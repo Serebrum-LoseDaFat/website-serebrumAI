@@ -41,7 +41,10 @@
       "Bash(curl -s -X POST -H \"Content-Type: application/json\" -d '{\"name\":\"Test\",\"email\":\"bad\",\"message\":\"\"}' http://localhost:3001/api/contact)",
       "Bash(curl -s -o /dev/null -w 'req__TRACKED_VAR__: %{http_code}\\\\n' -X POST -H 'Content-Type: application/json' -H 'x-forwarded-for: 1.2.3.4' -d '{}' http://localhost:3001/api/contact)",
       "Bash(curl -s -o /dev/null -w \"home:%{http_code} contact:%{http_code}\\\\n\" http://localhost:3003/ http://localhost:3003/contact)",
-      "Bash(curl -s http://localhost:3004/contact)"
+      "Bash(curl -s http://localhost:3004/contact)",
+      "Bash(curl -s -o /dev/null -w \"og:%{http_code} type:%{content_type}\\\\n\" http://localhost:3004/opengraph-image)",
+      "Bash(curl -s http://localhost:3004/)",
+      "Bash(curl -s http://localhost:3005/)"
     ]
   }
 }
