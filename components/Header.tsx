@@ -69,6 +69,12 @@ export default function Header() {
           >
             Why now
           </Link>
+          <Link
+            href="/writing"
+            className="rounded-full px-4 py-2 text-sm text-neutral-400 transition hover:text-neutral-100"
+          >
+            Writing
+          </Link>
 
           <Link
             href="/contact"

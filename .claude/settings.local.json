@@ -44,7 +44,10 @@
       "Bash(curl -s http://localhost:3004/contact)",
       "Bash(curl -s -o /dev/null -w \"og:%{http_code} type:%{content_type}\\\\n\" http://localhost:3004/opengraph-image)",
       "Bash(curl -s http://localhost:3004/)",
-      "Bash(curl -s http://localhost:3005/)"
+      "Bash(curl -s http://localhost:3005/)",
+      "Bash(cmd.exe /c start \"\" \"writing\\\\drafts\\\\01-point-solutions-are-done.md\")",
+      "Bash(curl -s -o /dev/null -w \"writing:%{http_code}\\\\n\" http://localhost:3005/writing)",
+      "Bash(curl -s http://localhost:3005/writing)"
     ]
   }
 }
