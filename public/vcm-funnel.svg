@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 840" role="img" aria-label="Serebrum Venture Creation Model — funnel">
+  <defs>
+    <style>
+      .sans { font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif; }
+      .mono { font-family: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Consolas, monospace; }
+    </style>
+    <linearGradient id="p1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="rgba(255,255,255,0.04)"/>
+      <stop offset="1" stop-color="rgba(255,255,255,0.02)"/>
+    </linearGradient>
+    <linearGradient id="p2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="rgba(255,255,255,0.05)"/>
+      <stop offset="1" stop-color="rgba(255,255,255,0.03)"/>
+    </linearGradient>
+    <linearGradient id="p3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="rgba(52,211,153,0.06)"/>
+      <stop offset="1" stop-color="rgba(52,211,153,0.04)"/>
+    </linearGradient>
+    <linearGradient id="p4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="rgba(52,211,153,0.14)"/>
+      <stop offset="1" stop-color="rgba(52,211,153,0.08)"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Canvas -->
+  <rect width="1200" height="840" fill="#070709" rx="24"/>
+  <rect x="0.5" y="0.5" width="1199" height="839" rx="24" fill="none" stroke="rgba(255,255,255,0.08)"/>
+
+  <!-- Header -->
+  <g class="mono">
+    <text x="60" y="56" fill="#34d399" font-size="11" letter-spacing="3">/ THE MODEL</text>
+  </g>
+  <g class="sans">
+    <text x="60" y="98" fill="#fafafa" font-size="30" font-weight="500" letter-spacing="-0.5">
+      Serebrum Venture Creation Model<tspan font-size="16" dy="-10" fill="rgba(255,255,255,0.4)">™</tspan>
+    </text>
+    <text x="60" y="128" fill="rgba(255,255,255,0.5)" font-size="14">
+      A funnel — from many inefficient industries to one AI-native spinout.
+    </text>
+  </g>
+
+  <!-- Side labels -->
+  <g class="mono" fill="rgba(255,255,255,0.35)" font-size="10" letter-spacing="2.5">
+    <text x="60" y="195" >WIDE · MANY INDUSTRIES</text>
+    <text x="1140" y="700" text-anchor="end">NARROW · ONE COMPANY</text>
+  </g>
+
+  <!-- PHASE 01 trapezoid: top 1080 -> bottom 900 -->
+  <path d="M 60,210 L 1140,210 L 1050,340 L 150,340 Z" fill="url(#p1)" stroke="rgba(255,255,255,0.12)"/>
+  <g class="mono"><text x="600" y="245" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="10" letter-spacing="2.5">PHASE 01</text></g>
+  <g class="sans">
+    <text x="600" y="285" text-anchor="middle" fill="#fafafa" font-size="26" font-weight="500" letter-spacing="-0.3">Industry Dislocation Analysis</text>
+    <text x="600" y="318" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="13">
+      Labor-based coordination · Inefficiencies · Regulatory + structural barriers
+    </text>
+  </g>
+
+  <!-- PHASE 02 trapezoid: top 900 -> bottom 720 -->
+  <path d="M 150,350 L 1050,350 L 960,480 L 240,480 Z" fill="url(#p2)" stroke="rgba(255,255,255,0.14)"/>
+  <g class="mono"><text x="600" y="385" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="10" letter-spacing="2.5">PHASE 02</text></g>
+  <g class="sans">
+    <text x="600" y="425" text-anchor="middle" fill="#fafafa" font-size="26" font-weight="500" letter-spacing="-0.3">AI Architecture Design</text>
+    <text x="600" y="458" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="13">
+      Intelligence layer · Autonomy scope · Defensible data loop
+    </text>
+  </g>
+
+  <!-- PHASE 03 trapezoid: top 720 -> bottom 540 -->
+  <path d="M 240,490 L 960,490 L 870,620 L 330,620 Z" fill="url(#p3)" stroke="rgba(52,211,153,0.25)"/>
+  <g class="mono"><text x="600" y="525" text-anchor="middle" fill="rgba(52,211,153,0.75)" font-size="10" letter-spacing="2.5">PHASE 03</text></g>
+  <g class="sans">
+    <text x="600" y="565" text-anchor="middle" fill="#fafafa" font-size="24" font-weight="500" letter-spacing="-0.3">Prototype + Domain Validation</text>
+    <text x="600" y="596" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-size="12">
+      2–3 design partners · Structural transformation, not feature enhancement
+    </text>
+  </g>
+
+  <!-- PHASE 04 trapezoid: top 540 -> bottom 360 (output) -->
+  <path d="M 330,630 L 870,630 L 780,760 L 420,760 Z" fill="url(#p4)" stroke="rgba(52,211,153,0.5)"/>
+  <g class="mono"><text x="600" y="665" text-anchor="middle" fill="#34d399" font-size="10" letter-spacing="2.5">PHASE 04 · SPINOUT</text></g>
+  <g class="sans">
+    <text x="600" y="705" text-anchor="middle" fill="#fafafa" font-size="26" font-weight="600" letter-spacing="-0.3">AI-native company</text>
+    <text x="600" y="738" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="12">
+      Dedicated CEO · Capital raise · Serebrum retains significant equity
+    </text>
+  </g>
+
+  <!-- Bottom caption -->
+  <g class="mono" fill="rgba(255,255,255,0.35)" font-size="10" letter-spacing="2">
+    <text x="600" y="805" text-anchor="middle">EACH PHASE NARROWS SELECTION · FROM THESIS TO LAUNCHED COMPANY</text>
+  </g>
+</svg>

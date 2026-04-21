@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #070709;
+  color: #e5e5e7;
+}
+
+::selection {
+  background: rgba(110, 231, 183, 0.25);
+  color: #fff;
+}
+
+/* Subtle grid texture used in hero backgrounds */
+.grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse at 50% 0%, black 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 0%, black 30%, transparent 75%);
+}
+
+.glow-orb {
+  background: radial-gradient(
+    circle at center,
+    rgba(110, 231, 183, 0.22) 0%,
+    rgba(34, 211, 238, 0.12) 35%,
+    transparent 70%
+  );
+  filter: blur(60px);
+}
+
+.text-gradient {
+  background: linear-gradient(100deg, #6ee7b7 0%, #67e8f9 50%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.12),
+    transparent
+  );
+}

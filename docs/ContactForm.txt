@@ -1,0 +1,23 @@
+Wired. The "placeholder" warning is gone too.
+
+**What's in place:**
+- [app/api/contact/route.ts](app/api/contact/route.ts) — validates name/email/message, sends via Resend, returns proper error codes
+- [app/contact/ContactForm.tsx](app/contact/ContactForm.tsx) — POSTs to `/api/contact`, shows thank-you on success and a red error banner on failure
+- [.env.example](.env.example) — documents the three env vars
+
+**What you need to do to turn it on:**
+
+1. **Sign up** at [resend.com](https://resend.com) (free — 3,000 emails/mo)
+2. **Get an API key** from `resend.com/api-keys` (starts with `re_...`)
+3. **Verify your sending domain** at `resend.com/domains` — add the DNS records they give you for `serebrum.ai`. Once verified, emails can come from `contact@serebrum.ai`. For local testing before DNS, Resend's `onboarding@resend.dev` address works out of the box.
+4. **Create `.env.local`** at the project root (not `.env.example`) with:
+   ```
+   RESEND_API_KEY=re_your_key_here
+   CONTACT_TO_EMAIL=hello@serebrum.ai
+   # CONTACT_FROM_EMAIL=SerebrumAI <contact@serebrum.ai>   # after domain verification
+   ```
+5. Restart dev (`Ctrl+C`, `npm run dev`) so the new env vars load.
+
+On Vercel deploy, add the same three keys in the project's **Environment Variables** settings instead of committing `.env.local`.
+
+Want me to also add a rate limit (e.g., reject more than N submissions per IP per hour) to prevent spam? Straightforward add to the API route if so.

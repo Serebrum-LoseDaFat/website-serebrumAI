@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-label="Why now — three forces converging">
+  <defs>
+    <style>
+      .sans { font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif; }
+      .mono { font-family: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Consolas, monospace; }
+      .serif { font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif; }
+    </style>
+    <radialGradient id="convergeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="rgba(52,211,153,0.55)"/>
+      <stop offset="0.5" stop-color="rgba(52,211,153,0.12)"/>
+      <stop offset="1" stop-color="rgba(52,211,153,0)"/>
+    </radialGradient>
+    <linearGradient id="fadeIn" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="rgba(52,211,153,0.15)"/>
+      <stop offset="1" stop-color="rgba(52,211,153,0.75)"/>
+    </linearGradient>
+    <linearGradient id="outRay" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="rgba(52,211,153,0.9)"/>
+      <stop offset="1" stop-color="rgba(52,211,153,0.3)"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Canvas -->
+  <rect width="1200" height="620" fill="#070709" rx="24"/>
+  <rect x="0.5" y="0.5" width="1199" height="619" rx="24" fill="none" stroke="rgba(255,255,255,0.08)"/>
+
+  <!-- Header -->
+  <g class="mono">
+    <text x="60" y="56" fill="#34d399" font-size="11" letter-spacing="3">/ WHY NOW</text>
+  </g>
+  <g class="serif">
+    <text x="60" y="112" fill="#fafafa" font-size="40" font-style="italic">Three forces have converged.</text>
+  </g>
+
+  <!-- ====== FORCE CARDS (left) ====== -->
+  <!-- Force 01 -->
+  <g>
+    <rect x="60" y="190" width="420" height="110" rx="16" fill="rgba(255,255,255,0.025)" stroke="rgba(255,255,255,0.08)"/>
+    <g class="mono"><text x="84" y="222" fill="rgba(255,255,255,0.5)" font-size="10" letter-spacing="2.5">/ FORCE 01</text></g>
+    <g class="sans">
+      <text x="84" y="254" fill="#fafafa" font-size="22" font-weight="500" letter-spacing="-0.3">Abundant intelligence</text>
+      <text x="84" y="280" fill="rgba(255,255,255,0.6)" font-size="13">Foundation models made reasoning effectively free.</text>
+    </g>
+  </g>
+
+  <!-- Force 02 -->
+  <g>
+    <rect x="60" y="310" width="420" height="110" rx="16" fill="rgba(255,255,255,0.025)" stroke="rgba(255,255,255,0.08)"/>
+    <g class="mono"><text x="84" y="342" fill="rgba(255,255,255,0.5)" font-size="10" letter-spacing="2.5">/ FORCE 02</text></g>
+    <g class="sans">
+      <text x="84" y="374" fill="#fafafa" font-size="22" font-weight="500" letter-spacing="-0.3">Real-time everywhere</text>
+      <text x="84" y="400" fill="rgba(255,255,255,0.6)" font-size="13">Sensors and streams replace batch decisioning.</text>
+    </g>
+  </g>
+
+  <!-- Force 03 -->
+  <g>
+    <rect x="60" y="430" width="420" height="110" rx="16" fill="rgba(255,255,255,0.025)" stroke="rgba(255,255,255,0.08)"/>
+    <g class="mono"><text x="84" y="462" fill="rgba(255,255,255,0.5)" font-size="10" letter-spacing="2.5">/ FORCE 03</text></g>
+    <g class="sans">
+      <text x="84" y="494" fill="#fafafa" font-size="22" font-weight="500" letter-spacing="-0.3">Global by default</text>
+      <text x="84" y="520" fill="rgba(255,255,255,0.6)" font-size="13">A company launched today reaches a planet-sized market.</text>
+    </g>
+  </g>
+
+  <!-- ====== CONVERGING STREAMS ====== -->
+  <g fill="none" stroke-width="2" stroke-linecap="round">
+    <!-- Force 01 → converge -->
+    <path d="M 480,245 C 640,245 680,365 810,365" stroke="url(#fadeIn)"/>
+    <!-- Force 02 → converge (straight) -->
+    <path d="M 480,365 L 810,365" stroke="url(#fadeIn)"/>
+    <!-- Force 03 → converge -->
+    <path d="M 480,485 C 640,485 680,365 810,365" stroke="url(#fadeIn)"/>
+  </g>
+
+  <!-- ====== CONVERGENCE NODE ====== -->
+  <!-- Outer glow -->
+  <circle cx="820" cy="365" r="60" fill="url(#convergeGlow)"/>
+  <!-- Pulse ring -->
+  <circle cx="820" cy="365" r="20" fill="none" stroke="rgba(52,211,153,0.4)" stroke-width="1"/>
+  <circle cx="820" cy="365" r="14" fill="none" stroke="rgba(52,211,153,0.7)" stroke-width="1.5"/>
+  <!-- Core -->
+  <circle cx="820" cy="365" r="7" fill="#34d399"/>
+  <!-- NOW label above -->
+  <g class="mono">
+    <text x="820" y="310" text-anchor="middle" fill="#34d399" font-size="11" letter-spacing="4" font-weight="600">NOW</text>
+  </g>
+
+  <!-- ====== ASCENT TRAJECTORY ====== -->
+  <g>
+    <!-- Arc rising from convergence to the outcome point -->
+    <path
+      d="M 842,365 C 930,365 1000,310 1100,265"
+      stroke="url(#outRay)"
+      stroke-width="2"
+      stroke-linecap="round"
+      fill="none"
+    />
+    <!-- Progression dots along the arc (growing) -->
+    <circle cx="906" cy="356" r="2" fill="#34d399" opacity="0.45"/>
+    <circle cx="967" cy="332" r="2.5" fill="#34d399" opacity="0.6"/>
+    <circle cx="1031" cy="300" r="3" fill="#34d399" opacity="0.8"/>
+    <!-- Bright endpoint -->
+    <circle cx="1100" cy="265" r="28" fill="url(#convergeGlow)"/>
+    <circle cx="1100" cy="265" r="11" fill="none" stroke="rgba(52,211,153,0.4)" stroke-width="1"/>
+    <circle cx="1100" cy="265" r="7" fill="none" stroke="rgba(52,211,153,0.7)" stroke-width="1.5"/>
+    <circle cx="1100" cy="265" r="4" fill="#34d399"/>
+    <!-- Small mono label above -->
+    <g class="mono">
+      <text x="1100" y="228" text-anchor="middle" fill="rgba(52,211,153,0.7)" font-size="10" letter-spacing="3">/ THE PRIZE</text>
+    </g>
+    <!-- Serif italic tagline below -->
+    <g class="serif">
+      <text x="1100" y="320" text-anchor="middle" fill="#fafafa" font-size="22" font-style="italic">Capture the new</text>
+      <text x="1100" y="348" text-anchor="middle" fill="#fafafa" font-size="22" font-style="italic">AI economics</text>
+    </g>
+  </g>
+
+  <!-- ====== BOTTOM CAPTION ====== -->
+  <g class="sans">
+    <text x="60" y="585" fill="rgba(255,255,255,0.45)" font-size="13">
+      Legacy operating models — built for scarcity and hierarchy — can&#8217;t adapt fast enough.
+      The opportunity is to replace them with systems that run continuously, at global scale.
+    </text>
+  </g>
+</svg>

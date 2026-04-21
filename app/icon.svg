@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .bg { fill: #0a0a0d; }
+    .fg { fill: #f5f5f7; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #f5f5f7; }
+      .fg { fill: #0a0a0d; }
+    }
+  </style>
+  <circle class="bg" cx="32" cy="32" r="30"/>
+  <rect class="fg" x="20" y="10" width="10" height="44"/>
+  <path class="fg" fill-rule="evenodd" d="M30 10 A10 9 0 0 1 30 28 Z M30 14 A4 5 0 0 1 30 24 Z"/>
+  <path class="fg" fill-rule="evenodd" d="M30 28 A14 10 0 0 1 30 48 Z M30 32 A7 6 0 0 1 30 44 Z"/>
+</svg>
