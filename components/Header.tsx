@@ -70,10 +70,10 @@ export default function Header() {
             Why now
           </Link>
           <Link
-            href="/writing"
+            href="/insights"
             className="rounded-full px-4 py-2 text-sm text-neutral-400 transition hover:text-neutral-100"
           >
-            Writing
+            Insights
           </Link>
 
           <Link

@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import { XMLParser } from "fast-xml-parser";
 
 export const metadata: Metadata = {
-  title: "Writing — essays on AI-native venture building",
+  title: "Insights — essays on AI-native venture building",
   description:
-    "Notes from SerebrumAI on AI-native companies, industry transformation, and the venture model.",
-  alternates: { canonical: "/writing" },
+    "Insights from SerebrumAI on AI-native companies, industry transformation, and the venture model.",
+  alternates: { canonical: "/insights" },
   openGraph: {
-    title: "Writing · SerebrumAI",
+    title: "Insights · SerebrumAI",
     description:
       "Essays on AI-native venture building, industry transformation, and the Serebrum Venture Creation Model.",
-    url: "/writing",
+    url: "/insights",
   },
 };
 
@@ -96,7 +96,7 @@ export default async function WritingPage() {
 
         <div className="relative mx-auto max-w-5xl px-6 pb-16 pt-24 md:px-10 md:pb-20 md:pt-32">
           <div className="font-mono text-[11px] uppercase tracking-[0.25em] text-emerald-400">
-            / Writing
+            / Insights
           </div>
           <h1 className="mt-4 max-w-3xl text-5xl font-medium tracking-tight text-neutral-50 md:text-7xl">
             Notes from the{" "}

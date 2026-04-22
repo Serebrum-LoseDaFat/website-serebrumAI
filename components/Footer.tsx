@@ -78,10 +78,10 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/writing"
+                  href="/insights"
                   className="text-neutral-300 transition hover:text-white"
                 >
-                  Writing
+                  Insights
                 </Link>
               </li>
               <li>
