@@ -257,7 +257,119 @@ export default function PlaybookTimeline() {
           </div>
         </div>
 
-        <p className="mt-12 text-center text-sm text-neutral-500">
+        {/* ADDITIONAL CHANNELS */}
+        <div className="mt-20 border-t border-white/[0.06] pt-16">
+          <div className="mb-10 max-w-2xl">
+            <div className="font-mono text-[11px] uppercase tracking-[0.25em] text-emerald-400">
+              / Beyond the core flow
+            </div>
+            <h2 className="mt-4 text-3xl font-medium tracking-tight text-neutral-50 md:text-4xl">
+              Additional channels worth layering in.
+            </h2>
+            <p className="mt-4 text-neutral-400">
+              Once the 14-day rhythm is running, these extend reach without
+              changing the cadence. Organized by effort-to-impact ratio.
+            </p>
+          </div>
+
+          {/* Tier 1 */}
+          <div className="mb-12">
+            <div className="mb-5 flex items-center gap-3">
+              <span className="h-px w-8 bg-emerald-400/60" />
+              <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-emerald-300">
+                Tier 1 · high ROI, low effort
+              </span>
+            </div>
+            <div className="grid gap-4 md:grid-cols-3">
+              {[
+                {
+                  name: "Hacker News",
+                  body: "Sunday submissions can deliver thousands of relevant readers. One submission per essay — never spam. Ranking even mid-page puts you in front of serious AI/tech audiences.",
+                },
+                {
+                  name: "Reddit",
+                  body: "Post sparingly in r/venturecapital, r/startups, and r/artificial. Lead with substance, engage in the comments, and never drop the link without context.",
+                },
+                {
+                  name: "Substack Recommendations",
+                  body: "Trade mentions with other venture/AI Substack writers. Substack's built-in recommendation feature automates cross-promotion once set up.",
+                },
+              ].map((c) => (
+                <div
+                  key={c.name}
+                  className="rounded-2xl border border-white/[0.08] bg-[#0a0a0d] p-6 transition hover:border-white/[0.18]"
+                >
+                  <h3 className="text-base font-medium text-neutral-50">
+                    {c.name}
+                  </h3>
+                  <p className="mt-3 text-sm leading-6 text-neutral-400">
+                    {c.body}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Tier 2 */}
+          <div className="mb-12">
+            <div className="mb-5 flex items-center gap-3">
+              <span className="h-px w-8 bg-cyan-400/60" />
+              <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-cyan-300">
+                Tier 2 · higher effort, compounding returns
+              </span>
+            </div>
+            <div className="grid gap-4 md:grid-cols-2">
+              {[
+                {
+                  name: "Podcast guest spots",
+                  body: "Pitch yourself to AI/VC podcasts. Each appearance = 30–60 minutes of your thesis reaching a new audience. Search \"AI venture\" on Spotify, list 20 shows, pitch 5.",
+                },
+                {
+                  name: "Twitter Spaces / LinkedIn Live",
+                  body: "Host 30-min audio conversations on your thesis. Builds audience faster than text alone because it generates warm 1:1 connections in real time.",
+                },
+              ].map((c) => (
+                <div
+                  key={c.name}
+                  className="rounded-2xl border border-white/[0.08] bg-[#0a0a0d] p-6 transition hover:border-white/[0.18]"
+                >
+                  <h3 className="text-base font-medium text-neutral-50">
+                    {c.name}
+                  </h3>
+                  <p className="mt-3 text-sm leading-6 text-neutral-400">
+                    {c.body}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Tier 3 */}
+          <div>
+            <div className="mb-5 flex items-center gap-3">
+              <span className="h-px w-8 bg-violet-400/60" />
+              <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-violet-300">
+                Tier 3 · paid, strategic
+              </span>
+            </div>
+            <div className="grid gap-4">
+              <div className="rounded-2xl border border-white/[0.08] bg-[#0a0a0d] p-6 transition hover:border-white/[0.18]">
+                <h3 className="text-base font-medium text-neutral-50">
+                  Newsletter sponsorships
+                </h3>
+                <p className="mt-3 text-sm leading-6 text-neutral-400">
+                  Sponsor a relevant newsletter — TLDR AI, The Neuron,
+                  Stratechery, or similar. $500–$5,000 per placement, direct to
+                  exactly your audience. Only worth it once you have a
+                  concrete ask (fundraise, hiring, pilot partner) because
+                  awareness without conversion burns budget.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p className="mt-16 text-center text-sm text-neutral-500">
           Publishing day is 10% of the work. The rollout is the other 90%.
         </p>
       </div>
