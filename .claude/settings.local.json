@@ -47,7 +47,12 @@
       "Bash(curl -s http://localhost:3005/)",
       "Bash(cmd.exe /c start \"\" \"writing\\\\drafts\\\\01-point-solutions-are-done.md\")",
       "Bash(curl -s -o /dev/null -w \"writing:%{http_code}\\\\n\" http://localhost:3005/writing)",
-      "Bash(curl -s http://localhost:3005/writing)"
+      "Bash(curl -s http://localhost:3005/writing)",
+      "Bash(curl -s -o public/og-image.png http://localhost:3005/opengraph-image)",
+      "Bash(file public/og-image.png)",
+      "Bash(node -e \"const fs=require\\('fs'\\),b=fs.readFileSync\\('public/og-image.png'\\);console.log\\('dims:',b.readUInt32BE\\(16\\)+'x'+b.readUInt32BE\\(20\\),'size:',b.length+'B'\\)\")",
+      "Bash(curl -s -o /dev/null -w \"playbook:%{http_code}\\\\n\" http://localhost:3005/playbook)",
+      "Bash(curl -s http://localhost:3005/playbook)"
     ]
   }
 }
