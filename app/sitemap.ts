@@ -6,9 +6,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   const routes = [
     "",
-    "/ventures/vygor",
     "/ventures/tokensource",
     "/ventures/alphasigma",
+    "/ventures/vygor",
     "/insights",
     "/contact",
   ];

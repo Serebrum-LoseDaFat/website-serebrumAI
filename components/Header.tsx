@@ -2,9 +2,9 @@ import Link from "next/link";
 import Logo from "./Logo";
 
 const ventures = [
-  { href: "/ventures/vygor", label: "Vygor AI", tag: "Health" },
   { href: "/ventures/tokensource", label: "TokenSource", tag: "Software" },
   { href: "/ventures/alphasigma", label: "AlphaSigma", tag: "Capital" },
+  { href: "/ventures/vygor", label: "Vygor AI", tag: "Health" },
 ];
 
 export default function Header() {

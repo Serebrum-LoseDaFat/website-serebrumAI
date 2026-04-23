@@ -72,13 +72,6 @@ const organizationJsonLd = {
   subOrganization: [
     {
       "@type": "Organization",
-      name: "Vygor AI",
-      url: `${siteUrl}/ventures/vygor`,
-      description:
-        "Continuous intelligence for weight, obesity, and diabetes care — sold to health plans and employers.",
-    },
-    {
-      "@type": "Organization",
       name: "TokenSource",
       url: `${siteUrl}/ventures/tokensource`,
       description:
@@ -90,6 +83,13 @@ const organizationJsonLd = {
       url: `${siteUrl}/ventures/alphasigma`,
       description:
         "Decision intelligence for investment management — clear buy/sell signals and systematic rebalancing for RIAs and family offices.",
+    },
+    {
+      "@type": "Organization",
+      name: "Vygor AI",
+      url: `${siteUrl}/ventures/vygor`,
+      description:
+        "Continuous intelligence for weight, obesity, and diabetes care — sold to health plans and employers.",
     },
   ],
 };

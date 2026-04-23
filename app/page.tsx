@@ -10,18 +10,8 @@ export const metadata: Metadata = {
 
 const ventures = [
   {
-    href: "/ventures/vygor",
-    id: "01",
-    category: "Health & Wellness",
-    name: "Vygor AI",
-    tagline: "Continuous intelligence for weight, obesity, and diabetes care.",
-    buyer: "Health plans · employers",
-    impact: "20–40% program cost reduction",
-    accent: "from-emerald-400/40 to-emerald-400/0",
-  },
-  {
     href: "/ventures/tokensource",
-    id: "02",
+    id: "01",
     category: "Software Lifecycle",
     name: "TokenSource",
     tagline: "The execution layer for AI-native product teams.",
@@ -31,13 +21,23 @@ const ventures = [
   },
   {
     href: "/ventures/alphasigma",
-    id: "03",
+    id: "02",
     category: "Investment Management",
     name: "AlphaSigma",
     tagline: "From reporting dashboards to a decision engine.",
     buyer: "RIAs · family offices",
     impact: "Improved Sharpe · reduced drawdowns",
     accent: "from-violet-400/40 to-violet-400/0",
+  },
+  {
+    href: "/ventures/vygor",
+    id: "03",
+    category: "Health & Wellness",
+    name: "Vygor AI",
+    tagline: "Continuous intelligence for weight, obesity, and diabetes care.",
+    buyer: "Health plans · employers",
+    impact: "20–40% program cost reduction",
+    accent: "from-emerald-400/40 to-emerald-400/0",
   },
 ];
 

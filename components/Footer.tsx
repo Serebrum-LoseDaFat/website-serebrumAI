@@ -30,14 +30,6 @@ export default function Footer() {
             <ul className="mt-4 space-y-3 text-sm">
               <li>
                 <Link
-                  href="/ventures/vygor"
-                  className="text-neutral-300 transition hover:text-white"
-                >
-                  Vygor AI
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/ventures/tokensource"
                   className="text-neutral-300 transition hover:text-white"
                 >
@@ -50,6 +42,14 @@ export default function Footer() {
                   className="text-neutral-300 transition hover:text-white"
                 >
                   AlphaSigma
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/ventures/vygor"
+                  className="text-neutral-300 transition hover:text-white"
+                >
+                  Vygor AI
                 </Link>
               </li>
             </ul>
