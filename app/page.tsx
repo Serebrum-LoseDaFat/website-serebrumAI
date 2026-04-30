@@ -79,9 +79,8 @@ export default function Home() {
           </h1>
 
           <p className="mt-10 max-w-2xl text-lg leading-8 text-neutral-400 md:text-xl">
-            SerebrumAI is a venture studio for a post-constraint world —
-            where intelligence is abundant, coordination is automated, and the
-            systems that industries depend on are ready to be replaced.
+            SerebrumAI is building the next generation of AI-native companies
+            that replace broken systems across industries.
           </p>
 
           <div className="mt-12 flex flex-wrap items-center gap-3">
