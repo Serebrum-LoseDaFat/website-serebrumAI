@@ -22,11 +22,11 @@ const ventures = [
   {
     href: "/ventures/alphasigma",
     id: "02",
-    category: "Investment Management",
+    category: "Fund Management",
     name: "AlphaSigma",
-    tagline: "From reporting dashboards to a decision engine.",
-    buyer: "RIAs · family offices",
-    impact: "Improved Sharpe · reduced drawdowns",
+    tagline: "An AI-native absolute return strategy.",
+    buyer: "LPs · family offices · allocators",
+    impact: "Continuous · transparent · AI-native",
     accent: "from-violet-400/40 to-violet-400/0",
   },
   {
@@ -67,7 +67,7 @@ export default function Home() {
         <div className="relative mx-auto max-w-7xl px-6 pb-28 pt-28 md:px-10 md:pb-40 md:pt-36">
           <div className="mb-8 inline-flex items-center gap-2.5 rounded-full border border-emerald-400/20 bg-emerald-400/[0.06] px-3.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.25em] text-emerald-300">
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-            AI-native venture studio
+            AI-native venture creation engine
           </div>
 
           <h1 className="max-w-5xl font-sans text-5xl font-medium tracking-tight text-neutral-50 md:text-7xl lg:text-8xl">

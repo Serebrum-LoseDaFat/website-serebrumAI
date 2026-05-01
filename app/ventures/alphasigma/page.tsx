@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import VenturePage from "@/components/VenturePage";
 
 export const metadata: Metadata = {
-  title: "AlphaSigma — Decision intelligence for investment management",
+  title: "AlphaSigma — AI-native absolute return strategy",
   description:
-    "AlphaSigma turns fragmented portfolio data into continuous, model-driven decisions for RIAs and family offices. Better risk-adjusted returns, systematic execution.",
+    "AlphaSigma is a fund management company running an AI-native absolute return strategy. Continuous portfolio management, transparent process, AI-driven decisioning.",
   alternates: { canonical: "/ventures/alphasigma" },
   openGraph: {
-    title: "AlphaSigma — Decision intelligence for investment management",
+    title: "AlphaSigma — AI-native absolute return strategy",
     description:
-      "Continuous, model-driven decision support for RIAs and family offices.",
+      "A fund management company running an AI-native absolute return strategy.",
     url: "/ventures/alphasigma",
   },
 };
@@ -19,34 +19,34 @@ export default function Page() {
     <VenturePage
       accent="violet"
       logoSrc="/ventures/alphasigma.svg"
-      category="Investment Management"
+      category="Fund Management"
       name="AlphaSigma"
-      tagline="From reporting dashboards to a decision engine."
-      summary="Investment management today aggregates data and reports on it. AlphaSigma goes further: it recommends buys and sells, evaluates portfolios holistically, proposes rebalancing, and actively monitors risk — grounded in proven quantitative frameworks and continuously refreshed."
-      problem="RIAs and family offices operate reactively. Information arrives fragmented across custodians, research providers, and spreadsheets. Portfolio decisions are episodic, risk monitoring is manual, and most 'tech' in the stack is a reporting dashboard rather than a decision tool. High-stakes judgments get made without continuous intelligence support."
-      solution="AlphaSigma consolidates positions, market data, and risk models into one decision system. It issues clear buy and sell signals, recommends dynamic rebalancing tied to client mandates, and flags risk concentrations before they become losses. Human advisors retain authority; the system removes the operational burden and sharpens the judgment."
-      buyer="Registered investment advisors (RIAs), family offices, and wealth platforms — paid for improved risk-adjusted returns and the quality of decisions made on their behalf."
+      tagline="An AI-native absolute return strategy."
+      summary="AlphaSigma is a fund management company. Its absolute return strategy is operated continuously by an AI engine — sizing positions, managing risk, and rebalancing without the lag of human committees or quarterly reviews."
+      problem="Active asset management is built around human portfolio managers, weekly committees, and monthly rebalances — a structure optimized for an era when intelligence was scarce and decisions were necessarily batched. The result is high fees, inconsistent risk-adjusted returns, and strategies that can't keep pace with markets that move continuously."
+      solution="AlphaSigma is structured as a fund management company. The absolute return strategy is operated end-to-end by an AI engine that processes market data continuously, sizes positions dynamically, and applies risk management without committee bottlenecks. Human oversight enforces mandate and constraints; the system does the work."
+      buyer="Limited partners — family offices, endowments, fund-of-funds, and institutional allocators looking for AI-native exposure with transparent process and competitive risk-adjusted returns."
       impact={[
-        "Improved Sharpe ratio across monitored portfolios",
-        "Reduced maximum drawdowns through earlier risk signals",
-        "Systematic rebalancing that eliminates decision drift and oversight gaps",
+        "Continuously managed strategy across market regimes — not quarterly rebalancing",
+        "Transparent process — every position decision is auditable, not buried in quarterly letters",
+        "Lower cost structure than traditional active management with equivalent mandates",
       ]}
       howItWorks={[
         {
-          title: "Unified portfolio state",
-          body: "Positions, transactions, and client mandates across custodians are consolidated into a single, continuously updated portfolio view.",
+          title: "Continuous market analysis",
+          body: "The AI engine ingests price action, factor data, and signals across asset classes in real time. There are no scheduled cycles — analysis is continuous and the strategy responds when the data changes, not when the next committee meets.",
         },
         {
-          title: "Signal generation",
-          body: "Quantitative models produce buy, sell, and hold signals at the security and portfolio level, with transparent reasoning.",
-        },
-        {
-          title: "Dynamic rebalancing",
-          body: "The system recommends rebalancing actions calibrated to each client's mandate, tax situation, and risk profile.",
+          title: "Position sizing & execution",
+          body: "Each entry, exit, and rebalance is sized by the engine according to risk targets, conviction, and current exposure. The strategy executes without human-committee delay between signal and action.",
         },
         {
           title: "Active risk management",
-          body: "Concentration, factor, and drawdown risks are monitored continuously, with alerts surfaced to advisors before they become material.",
+          body: "Drawdown, factor, and concentration risks are monitored continuously. The system de-risks before losses compound — not after a monthly review meeting.",
+        },
+        {
+          title: "Transparent reporting",
+          body: "LPs see strategy logic and exposure in real time. Process visibility replaces quarterly letters, and every position is auditable against the mandate.",
         },
       ]}
     />

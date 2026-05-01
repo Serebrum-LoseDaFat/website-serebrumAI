@@ -56,7 +56,8 @@
       "Bash(curl -s -o /dev/null -w \"insights:%{http_code} writing-old:%{http_code}\\\\n\" http://localhost:3005/insights http://localhost:3005/writing)",
       "Bash(curl -s http://localhost:3005/insights)",
       "Bash(curl -s -o /dev/null -w \"home:%{http_code}\\\\n\" http://localhost:3005/)",
-      "Bash(curl -s http://localhost:3000/)"
+      "Bash(curl -s http://localhost:3000/)",
+      "Bash(curl -s http://localhost:3000/ventures/alphasigma)"
     ]
   }
 }

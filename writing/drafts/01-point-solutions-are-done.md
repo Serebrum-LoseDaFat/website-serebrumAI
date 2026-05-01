@@ -81,7 +81,7 @@ Three companies running this model today:
 
 - **[Vygor AI](https://serebrum.ai/ventures/vygor)** — replacing the fragmented health-and-wellness operating model with a continuous, intelligence-driven system for weight, obesity, and diabetes care.
 - **[TokenSource](https://serebrum.ai/ventures/tokensource)** — replacing the manual product management layer of software development with an AI-native execution system from real user need to shipped outcome.
-- **[AlphaSigma](https://serebrum.ai/ventures/alphasigma)** — replacing reactive investment management with continuous decision intelligence for RIAs and family offices.
+- **[AlphaSigma](https://serebrum.ai/ventures/alphasigma)** — a fund management company running an AI-native absolute return strategy, replacing the human-committee-and-quarterly-rebalance model of active asset management.
 
 Same pattern, three industries. That's the point.
 

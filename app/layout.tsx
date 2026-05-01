@@ -82,7 +82,7 @@ const organizationJsonLd = {
       name: "AlphaSigma",
       url: `${siteUrl}/ventures/alphasigma`,
       description:
-        "Decision intelligence for investment management — clear buy/sell signals and systematic rebalancing for RIAs and family offices.",
+        "A fund management company running an AI-native absolute return strategy — continuous portfolio management with transparent, AI-driven decisioning.",
     },
     {
       "@type": "Organization",
