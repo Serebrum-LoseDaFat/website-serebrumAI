@@ -10,18 +10,9 @@ export const metadata: Metadata = {
 
 const ventures = [
   {
-    href: "/ventures/tokensource",
-    id: "01",
-    category: "Software Lifecycle",
-    name: "TokenSource",
-    tagline: "The execution layer for AI-native product teams.",
-    buyer: "Product · engineering leadership",
-    impact: "30–50% faster delivery",
-    accent: "from-cyan-400/40 to-cyan-400/0",
-  },
-  {
     href: "/ventures/alphasigma",
-    id: "02",
+    id: "01",
+    logoSrc: "/ventures/alphasigma.svg",
     category: "Fund Management",
     name: "AlphaSigma",
     tagline: "An AI-native absolute return strategy.",
@@ -31,13 +22,25 @@ const ventures = [
   },
   {
     href: "/ventures/vygor",
-    id: "03",
+    id: "02",
+    logoSrc: "/ventures/vygor.svg",
     category: "Health & Wellness",
     name: "Vygor AI",
     tagline: "Continuous intelligence for weight, obesity, and diabetes care.",
     buyer: "Health plans · employers",
     impact: "20–40% program cost reduction",
     accent: "from-emerald-400/40 to-emerald-400/0",
+  },
+  {
+    href: "/ventures/tokensource",
+    id: "03",
+    logoSrc: "/ventures/tokensource.svg",
+    category: "Software Lifecycle",
+    name: "TokenSource",
+    tagline: "The execution layer for AI-native product teams.",
+    buyer: "Product · engineering leadership",
+    impact: "30–50% faster delivery",
+    accent: "from-cyan-400/40 to-cyan-400/0",
   },
 ];
 
@@ -280,7 +283,15 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="md:col-span-4">
-                    <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-neutral-500">
+                    <div className="flex h-10 items-center md:h-12">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={v.logoSrc}
+                        alt={`${v.name} logo`}
+                        className="h-full w-auto max-w-[180px] object-left object-contain"
+                      />
+                    </div>
+                    <div className="mt-5 font-mono text-[10px] uppercase tracking-[0.25em] text-neutral-500">
                       {v.category}
                     </div>
                     <h3 className="mt-3 text-4xl font-medium tracking-tight text-neutral-50 md:text-5xl">
