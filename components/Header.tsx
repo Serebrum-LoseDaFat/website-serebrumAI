@@ -4,6 +4,7 @@ import Logo from "./Logo";
 const ventures = [
   { href: "/ventures/tokensource", label: "TokenSource", tag: "Software" },
   { href: "/ventures/alphasigma", label: "AlphaSigma", tag: "Capital" },
+  { href: "/ventures/fedstat", label: "FedStat", tag: "IT Mgmt" },
   { href: "/ventures/vygor", label: "Vygor AI", tag: "Health" },
 ];
 

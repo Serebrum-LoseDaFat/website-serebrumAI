@@ -86,6 +86,13 @@ const organizationJsonLd = {
     },
     {
       "@type": "Organization",
+      name: "FedStat",
+      url: `${siteUrl}/ventures/fedstat`,
+      description:
+        "AI-native software suite for managing technology investments at large enterprises — budgeting, portfolio management, app rationalization, TBM, capex, and goal tracking.",
+    },
+    {
+      "@type": "Organization",
       name: "Vygor AI",
       url: `${siteUrl}/ventures/vygor`,
       description:

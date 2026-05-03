@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/ventures/tokensource",
     "/ventures/alphasigma",
+    "/ventures/fedstat",
     "/ventures/vygor",
     "/insights",
     "/contact",

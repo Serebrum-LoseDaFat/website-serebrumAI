@@ -42,6 +42,18 @@ const ventures = [
     impact: "30–50% faster delivery",
     accent: "from-cyan-400/40 to-cyan-400/0",
   },
+  {
+    href: "/ventures/fedstat",
+    id: "04",
+    logoSrc: "/ventures/fedstat.svg",
+    category: "Technology Investment Management",
+    name: "FedStat",
+    tagline:
+      "AI-native technology investment management for large enterprises.",
+    buyer: "CIOs · CFOs · IT financial leadership",
+    impact: "10–25% IT spend optimization",
+    accent: "from-amber-400/40 to-amber-400/0",
+  },
 ];
 
 const pillars = [

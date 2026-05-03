@@ -46,6 +46,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/ventures/fedstat"
+                  className="text-neutral-300 transition hover:text-white"
+                >
+                  FedStat
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/ventures/vygor"
                   className="text-neutral-300 transition hover:text-white"
                 >

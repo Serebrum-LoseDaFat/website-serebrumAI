@@ -57,7 +57,13 @@
       "Bash(curl -s http://localhost:3005/insights)",
       "Bash(curl -s -o /dev/null -w \"home:%{http_code}\\\\n\" http://localhost:3005/)",
       "Bash(curl -s http://localhost:3000/)",
-      "Bash(curl -s http://localhost:3000/ventures/alphasigma)"
+      "Bash(curl -s http://localhost:3000/ventures/alphasigma)",
+      "Bash(curl -s -o /dev/null -w \"blueprint:%{http_code}\\\\n\" http://localhost:3000/blueprint)",
+      "Bash(curl -s http://localhost:3000/blueprint)",
+      "Bash(curl -s -o /dev/null -w \"blueprint:%{http_code}\\\\n\" http://localhost:3001/blueprint)",
+      "Bash(curl -s -o /dev/null -w \"home:%{http_code} fedstat:%{http_code} blueprint:%{http_code} sitemap:%{http_code}\\\\n\" http://localhost:3000/ http://localhost:3000/ventures/fedstat http://localhost:3000/blueprint http://localhost:3000/sitemap.xml)",
+      "Bash(curl -s -o /dev/null -w \"gtm:%{http_code}\\\\n\" http://localhost:3000/gtm)",
+      "Bash(curl -s http://localhost:3000/gtm)"
     ]
   }
 }
