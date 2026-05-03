@@ -350,7 +350,7 @@ export default function BlueprintPage() {
               </div>
               <p className="mt-3 text-sm leading-6 text-neutral-300">
                 <span className="font-medium text-neutral-50">{flagshipWinner.name}</span>{" "}
-                anchors the studio's near-term VC story. Fastest sales cycle,
+                anchors the studio&rsquo;s near-term VC story. Fastest sales cycle,
                 lowest regulatory drag, generalist VC appeal. Use it as the
                 external proof point for the studio narrative.
               </p>
