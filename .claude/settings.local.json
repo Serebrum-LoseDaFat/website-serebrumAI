@@ -64,7 +64,12 @@
       "Bash(curl -s -o /dev/null -w \"home:%{http_code} fedstat:%{http_code} blueprint:%{http_code} sitemap:%{http_code}\\\\n\" http://localhost:3000/ http://localhost:3000/ventures/fedstat http://localhost:3000/blueprint http://localhost:3000/sitemap.xml)",
       "Bash(curl -s -o /dev/null -w \"gtm:%{http_code}\\\\n\" http://localhost:3000/gtm)",
       "Bash(curl -s http://localhost:3000/gtm)",
-      "Bash(xargs grep *)"
+      "Bash(xargs grep *)",
+      "Bash(curl -s -o /dev/null -w \"fundraising:%{http_code}\\\\n\" http://localhost:3000/fundraising)",
+      "Bash(curl -s -o /dev/null -w \"fundraising:%{http_code} content-marketing:%{http_code} playbook\\(redirect\\):%{http_code}\\\\n\" http://localhost:3000/fundraising http://localhost:3000/content-marketing http://localhost:3000/playbook)",
+      "Bash(curl -s http://localhost:3000/content-marketing)",
+      "Bash(curl -s -o /dev/null -w \"playbook:%{http_code} blueprint:%{http_code} gtm:%{http_code} fundraising:%{http_code} content-marketing:%{http_code}\\\\n\" http://localhost:3000/playbook http://localhost:3000/playbook/blueprint http://localhost:3000/playbook/gtm http://localhost:3000/playbook/fundraising http://localhost:3000/playbook/content-marketing)",
+      "Bash(curl -s -o /dev/null -w \"blueprint:%{http_code} gtm:%{http_code} fundraising:%{http_code} content-marketing:%{http_code}\\\\n\" http://localhost:3000/blueprint http://localhost:3000/gtm http://localhost:3000/fundraising http://localhost:3000/content-marketing)"
     ]
   }
 }

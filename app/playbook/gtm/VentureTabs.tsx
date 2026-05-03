@@ -84,7 +84,7 @@ const ventureDetails: VentureDetail[] = [
     items: [
       {
         rank: 1,
-        title: "Design partner program",
+        title: "Charter customers",
         target:
           "5 anchor customers in 6 months. Series-B+ SaaS with 30–100 product/eng staff. Filter for VPs of Engineering or CPOs publicly writing about AI in workflows.",
         mechanics:
@@ -136,7 +136,7 @@ const ventureDetails: VentureDetail[] = [
         target:
           "50 product/engineering leaders reachable via 2nd-degree LinkedIn connections, podcast circuit, or warm intros. Bias toward post–Series-A SaaS where AI tooling decisions get made fast.",
         mechanics:
-          "Personalized DMs and warm intros. Pitch: 20 minutes to react to where AI-native execution is heading. Expect ~30% reply rate; 10–20% of conversations convert to design-partner LOI.",
+          "Personalized DMs and warm intros. Pitch: 20 minutes to react to where AI-native execution is heading. Expect ~30% reply rate; 10–20% of conversations convert to a charter-customer LOI.",
         why: "Sub-$3M ARR, no SDR team is affordable, and SDRs can't sell the AI workflow story. Founder energy is the fastest viable channel and the highest signal-density.",
       },
       {

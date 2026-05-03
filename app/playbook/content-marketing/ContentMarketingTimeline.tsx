@@ -129,7 +129,7 @@ const phases: Phase[] = [
   },
 ];
 
-export default function PlaybookTimeline() {
+export default function ContentMarketingTimeline() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (

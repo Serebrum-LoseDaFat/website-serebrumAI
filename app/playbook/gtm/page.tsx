@@ -63,8 +63,8 @@ const actions: {
   cells: Record<VentureKey, Cell>;
 }[] = [
   {
-    label: "Design partner program",
-    sub: "anchor SaaS customers",
+    label: "Charter customers",
+    sub: "founding cohort of 5 SaaS anchors",
     cells: { ts: 1, fs: null, as: null, vg: null },
   },
   {
@@ -302,7 +302,7 @@ export default function GTMPage() {
               },
               {
                 title: "Outbound SDR/BDR at scale",
-                body: "Premature for all four. Founder-led + design partners first. SDR scale comes after PMF.",
+                body: "Premature for all four. Founder-led + charter customers / pilot partners first. SDR scale comes after PMF.",
               },
               {
                 title: "Industry analyst engagement",
