@@ -231,8 +231,9 @@ const ventureDetails: VentureDetail[] = [
     name: "Vygor AI",
     framing: "Healthcare · evidence-driven",
     accent: "emerald",
+    salesCycle: "6–12 months self-funded employer · 9–15 months TPA · 12–24 months health plan",
     context:
-      "Vygor sells AI-native chronic care for weight, obesity, and diabetes. Buyers are health plans (UnitedHealth, Aetna, Cigna, regional Blues) and self-insured employers (Fortune 500 + mid-market). Comps: Livongo (Teladoc $18.5B acquisition), Omada, Calibrate, Noom. Average sales cycle: 12–24 months. Clinical outcomes data is mandatory; without it, no buyer signs.",
+      "Vygor sells AI-native chronic care for weight, obesity, and diabetes. Buyers are health plans (UnitedHealth, Aetna, Cigna, regional Blues), self-funded employers (Fortune 500 + mid-market), and the TPAs that administer their benefits. Comps: Livongo (Teladoc $18.5B acquisition), Omada, Calibrate, Noom. Clinical outcomes data is mandatory; without it, no buyer signs.",
     items: [
       {
         rank: 1,
@@ -297,6 +298,20 @@ const ventureDetails: VentureDetail[] = [
         why: "Brokers gate the employer market. Plan-direct sales work for Vygor, but skipping brokers loses you the entire employer purchasing motion. Broker relationships take 12–18 months to build but unlock self-insured employers — the second leg of the demand.",
       },
     ],
+    tier2: [
+      {
+        title: "Wellhub (formerly Gympass)",
+        body: "Corporate wellness marketplace, ~15K corporate clients, actively expanding into chronic-disease management. ~20–40% rev share. Activates after 2–3 pilot wins + first peer-reviewed outcomes paper.",
+      },
+      {
+        title: "Personify Health (Virgin Pulse)",
+        body: "Employer + plan benefits platform, ~70M reachable lives. Marketplace shelf for chronic-care vendors. Same activation gates as Wellhub — outcomes data first, then onboard.",
+      },
+      {
+        title: "Coaching network OEM",
+        body: "White-label Vygor as the AI/clinical platform for Catalyst Health Coaching, Wellcoaches, or similar networks. Smaller TAM than direct-to-plan, but deeper integration and recurring per-coach licensing.",
+      },
+    ],
   },
 ];
 
@@ -355,6 +370,18 @@ export default function VentureTabs() {
           <p className="mt-5 text-base leading-7 text-neutral-300 md:text-lg md:leading-8">
             {v.context}
           </p>
+
+          {/* Average sales cycle — distinct prominent line */}
+          <div
+            className={`mt-6 flex flex-col gap-2 rounded-2xl border ${a.softBorder} ${a.softBg} p-4 sm:flex-row sm:items-center sm:gap-4`}
+          >
+            <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-neutral-500">
+              Avg sales cycle
+            </span>
+            <span className={`text-sm font-medium ${a.text}`}>
+              {v.salesCycle}
+            </span>
+          </div>
         </div>
 
         <div className="space-y-5">
@@ -362,6 +389,41 @@ export default function VentureTabs() {
             <PriorityCard key={item.rank} item={item} accent={v.accent} />
           ))}
         </div>
+
+        {/* Tier 2 channels (renders only if defined) */}
+        {v.tier2 && (
+          <div className="mt-12 border-t border-white/[0.06] pt-10">
+            <div
+              className={`font-mono text-[11px] uppercase tracking-[0.25em] ${a.text}`}
+            >
+              / Tier 2 channels
+            </div>
+            <h4 className="mt-3 text-2xl font-medium tracking-tight text-neutral-50 md:text-3xl">
+              Activates after PMF + outcomes data.
+            </h4>
+            <p className="mt-3 max-w-2xl text-sm leading-6 text-neutral-400">
+              Distribution channels that depend on the top-3 already being in
+              place. Layer in once 2–3 pilots have produced peer-reviewed
+              outcomes.
+            </p>
+
+            <div className="mt-6 grid gap-4 md:grid-cols-3">
+              {v.tier2.map((t) => (
+                <div
+                  key={t.title}
+                  className="rounded-2xl border border-white/[0.08] bg-[#0a0a0d] p-5 transition hover:border-white/[0.18]"
+                >
+                  <h5 className="text-sm font-medium text-neutral-50">
+                    {t.title}
+                  </h5>
+                  <p className="mt-2 text-sm leading-6 text-neutral-400">
+                    {t.body}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
