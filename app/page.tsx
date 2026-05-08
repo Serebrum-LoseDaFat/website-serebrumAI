@@ -45,7 +45,7 @@ const ventures = [
   {
     href: "/ventures/fedstat",
     id: "04",
-    logoSrc: "/ventures/fedstat.svg",
+    logoSrc: "/ventures/fedstat.png",
     category: "Technology Investment Management",
     name: "FedStat",
     tagline:

@@ -18,7 +18,7 @@ export default function Page() {
   return (
     <VenturePage
       accent="cyan"
-      logoSrc="/ventures/fedstat.svg"
+      logoSrc="/ventures/fedstat.png"
       category="Technology Investment Management"
       name="FedStat"
       tagline="AI-native technology investment management for large enterprises."
