@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 600" role="img" aria-label="FedStat">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 760" role="img" aria-label="FedStat">
   <defs>
     <clipPath id="ball">
       <circle cx="300" cy="300" r="260"/>
@@ -47,11 +47,12 @@
     </g>
   </g>
 
-  <!-- wordmark: positioned to the right of the mark, vertically centered -->
-  <text x="650" y="370"
+  <!-- wordmark -->
+  <text x="300" y="720"
+        text-anchor="middle"
         font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
         font-weight="900"
-        font-size="180"
-        letter-spacing="8"
-        fill="#F5F5F5">FEDSTAT</text>
+        font-size="120"
+        letter-spacing="6"
+        fill="#1A3668">FEDSTAT</text>
 </svg>
