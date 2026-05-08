@@ -19,9 +19,9 @@ export default function Page() {
     <VenturePage
       accent="cyan"
       logoSrc="/ventures/fedstat.png"
-      category="Technology Investment Management"
+      category="Technology Business Management"
       name="FedStat"
-      tagline="AI-native technology investment management for large enterprises."
+      tagline="Technology Business Management."
       summary="FedStat is a software suite for managing how large organizations invest in technology — budgeting, portfolio management, app rationalization, technology business management (TBM), capex decisions, and goal tracking. It replaces the fragmented spreadsheet-and-committee model with a continuous AI-native decision system."
       problem="Most large organizations manage technology investments in spreadsheets, quarterly reviews, and committee meetings. Information is fragmented across procurement, finance, IT operations, and HR. Application portfolios bloat over time. Spend allocation drifts from strategy. Goal tracking happens after the fact. The result: tens or hundreds of millions in misallocated technology spend per year, with no clear, real-time view of return on technology investment."
       solution="FedStat unifies budgeting, portfolio management, app rationalization, capex decisioning, and goal tracking into a single AI-native system. Live data from procurement, IT operations, and finance feeds a continuous decision layer. The system surfaces rationalization candidates, flags drift from strategy, and produces always-current views of return on technology investment — not quarterly reports."

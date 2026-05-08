@@ -46,10 +46,9 @@ const ventures = [
     href: "/ventures/fedstat",
     id: "04",
     logoSrc: "/ventures/fedstat.png",
-    category: "Technology Investment Management",
+    category: "Technology Business Management",
     name: "FedStat",
-    tagline:
-      "AI-native technology investment management for large enterprises.",
+    tagline: "Technology Business Management.",
     buyer: "CIOs · CFOs · IT financial leadership",
     impact: "10–25% IT spend optimization",
     accent: "from-amber-400/40 to-amber-400/0",
