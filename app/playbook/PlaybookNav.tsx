@@ -3,12 +3,13 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const sections = [
+const sections: { href: string; label: string; external?: boolean }[] = [
   { href: "/playbook", label: "Overview" },
   { href: "/playbook/blueprint", label: "Blueprint" },
   { href: "/playbook/gtm", label: "GTM" },
   { href: "/playbook/fundraising", label: "Fundraising" },
   { href: "/playbook/content-marketing", label: "Content marketing" },
+  { href: "/playbook/b2b-leadgen.html", label: "B2B LeadGen", external: true },
 ];
 
 export default function PlaybookNav() {
@@ -34,16 +35,26 @@ export default function PlaybookNav() {
                 s.href === "/playbook"
                   ? pathname === "/playbook"
                   : pathname === s.href || pathname.startsWith(s.href + "/");
+              const className = `whitespace-nowrap rounded-full px-3 py-1.5 text-xs transition ${
+                isActive
+                  ? "bg-white/[0.08] text-neutral-50"
+                  : "text-neutral-400 hover:bg-white/[0.04] hover:text-neutral-100"
+              }`;
+              // External (static HTML) entries use a regular anchor so we leave
+              // the Next.js app rather than 404 on a non-route.
+              if (s.external) {
+                return (
+                  <a key={s.href} href={s.href} className={className}>
+                    {s.label}
+                  </a>
+                );
+              }
               return (
                 <Link
                   key={s.href}
                   href={s.href}
                   aria-current={isActive ? "page" : undefined}
-                  className={`whitespace-nowrap rounded-full px-3 py-1.5 text-xs transition ${
-                    isActive
-                      ? "bg-white/[0.08] text-neutral-50"
-                      : "text-neutral-400 hover:bg-white/[0.04] hover:text-neutral-100"
-                  }`}
+                  className={className}
                 >
                   {s.label}
                 </Link>

@@ -1,0 +1,2418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B2B Lead Generation SOP — Apollo, Sales Navigator & Claude</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500;600&family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1814;
+    --ink-soft: #4a463f;
+    --ink-mute: #8a8478;
+    --paper: #f7f4ed;
+    --paper-warm: #efeadd;
+    --rule: #d8d2c2;
+    --accent: #c2410c;
+    --accent-soft: #fef2e8;
+    --green: #4d7c3a;
+    --green-soft: #eef4e6;
+    --blue: #1e4d7a;
+    --blue-soft: #e6eff5;
+    --shadow: 0 1px 0 rgba(26,24,20,0.04), 0 4px 16px rgba(26,24,20,0.06);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+
+  body {
+    font-family: 'Inter Tight', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.6;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Layout */
+  .layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    min-height: 100vh;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 32px 28px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    border-right: 1px solid #2a2620;
+  }
+
+  .sidebar-brand {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 4px;
+  }
+
+  .sidebar-brand em {
+    font-style: italic;
+    color: #d4a574;
+  }
+
+  .sidebar-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #8a8478;
+    margin-bottom: 36px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #2a2620;
+  }
+
+  .nav-section {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: #6a655c;
+    margin: 28px 0 10px;
+  }
+
+  .nav-section:first-of-type { margin-top: 0; }
+
+  .nav-link {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    padding: 7px 0;
+    color: #c8c2b3;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.15s;
+    line-height: 1.4;
+  }
+
+  .nav-link:hover { color: var(--paper); }
+  .nav-link.active { color: #d4a574; }
+
+  .nav-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #6a655c;
+    min-width: 22px;
+  }
+
+  /* Main */
+  .main {
+    padding: 64px 80px 120px;
+    max-width: 980px;
+  }
+
+  /* Hero */
+  .hero {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 48px;
+    margin-bottom: 64px;
+  }
+
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--accent);
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 1.04;
+    letter-spacing: -0.025em;
+    margin-bottom: 24px;
+    color: var(--ink);
+  }
+
+  h1 em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--accent);
+  }
+
+  .hero-lede {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    max-width: 680px;
+    margin-bottom: 32px;
+  }
+
+  .meta-row {
+    display: flex;
+    gap: 32px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-mute);
+  }
+
+  .meta-row span strong {
+    color: var(--ink);
+    font-weight: 600;
+    margin-left: 6px;
+  }
+
+  /* Sections */
+  section {
+    margin-bottom: 80px;
+    scroll-margin-top: 24px;
+  }
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--ink);
+  }
+
+  .section-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+  }
+
+  h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  .section-sub {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: 17px;
+    color: var(--ink-soft);
+    margin-top: -12px;
+    margin-bottom: 32px;
+    max-width: 720px;
+    font-style: italic;
+  }
+
+  h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin: 36px 0 14px;
+    color: var(--ink);
+  }
+
+  h4 {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink);
+    margin: 24px 0 10px;
+  }
+
+  p { margin-bottom: 14px; color: var(--ink-soft); }
+  p strong { color: var(--ink); font-weight: 600; }
+
+  /* Step blocks */
+  .step {
+    background: #fffdf7;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    padding: 28px 32px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+    position: relative;
+  }
+
+  .step-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 16px;
+  }
+
+  .step-marker {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 4px 8px;
+    letter-spacing: 0.06em;
+    flex-shrink: 0;
+    border-radius: 2px;
+    margin-top: 2px;
+  }
+
+  .step-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 1.3;
+    color: var(--ink);
+  }
+
+  .step-body p:last-child { margin-bottom: 0; }
+
+  /* Tool chips inline */
+  .tools-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 14px 0 18px;
+  }
+
+  .chip {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 4px 10px;
+    border-radius: 2px;
+    font-weight: 500;
+  }
+
+  .chip.apollo { background: var(--accent-soft); color: var(--accent); border: 1px solid #f4ccaa; }
+  .chip.salesnav { background: var(--blue-soft); color: var(--blue); border: 1px solid #b9d0e0; }
+  .chip.claude { background: var(--green-soft); color: var(--green); border: 1px solid #bcd1a8; }
+  .chip.crm { background: #f0eadc; color: #5a4a2a; border: 1px solid #d8c8a0; }
+
+  /* Bullet lists */
+  ul.checklist {
+    list-style: none;
+    margin: 12px 0 18px;
+    padding-left: 0;
+  }
+
+  ul.checklist li {
+    position: relative;
+    padding-left: 26px;
+    margin-bottom: 10px;
+    color: var(--ink-soft);
+  }
+
+  ul.checklist li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 14px;
+    height: 14px;
+    border: 1.5px solid var(--ink);
+    border-radius: 2px;
+  }
+
+  ul.bullets {
+    list-style: none;
+    margin: 12px 0 18px;
+    padding-left: 0;
+  }
+
+  ul.bullets li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 8px;
+    color: var(--ink-soft);
+  }
+
+  ul.bullets li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  ul.bullets li strong { color: var(--ink); }
+
+  /* Pull-out callouts */
+  .pullout {
+    border-left: 3px solid var(--accent);
+    background: var(--accent-soft);
+    padding: 18px 24px;
+    margin: 24px 0;
+    border-radius: 0 2px 2px 0;
+  }
+
+  .pullout-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .pullout p { color: var(--ink); margin-bottom: 0; }
+
+  /* Code-like blocks for filter strings */
+  .filter-box {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12.5px;
+    background: var(--ink);
+    color: #e8ddc4;
+    padding: 16px 20px;
+    border-radius: 2px;
+    margin: 14px 0;
+    line-height: 1.7;
+    overflow-x: auto;
+  }
+
+  .filter-box .label {
+    color: #8a8478;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 10px;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .filter-box .value { color: #d4a574; }
+  .filter-box .op { color: #6a9c5c; }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 14px;
+  }
+
+  table th {
+    text-align: left;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-mute);
+    font-weight: 600;
+    padding: 10px 14px 10px 0;
+    border-bottom: 1.5px solid var(--ink);
+  }
+
+  table td {
+    padding: 14px 14px 14px 0;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+    color: var(--ink-soft);
+  }
+
+  table td:first-child { color: var(--ink); font-weight: 500; }
+
+  /* Tier grid */
+  .tier-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin: 24px 0;
+  }
+
+  .tier-card {
+    background: #fffdf7;
+    border: 1px solid var(--rule);
+    padding: 22px;
+    border-radius: 2px;
+  }
+
+  .tier-card.t1 { border-top: 3px solid var(--accent); }
+  .tier-card.t2 { border-top: 3px solid var(--blue); }
+  .tier-card.t3 { border-top: 3px solid var(--ink-mute); }
+
+  .tier-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-mute);
+    margin-bottom: 4px;
+  }
+
+  .tier-name {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .tier-card ul {
+    list-style: none;
+    padding: 0;
+    font-size: 13px;
+  }
+
+  .tier-card li {
+    padding: 6px 0;
+    border-bottom: 1px dashed var(--rule);
+    color: var(--ink-soft);
+  }
+
+  .tier-card li:last-child { border-bottom: none; }
+  .tier-card li strong { display: block; color: var(--ink); font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 2px; }
+
+  /* Tool capability matrix */
+  .matrix {
+    margin: 24px 0;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .matrix-row {
+    display: grid;
+    grid-template-columns: 220px 1fr 1fr 1fr;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .matrix-row:last-child { border-bottom: none; }
+
+  .matrix-row.header {
+    background: var(--ink);
+    color: var(--paper);
+  }
+
+  .matrix-cell {
+    padding: 14px 18px;
+    border-right: 1px solid var(--rule);
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+
+  .matrix-row.header .matrix-cell {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--paper);
+    border-right: 1px solid #3a352c;
+  }
+
+  .matrix-cell:last-child { border-right: none; }
+  .matrix-cell.task { color: var(--ink); font-weight: 500; }
+
+  .mark {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .mark.yes { color: var(--green); }
+  .mark.no { color: #b94545; }
+  .mark.partial { color: #b8860b; }
+
+  /* Process Flow Diagram */
+  .flow-wrap {
+    margin: 40px 0 56px;
+    padding: 32px 28px;
+    background: #fffdf7;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+    transition: padding 0.25s ease;
+  }
+
+  /* Expanded fullscreen mode */
+  .flow-wrap.expanded {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 28px 40px 32px;
+    z-index: 1000;
+    border-radius: 0;
+    border: none;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flow-wrap.expanded .flow-svg-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
+  }
+
+  .flow-wrap.expanded .flow-svg {
+    max-height: calc(100vh - 280px);
+    width: 100%;
+  }
+
+  body.flow-locked { overflow: hidden; }
+
+  /* Expand button */
+  .flow-expand-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--ink);
+    color: var(--paper);
+    border: none;
+    padding: 8px 14px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background 0.15s;
+  }
+
+  .flow-expand-btn:hover { background: var(--accent); }
+
+  .flow-expand-btn svg {
+    width: 12px;
+    height: 12px;
+    fill: currentColor;
+  }
+
+  .flow-wrap.expanded .flow-expand-btn .icon-expand { display: none; }
+  .flow-wrap:not(.expanded) .flow-expand-btn .icon-collapse { display: none; }
+  .flow-wrap:not(.expanded) .flow-expand-btn .label-collapse { display: none; }
+  .flow-wrap.expanded .flow-expand-btn .label-expand { display: none; }
+
+  .flow-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--rule);
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .flow-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: -0.01em;
+  }
+
+  .flow-title em {
+    font-style: italic;
+    color: var(--accent);
+    font-weight: 400;
+  }
+
+  .flow-legend {
+    display: flex;
+    gap: 18px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-mute);
+    flex-wrap: wrap;
+  }
+
+  .flow-legend span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .flow-legend i {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .leg-apollo { background: #F1CA20; }
+  .leg-sn { background: var(--blue); }
+  .leg-claude { background: #c2410c; }
+  .leg-crm { background: #8a5a2a; }
+
+  .flow-hint {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-mute);
+    margin-top: 12px;
+    text-align: right;
+  }
+
+  .flow-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: visible;
+  }
+
+  /* Flow nodes */
+  .flow-node {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+
+  .flow-node:hover { transform: translateY(-2px); }
+  .flow-node:hover .node-bg { filter: brightness(1.05); }
+  .flow-node:hover .node-glow { opacity: 1; }
+
+  .node-bg {
+    transition: filter 0.2s;
+  }
+
+  .node-glow {
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .node-title {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    fill: #fffdf7;
+    pointer-events: none;
+  }
+
+  .node-title-dark {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    fill: #1a1814;
+    pointer-events: none;
+  }
+
+  .node-sub {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    fill: rgba(255,253,247,0.75);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    pointer-events: none;
+  }
+
+  .node-sub-dark {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    fill: rgba(26,24,20,0.65);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    pointer-events: none;
+  }
+
+  .lane-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    fill: var(--ink-mute);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    pointer-events: none;
+  }
+
+  .lane-bg {
+    fill: var(--paper-warm);
+    opacity: 0.4;
+  }
+
+  .stage-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    fill: var(--ink);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 600;
+    pointer-events: none;
+  }
+
+  .stage-num {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 14px;
+    fill: var(--accent);
+    pointer-events: none;
+  }
+
+  .flow-arrow {
+    stroke: var(--ink-soft);
+    stroke-width: 1.5;
+    fill: none;
+    marker-end: url(#arrowhead);
+    opacity: 0.5;
+  }
+
+  .flow-arrow.thick {
+    stroke: var(--ink);
+    stroke-width: 2;
+    opacity: 0.7;
+  }
+
+  .flow-divider {
+    stroke: var(--rule);
+    stroke-width: 1;
+    stroke-dasharray: 3 4;
+  }
+
+  /* Detail panel */
+  .flow-detail {
+    margin-top: 20px;
+    padding: 18px 22px;
+    background: var(--paper-warm);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 2px 2px 0;
+    min-height: 72px;
+    transition: opacity 0.2s;
+  }
+
+  .flow-detail-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+
+  .flow-detail-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 17px;
+    margin-bottom: 6px;
+    color: var(--ink);
+  }
+
+  .flow-detail-body {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+
+  .flow-detail-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 1px;
+  }
+
+  .flow-detail-link:hover { color: var(--ink); border-color: var(--ink); }
+
+  /* Sequence cadence visualization */
+  .cadence {
+    margin: 24px 0;
+    border: 1px solid var(--rule);
+    background: #fffdf7;
+    padding: 28px;
+    border-radius: 2px;
+  }
+
+  .cadence-grid {
+    display: grid;
+    grid-template-columns: 70px repeat(7, 1fr);
+    gap: 4px;
+    font-size: 11px;
+  }
+
+  .cad-day {
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--ink-mute);
+    padding: 6px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .cad-channel {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink);
+    padding: 10px 0;
+    font-weight: 600;
+  }
+
+  .cad-cell {
+    padding: 8px 4px;
+    text-align: center;
+    border: 1px solid var(--rule);
+    font-size: 10px;
+    border-radius: 2px;
+    background: #fdfbf4;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cad-cell.active { background: var(--ink); color: var(--paper); border-color: var(--ink); font-weight: 600; }
+  .cad-cell.soft { background: var(--accent-soft); color: var(--accent); border-color: #f4ccaa; font-weight: 600; }
+
+  /* Metrics dashboard */
+  .metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin: 24px 0;
+  }
+
+  .metric {
+    background: #fffdf7;
+    border: 1px solid var(--rule);
+    padding: 20px;
+    border-radius: 2px;
+  }
+
+  .metric-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-mute);
+    margin-bottom: 8px;
+  }
+
+  .metric-value {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 26px;
+    color: var(--ink);
+    line-height: 1.1;
+  }
+
+  .metric-value em { font-style: italic; color: var(--accent); font-weight: 400; }
+
+  .metric-note {
+    font-size: 11px;
+    color: var(--ink-mute);
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* Two column */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin: 20px 0;
+  }
+
+  .col-box {
+    background: #fffdf7;
+    border: 1px solid var(--rule);
+    padding: 22px;
+    border-radius: 2px;
+  }
+
+  .col-box h4 { margin-top: 0; }
+
+  /* Anti-pattern callout */
+  .warning {
+    border-left: 3px solid #b94545;
+    background: #fbecec;
+    padding: 18px 24px;
+    margin: 24px 0;
+    border-radius: 0 2px 2px 0;
+  }
+
+  .warning-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #8c2e2e;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .warning p { color: var(--ink); margin: 0; }
+
+  /* Footer */
+  .footer {
+    margin-top: 80px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-mute);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* Responsive */
+  @media (max-width: 1100px) {
+    .layout { grid-template-columns: 1fr; }
+    .sidebar { position: relative; height: auto; }
+    .main { padding: 40px 32px 80px; }
+    h1 { font-size: 40px; }
+    .tier-grid { grid-template-columns: 1fr; }
+    .metrics { grid-template-columns: repeat(2, 1fr); }
+    .matrix-row { grid-template-columns: 1fr; }
+    .matrix-cell { border-right: none; border-bottom: 1px solid var(--rule); }
+    .cadence-grid { font-size: 9px; }
+  }
+
+  /* Print */
+  @media print {
+    .sidebar { display: none; }
+    .layout { grid-template-columns: 1fr; }
+    .main { padding: 0; max-width: none; }
+    body { background: white; }
+  }
+
+  /* Scroll spy active state will be set via JS */
+</style>
+</head>
+<body>
+<div class="layout">
+
+  <aside class="sidebar">
+    <a href="/playbook" style="display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:0.14em;color:#8a8478;text-decoration:none;margin-bottom:24px;transition:color .15s">
+      <span style="font-size:14px;line-height:1">←</span>
+      <span>SerebrumAI · Playbook</span>
+    </a>
+    <div class="sidebar-brand">B2B Lead Gen<br><em>Playbook</em></div>
+    <div class="sidebar-tag">SOP / v1.0 / Enterprise SaaS</div>
+
+    <div class="nav-section">Foundation</div>
+    <a class="nav-link" href="#process-map"><span class="nav-num">→</span>Process Map</a>
+    <a class="nav-link" href="#overview"><span class="nav-num">00</span>Overview &amp; Principles</a>
+    <a class="nav-link" href="#tools"><span class="nav-num">01</span>Tool Roles</a>
+
+    <div class="nav-section">Build</div>
+    <a class="nav-link" href="#icp"><span class="nav-num">02</span>Define the ICP</a>
+    <a class="nav-link" href="#accounts"><span class="nav-num">03</span>Build the Account List</a>
+    <a class="nav-link" href="#tiering"><span class="nav-num">04</span>Tier Accounts</a>
+    <a class="nav-link" href="#contacts"><span class="nav-num">05</span>Map Buying Committees</a>
+    <a class="nav-link" href="#enrichment"><span class="nav-num">06</span>Enrich &amp; Verify</a>
+
+    <div class="nav-section">Engage</div>
+    <a class="nav-link" href="#messaging"><span class="nav-num">07</span>Messaging &amp; Sequences</a>
+    <a class="nav-link" href="#cadence"><span class="nav-num">08</span>Cadence &amp; Multi-thread</a>
+    <a class="nav-link" href="#inmail-teamlink"><span class="nav-num">09</span>InMail &amp; TeamLink</a>
+    <a class="nav-link" href="#handoff"><span class="nav-num">10</span>Reply Handling &amp; SDR→AE</a>
+
+    <div class="nav-section">Operate</div>
+    <a class="nav-link" href="#metrics"><span class="nav-num">11</span>Metrics &amp; Review</a>
+    <a class="nav-link" href="#weekly"><span class="nav-num">12</span>Weekly Operating Rhythm</a>
+    <a class="nav-link" href="#antipatterns"><span class="nav-num">13</span>Anti-patterns</a>
+  </aside>
+
+  <main class="main">
+
+    <header class="hero">
+      <div class="eyebrow">Standard Operating Procedure</div>
+      <h1>The B2B Lead<br>Generation <em>Playbook</em></h1>
+      <p class="hero-lede">A repeatable system for enterprise SaaS prospecting — combining Apollo's contact database, LinkedIn Sales Navigator's signal layer, and Claude's strategy and messaging work into one workflow your team can actually run.</p>
+      <div class="meta-row">
+        <span>Designed for<strong>$100K+ ACV SaaS</strong></span>
+        <span>Owners<strong>SDR / RevOps</strong></span>
+        <span>Cadence<strong>Weekly</strong></span>
+      </div>
+    </header>
+
+    <!-- PROCESS MAP -->
+    <section id="process-map" style="margin-bottom: 60px;">
+      <div class="flow-wrap" id="flow-wrap">
+        <div class="flow-header">
+          <div class="flow-title">The <em>full process</em>, at a glance</div>
+          <div style="display:flex; align-items:center; gap:20px; flex-wrap:wrap;">
+            <div class="flow-legend">
+              <span><i class="leg-claude"></i> Claude</span>
+              <span><i class="leg-apollo"></i> Apollo</span>
+              <span><i class="leg-sn"></i> Sales Nav</span>
+              <span><i class="leg-crm"></i> CRM</span>
+            </div>
+            <button class="flow-expand-btn" id="flow-expand-btn" type="button" aria-label="Toggle fullscreen diagram">
+              <svg class="icon-expand" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M2 2h5v2H4v3H2V2zm12 0v5h-2V4H9V2h5zM2 14V9h2v3h3v2H2zm12 0H9v-2h3V9h2v5z"/>
+              </svg>
+              <svg class="icon-collapse" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M7 2v5H2V5h3V2h2zm7 0v3h-3v2H9V2h5zM2 9h5v5H5v-3H2V9zm12 0v2h-3v3H9V9h5z"/>
+              </svg>
+              <span class="label-expand">Expand</span>
+              <span class="label-collapse">Close</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="flow-svg-container">
+        <svg class="flow-svg" viewBox="0 0 1100 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="B2B lead generation process map">
+          <defs>
+            <marker id="arrowhead" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="strokeWidth">
+              <path d="M0,0 L0,8 L10,4 z" fill="#4a463f" opacity="0.7"/>
+            </marker>
+            <filter id="node-shadow" x="-20%" y="-20%" width="140%" height="140%">
+              <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1a1814" flood-opacity="0.18"/>
+            </filter>
+          </defs>
+
+          <!-- Stage column headers (top) -->
+          <g>
+            <text x="110" y="32" class="stage-num">i.</text>
+            <text x="130" y="32" class="stage-label">Foundation</text>
+            <text x="295" y="32" class="stage-num">ii.</text>
+            <text x="320" y="32" class="stage-label">Build</text>
+            <text x="555" y="32" class="stage-num">iii.</text>
+            <text x="582" y="32" class="stage-label">Enrich</text>
+            <text x="795" y="32" class="stage-num">iv.</text>
+            <text x="820" y="32" class="stage-label">Engage</text>
+            <text x="985" y="32" class="stage-num">v.</text>
+            <text x="1005" y="32" class="stage-label">Convert</text>
+          </g>
+
+          <!-- Vertical stage dividers -->
+          <line x1="265" y1="50" x2="265" y2="560" class="flow-divider"/>
+          <line x1="525" y1="50" x2="525" y2="560" class="flow-divider"/>
+          <line x1="765" y1="50" x2="765" y2="560" class="flow-divider"/>
+          <line x1="965" y1="50" x2="965" y2="560" class="flow-divider"/>
+
+          <!-- Lane backgrounds -->
+          <rect x="90" y="80" width="990" height="130" class="lane-bg" rx="2"/>
+          <rect x="90" y="240" width="990" height="130" class="lane-bg" rx="2"/>
+          <rect x="90" y="400" width="990" height="130" class="lane-bg" rx="2"/>
+
+          <!-- Lane labels (left) -->
+          <text x="20" y="150" class="lane-label">Claude</text>
+          <text x="20" y="310" class="lane-label">Apollo</text>
+          <text x="20" y="470" class="lane-label">Sales Nav</text>
+
+          <!-- Lane indicator dots -->
+          <circle cx="70" cy="146" r="4" fill="#4d7c3a"/>
+          <circle cx="70" cy="306" r="4" fill="#c2410c"/>
+          <circle cx="70" cy="466" r="4" fill="#1e4d7a"/>
+
+          <!-- ==================== STAGE i. FOUNDATION ==================== -->
+
+          <!-- Node: ICP (Claude lane) -->
+          <g class="flow-node" data-id="icp">
+            <rect class="node-glow" x="100" y="116" width="155" height="60" rx="4" fill="#c2410c" opacity="0.25"/>
+            <rect class="node-bg" x="105" y="121" width="145" height="50" rx="3" fill="#c2410c" filter="url(#node-shadow)"/>
+            <text x="177" y="143" class="node-title" text-anchor="middle">Define ICP</text>
+            <text x="177" y="160" class="node-sub" text-anchor="middle">§ 02</text>
+          </g>
+
+          <!-- ==================== STAGE ii. BUILD ==================== -->
+
+          <!-- Node: Filter strings (Claude) -->
+          <g class="flow-node" data-id="filters">
+            <rect class="node-glow" x="275" y="116" width="155" height="60" rx="4" fill="#c2410c" opacity="0.25"/>
+            <rect class="node-bg" x="280" y="121" width="145" height="50" rx="3" fill="#c2410c" filter="url(#node-shadow)"/>
+            <text x="352" y="143" class="node-title" text-anchor="middle">Write filter strings</text>
+            <text x="352" y="160" class="node-sub" text-anchor="middle">§ 03</text>
+          </g>
+
+          <!-- Node: Account search (Apollo) -->
+          <g class="flow-node" data-id="apollo-accounts">
+            <rect class="node-glow" x="275" y="276" width="115" height="60" rx="4" fill="#F1CA20" opacity="0.35"/>
+            <rect class="node-bg" x="280" y="281" width="105" height="50" rx="3" fill="#F1CA20" filter="url(#node-shadow)"/>
+            <text x="332" y="303" class="node-title-dark" text-anchor="middle">Account list</text>
+            <text x="332" y="320" class="node-sub-dark" text-anchor="middle">§ 03</text>
+          </g>
+
+          <!-- Node: Signal layer (Sales Nav) -->
+          <g class="flow-node" data-id="sn-signals">
+            <rect class="node-glow" x="275" y="436" width="115" height="60" rx="4" fill="#1e4d7a" opacity="0.25"/>
+            <rect class="node-bg" x="280" y="441" width="105" height="50" rx="3" fill="#1e4d7a" filter="url(#node-shadow)"/>
+            <text x="332" y="463" class="node-title" text-anchor="middle">Signals + IQ</text>
+            <text x="332" y="480" class="node-sub" text-anchor="middle">§ 03</text>
+          </g>
+
+          <!-- Node: Tier accounts (Claude) -->
+          <g class="flow-node" data-id="tier">
+            <rect class="node-glow" x="408" y="276" width="115" height="60" rx="4" fill="#c2410c" opacity="0.25"/>
+            <rect class="node-bg" x="413" y="281" width="105" height="50" rx="3" fill="#c2410c" filter="url(#node-shadow)"/>
+            <text x="465" y="303" class="node-title" text-anchor="middle">Tier accounts</text>
+            <text x="465" y="320" class="node-sub" text-anchor="middle">§ 04</text>
+          </g>
+
+          <!-- ==================== STAGE iii. ENRICH ==================== -->
+
+          <!-- Node: Committee map (Apollo) -->
+          <g class="flow-node" data-id="committee">
+            <rect class="node-glow" x="535" y="276" width="135" height="60" rx="4" fill="#F1CA20" opacity="0.35"/>
+            <rect class="node-bg" x="540" y="281" width="125" height="50" rx="3" fill="#F1CA20" filter="url(#node-shadow)"/>
+            <text x="602" y="303" class="node-title-dark" text-anchor="middle">Committee map</text>
+            <text x="602" y="320" class="node-sub-dark" text-anchor="middle">§ 05</text>
+          </g>
+
+          <!-- Node: Tier-1 verify (Sales Nav) -->
+          <g class="flow-node" data-id="sn-verify">
+            <rect class="node-glow" x="535" y="436" width="135" height="60" rx="4" fill="#1e4d7a" opacity="0.25"/>
+            <rect class="node-bg" x="540" y="441" width="125" height="50" rx="3" fill="#1e4d7a" filter="url(#node-shadow)"/>
+            <text x="602" y="463" class="node-title" text-anchor="middle">Verify tier-1</text>
+            <text x="602" y="480" class="node-sub" text-anchor="middle">§ 05</text>
+          </g>
+
+          <!-- Node: Personalization research (Claude) -->
+          <g class="flow-node" data-id="personalize">
+            <rect class="node-glow" x="685" y="116" width="155" height="60" rx="4" fill="#c2410c" opacity="0.25"/>
+            <rect class="node-bg" x="690" y="121" width="145" height="50" rx="3" fill="#c2410c" filter="url(#node-shadow)"/>
+            <text x="762" y="143" class="node-title" text-anchor="middle">Personalize hooks</text>
+            <text x="762" y="160" class="node-sub" text-anchor="middle">§ 06</text>
+          </g>
+
+          <!-- Node: Verify + sync (Apollo) -->
+          <g class="flow-node" data-id="verify-sync">
+            <rect class="node-glow" x="685" y="276" width="155" height="60" rx="4" fill="#F1CA20" opacity="0.35"/>
+            <rect class="node-bg" x="690" y="281" width="145" height="50" rx="3" fill="#F1CA20" filter="url(#node-shadow)"/>
+            <text x="762" y="303" class="node-title-dark" text-anchor="middle">Verify + CRM sync</text>
+            <text x="762" y="320" class="node-sub-dark" text-anchor="middle">§ 06</text>
+          </g>
+
+          <!-- ==================== STAGE iv. ENGAGE ==================== -->
+
+          <!-- Node: Write sequences (Claude) -->
+          <g class="flow-node" data-id="messaging">
+            <rect class="node-glow" x="855" y="116" width="105" height="60" rx="4" fill="#c2410c" opacity="0.25"/>
+            <rect class="node-bg" x="860" y="121" width="95" height="50" rx="3" fill="#c2410c" filter="url(#node-shadow)"/>
+            <text x="907" y="143" class="node-title" text-anchor="middle">Sequences</text>
+            <text x="907" y="160" class="node-sub" text-anchor="middle">§ 07</text>
+          </g>
+
+          <!-- Node: Run cadence (Apollo) -->
+          <g class="flow-node" data-id="cadence">
+            <rect class="node-glow" x="855" y="276" width="105" height="60" rx="4" fill="#F1CA20" opacity="0.35"/>
+            <rect class="node-bg" x="860" y="281" width="95" height="50" rx="3" fill="#F1CA20" filter="url(#node-shadow)"/>
+            <text x="907" y="303" class="node-title-dark" text-anchor="middle">Run cadence</text>
+            <text x="907" y="320" class="node-sub-dark" text-anchor="middle">§ 08</text>
+          </g>
+
+          <!-- Node: InMail / TeamLink (Sales Nav) -->
+          <g class="flow-node" data-id="inmail">
+            <rect class="node-glow" x="855" y="436" width="105" height="60" rx="4" fill="#1e4d7a" opacity="0.25"/>
+            <rect class="node-bg" x="860" y="441" width="95" height="50" rx="3" fill="#1e4d7a" filter="url(#node-shadow)"/>
+            <text x="907" y="463" class="node-title" text-anchor="middle">InMail / Intro</text>
+            <text x="907" y="480" class="node-sub" text-anchor="middle">§ 09</text>
+          </g>
+
+          <!-- ==================== STAGE v. CONVERT ==================== -->
+
+          <!-- Node: Handoff (CRM) -->
+          <g class="flow-node" data-id="handoff">
+            <rect class="node-glow" x="980" y="276" width="105" height="60" rx="4" fill="#8a5a2a" opacity="0.25"/>
+            <rect class="node-bg" x="985" y="281" width="95" height="50" rx="3" fill="#8a5a2a" filter="url(#node-shadow)"/>
+            <text x="1032" y="303" class="node-title" text-anchor="middle">SDR → AE</text>
+            <text x="1032" y="320" class="node-sub" text-anchor="middle">§ 10</text>
+          </g>
+
+          <!-- ==================== ARROWS ==================== -->
+
+          <!-- ICP → Filter strings (within Claude lane) -->
+          <path d="M 250 146 L 280 146" class="flow-arrow thick"/>
+
+          <!-- Filter strings → Apollo accounts (down) -->
+          <path d="M 352 175 Q 352 220 332 270" class="flow-arrow"/>
+          <!-- Filter strings → Sales Nav signals (down) -->
+          <path d="M 352 175 Q 352 380 332 430" class="flow-arrow"/>
+
+          <!-- Apollo accounts → Tier (horizontal) -->
+          <path d="M 388 306 L 413 306" class="flow-arrow thick"/>
+          <!-- Sales Nav signals → Tier (up-right) -->
+          <path d="M 388 466 Q 430 466 430 380 Q 430 335 440 330" class="flow-arrow"/>
+
+          <!-- Tier → Committee map -->
+          <path d="M 518 306 L 540 306" class="flow-arrow thick"/>
+
+          <!-- Committee map → SN verify (tier-1 only, down) -->
+          <path d="M 602 335 Q 602 380 602 435" class="flow-arrow"/>
+          <!-- SN verify → Personalize (up to Claude lane) -->
+          <path d="M 665 466 Q 720 466 720 200 Q 720 160 690 146" class="flow-arrow"/>
+
+          <!-- Committee map → Verify + sync -->
+          <path d="M 665 306 L 690 306" class="flow-arrow thick"/>
+
+          <!-- Personalize → Sequences -->
+          <path d="M 835 146 L 860 146" class="flow-arrow thick"/>
+          <!-- Sequences → Run cadence (down) -->
+          <path d="M 907 175 L 907 275" class="flow-arrow"/>
+
+          <!-- Verify + sync → Run cadence -->
+          <path d="M 835 306 L 860 306" class="flow-arrow thick"/>
+          <!-- Run cadence → InMail (down, escalation path) -->
+          <path d="M 907 335 L 907 435" class="flow-arrow"/>
+          <!-- InMail → Run cadence loop back (up) -->
+          <path d="M 940 441 Q 960 410 940 340" class="flow-arrow" stroke-dasharray="3 3"/>
+
+          <!-- Run cadence → Handoff -->
+          <path d="M 955 306 L 985 306" class="flow-arrow thick"/>
+
+          <!-- Feedback loop: Handoff → Sequences (reply analysis) -->
+          <path d="M 1032 281 Q 1032 100 1032 80 L 907 80 L 907 119" class="flow-arrow" stroke-dasharray="4 4"/>
+          <text x="970" y="73" class="node-sub" fill="#8a8478" text-anchor="middle">weekly review feedback</text>
+
+        </svg>
+        </div>
+
+        <div class="flow-detail" id="flow-detail">
+          <div class="flow-detail-label">Tap any node</div>
+          <div class="flow-detail-title">Read the full process map</div>
+          <div class="flow-detail-body">Each node maps to a section in the SOP. Click a node to preview what happens there and jump to the detailed steps. Horizontal flow goes left-to-right through five stages; dashed line is the weekly feedback loop from reply analysis back into messaging.</div>
+        </div>
+
+        <div class="flow-hint">↳ Click any node to jump to its section</div>
+      </div>
+    </section>
+
+    <!-- 00 OVERVIEW -->
+    <section id="overview">
+      <div class="section-head">
+        <span class="section-num">§ 00</span>
+        <h2>Overview &amp; Operating Principles</h2>
+      </div>
+      <p class="section-sub">What this document is, what it isn't, and the five principles that hold the system together.</p>
+
+      <p>This SOP turns three tools into one pipeline-generating machine. Each tool has a job. The mistake most teams make is treating them as interchangeable — using Apollo for everything, or trying to run sequences out of Sales Navigator, or asking an LLM to act like a database. This playbook keeps them in their lanes.</p>
+
+      <h3>The five operating principles</h3>
+      <ul class="bullets">
+        <li><strong>Precision over volume.</strong> At enterprise ACV, 300 well-researched accounts beat 5,000 sprayed ones. Every step optimizes for fit and depth, not list size.</li>
+        <li><strong>Accounts before contacts.</strong> Lock the target account universe first. "Finding contacts" is only hard when the account list is wrong.</li>
+        <li><strong>Multi-thread by default.</strong> Enterprise deals are 6–10 person decisions. Never run a single-threaded sequence at a tier-1 account.</li>
+        <li><strong>Signal beats persistence.</strong> A timely message tied to a trigger event out-converts a perfect cold pitch by 3–5x. Build the signal layer.</li>
+        <li><strong>Measure replies, not opens.</strong> Open rates are a noise floor. Track positive reply rate and meetings booked per 100 contacted.</li>
+      </ul>
+
+      <div class="pullout">
+        <div class="pullout-label">Read this first</div>
+        <p>If you can only fix one thing about your current process, fix tiering. Sections 03 and 04 will save you more time than the rest of the document combined.</p>
+      </div>
+    </section>
+
+    <!-- 01 TOOLS -->
+    <section id="tools">
+      <div class="section-head">
+        <span class="section-num">§ 01</span>
+        <h2>Tool Roles &amp; Capability Matrix</h2>
+      </div>
+      <p class="section-sub">Each tool has one job. Stop asking the wrong tool to do the wrong thing.</p>
+
+      <div class="two-col">
+        <div class="col-box">
+          <h4><span class="chip apollo">Apollo</span></h4>
+          <p style="margin-top:10px;"><strong>Job:</strong> Contact database + sequencing engine.</p>
+          <p>Source verified emails and phones at scale, enrich accounts with firmographics and technographics, run multi-step sequences, sync to CRM. Your workhorse for volume.</p>
+        </div>
+        <div class="col-box">
+          <h4><span class="chip salesnav">Sales Navigator</span></h4>
+          <p style="margin-top:10px;"><strong>Job:</strong> Signal layer + warm path.</p>
+          <p>Find buying signals (job changes, posts, hires), see who's active, surface TeamLink intros, and confirm a real human is on the other end. Your precision instrument for tier-1.</p>
+        </div>
+      </div>
+
+      <div class="col-box" style="margin-top:16px;">
+        <h4><span class="chip claude">Claude</span></h4>
+        <p style="margin-top:10px;"><strong>Job:</strong> Strategy, research synthesis, and messaging craft.</p>
+        <p>Build ICP and persona docs, write Apollo filter strings and Sales Nav boolean searches, rank exported lists for fit, synthesize personalization hooks from public data, draft persona-specific sequences, analyze reply patterns. Cannot pull live contact records — that's Apollo's job.</p>
+      </div>
+
+      <h3>What each tool can and cannot do</h3>
+      <div class="matrix">
+        <div class="matrix-row header">
+          <div class="matrix-cell">Task</div>
+          <div class="matrix-cell">Apollo</div>
+          <div class="matrix-cell">Sales Nav</div>
+          <div class="matrix-cell">Claude</div>
+        </div>
+        <div class="matrix-row">
+          <div class="matrix-cell task">Pull verified email addresses</div>
+          <div class="matrix-cell"><span class="mark yes">●</span> Primary</div>
+          <div class="matrix-cell"><span class="mark no">○</span> No</div>
+          <div class="matrix-cell"><span class="mark no">○</span> No</div>
+        </div>
+        <div class="matrix-row">
+          <div class="matrix-cell task">Identify real-time buying signals</div>
+          <div class="matrix-cell"><span class="mark partial">◐</span> Limited intent data</div>
+          <div class="matrix-cell"><span class="mark yes">●</span> Primary</div>
+          <div class="matrix-cell"><span class="mark no">○</span> No</div>
+        </div>
+        <div class="matrix-row">
+          <div class="matrix-cell task">Write filter / boolean strings</div>
+          <div class="matrix-cell"><span class="mark no">○</span> Manual UI</div>
+          <div class="matrix-cell"><span class="mark no">○</span> Manual UI</div>
+          <div class="matrix-cell"><span class="mark yes">●</span> Primary</div>
+        </div>
+        <div class="matrix-row">
+          <div class="matrix-cell task">Run automated email sequences</div>
+          <div class="matrix-cell"><span class="mark yes">●</span> Primary</div>
+          <div class="matrix-cell"><span class="mark no">○</span> No</div>
+          <div class="matrix-cell"><span class="mark no">○</span> No</div>
+        </div>
+        <div class="matrix-row">
+          <div class="matrix-cell task">Personalize tier-1 outreach</div>
+          <div class="matrix-cell"><span class="mark no">○</span> No</div>
+          <div class="matrix-cell"><span class="mark partial">◐</span> Surface input</div>
+          <div class="matrix-cell"><span class="mark yes">●</span> Primary</div>
+        </div>
+        <div class="matrix-row">
+          <div class="matrix-cell task">Score exported lists for fit</div>
+          <div class="matrix-cell"><span class="mark no">○</span> No</div>
+          <div class="matrix-cell"><span class="mark no">○</span> No</div>
+          <div class="matrix-cell"><span class="mark yes">●</span> Primary</div>
+        </div>
+        <div class="matrix-row">
+          <div class="matrix-cell task">Find warm-intro paths</div>
+          <div class="matrix-cell"><span class="mark no">○</span> No</div>
+          <div class="matrix-cell"><span class="mark yes">●</span> TeamLink</div>
+          <div class="matrix-cell"><span class="mark no">○</span> No</div>
+        </div>
+        <div class="matrix-row">
+          <div class="matrix-cell task">Map buying committee per account</div>
+          <div class="matrix-cell"><span class="mark yes">●</span> Org charts</div>
+          <div class="matrix-cell"><span class="mark yes">●</span> Account view</div>
+          <div class="matrix-cell"><span class="mark yes">●</span> Persona framework</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 ICP -->
+    <section id="icp">
+      <div class="section-head">
+        <span class="section-num">§ 02</span>
+        <h2>Define the Ideal Customer Profile</h2>
+      </div>
+      <p class="section-sub">If this document doesn't exist, stop everything else and write it. Nothing downstream works without it.</p>
+
+      <div class="step">
+        <div class="step-head">
+          <span class="step-marker">STEP 1</span>
+          <span class="step-title">Pattern-match your existing wins</span>
+        </div>
+        <div class="tools-row">
+          <span class="chip crm">CRM</span>
+          <span class="chip claude">Claude</span>
+        </div>
+        <div class="step-body">
+          <p>Pull your closed-won deals from the last 18 months. Filter to customers who renewed, expanded, or referred. Ignore one-and-done deals — they pollute the signal.</p>
+          <ul class="checklist">
+            <li>Export deal data: company name, industry, employee count, revenue, geography, contract value, sales cycle length</li>
+            <li>Note the buyer persona that championed each deal (title, department, seniority)</li>
+            <li>Note the trigger event or "why now" for each deal if known</li>
+            <li>Paste the export into Claude and ask: <em>"What patterns do you see across these wins that I should turn into ICP filters?"</em></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-head">
+          <span class="step-marker">STEP 2</span>
+          <span class="step-title">Document firmographic, technographic, and trigger criteria</span>
+        </div>
+        <div class="tools-row">
+          <span class="chip claude">Claude</span>
+        </div>
+        <div class="step-body">
+          <p>The ICP doc has three layers. Don't skip the third — most teams do, which is why their lists look fine on paper and underperform.</p>
+
+          <h4>Firmographic (who they are)</h4>
+          <ul class="bullets">
+            <li><strong>Industry:</strong> Specific NAICS or SIC codes, not broad categories</li>
+            <li><strong>Employee count:</strong> Band that maps to your deal size (e.g. 500–2,500)</li>
+            <li><strong>Revenue:</strong> Annual range</li>
+            <li><strong>Geography:</strong> Countries, regions, sometimes metros</li>
+            <li><strong>Funding stage / public status</strong></li>
+          </ul>
+
+          <h4>Technographic (what they use)</h4>
+          <ul class="bullets">
+            <li>Adjacent or complementary tools in their stack</li>
+            <li>Competitors they currently run</li>
+            <li>Infrastructure choices that imply readiness (cloud, modern data stack, etc.)</li>
+          </ul>
+
+          <h4>Trigger events (why now)</h4>
+          <ul class="bullets">
+            <li>Recent funding round (Series B+ often correlates with budget release)</li>
+            <li>Leadership hire in the buying persona's department</li>
+            <li>Headcount growth in the relevant team (visible in job postings)</li>
+            <li>Public statements about the problem you solve (10-Ks, earnings calls, blog posts)</li>
+            <li>M&amp;A, expansion, or platform consolidation announcements</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-head">
+          <span class="step-marker">STEP 3</span>
+          <span class="step-title">Define personas with care-about statements</span>
+        </div>
+        <div class="tools-row">
+          <span class="chip claude">Claude</span>
+        </div>
+        <div class="step-body">
+          <p>For each role in the buying committee, write a one-page persona doc:</p>
+          <ul class="checklist">
+            <li>Title variants and seniority signals</li>
+            <li>Top 3 things they're measured on this quarter</li>
+            <li>The problem you solve, framed in <em>their</em> language</li>
+            <li>The objections they raise first</li>
+            <li>What they need to see to say yes (evidence, social proof, calculator, peer reference)</li>
+          </ul>
+          <div class="pullout">
+            <div class="pullout-label">How Claude helps here</div>
+            <p>Paste 5–10 LinkedIn profiles of people who hold this title at customer companies. Ask Claude to extract common career paths, language patterns in their job descriptions, and the publications / communities they engage with. That becomes your messaging vocabulary.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 ACCOUNTS -->
+    <section id="accounts">
+      <div class="section-head">
+        <span class="section-num">§ 03</span>
+        <h2>Build the Target Account List</h2>
+      </div>
+      <p class="section-sub">300–800 accounts for a year of prospecting. Not 50,000. Precision is the asset.</p>
+
+      <div class="step">
+        <div class="step-head">
+          <span class="step-marker">STEP 1</span>
+          <span class="step-title">Draft filter strings with Claude</span>
+        </div>
+        <div class="tools-row">
+          <span class="chip claude">Claude</span>
+        </div>
+        <div class="step-body">
+          <p>Before touching Apollo or Sales Nav, get the filter logic right. Paste your ICP doc into Claude and ask for:</p>
+          <ul class="bullets">
+            <li>Apollo company-search filter set (industry codes, employee bands, technographics, funding)</li>
+            <li>Sales Nav account-search boolean string (handles AND/OR/NOT and keyword fields)</li>
+            <li>Exclusion lists (competitors, current customers, do-not-contact)</li>
+          </ul>
+          <div class="filter-box">
+            <span class="label">Example — Sales Nav account search boolean</span>
+            (industry:"Financial Services" <span class="op">OR</span> industry:"Insurance")<br>
+            <span class="op">AND</span> headcount:"501-1000"<br>
+            <span class="op">AND</span> (keywords:"data platform" <span class="op">OR</span> keywords:"customer 360")<br>
+            <span class="op">AND</span> <span class="value">growth:&gt;15%</span><br>
+            <span class="op">NOT</span> company:"[customer A]" <span class="op">NOT</span> company:"[customer B]"
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-head">
+          <span class="step-marker">STEP 2</span>
+          <span class="step-title">Run parallel searches in Apollo and Sales Nav</span>
+        </div>
+        <div class="tools-row">
+          <span class="chip apollo">Apollo</span>
+          <span class="chip salesnav">Sales Nav</span>
+        </div>
+        <div class="step-body">
+          <p>Each tool sees a slightly different universe. Run the search in both and merge.</p>
+          <ul class="checklist">
+            <li>Apollo: save the search, export company list to CSV</li>
+            <li>Sales Nav: save as an Account List, export to CSV (or use the Account List + LinkedIn search alignment)</li>
+            <li>Deduplicate by domain in a spreadsheet (or paste both into Claude and ask for a merged, deduplicated list)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-head">
+          <span class="step-marker">STEP 3</span>
+          <span class="step-title">Layer signals to find "why now" accounts</span>
+        </div>
+        <div class="tools-row">
+          <span class="chip salesnav">Sales Nav</span>
+          <span class="chip apollo">Apollo</span>
+        </div>
+        <div class="step-body">
+          <p>From the merged list, identify the subset showing buying signals right now. These become your priority accounts this quarter.</p>
+          <ul class="bullets">
+            <li><strong>Sales Nav Account IQ:</strong> recent funding, leadership changes, hiring trends, news mentions</li>
+            <li><strong>Apollo intent:</strong> third-party intent topics, website visitors (if Apollo Chrome extension is installed on your site)</li>
+            <li><strong>Job postings:</strong> active reqs mentioning the problem space (massive signal)</li>
+            <li><strong>News / SEC filings:</strong> ask Claude to scan recent 10-K or earnings transcripts for language matching your problem</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 TIERING -->
+    <section id="tiering">
+      <div class="section-head">
+        <span class="section-num">§ 04</span>
+        <h2>Tier the Account List</h2>
+      </div>
+      <p class="section-sub">Different accounts deserve different effort levels. Tier explicitly or you'll over-invest in the wrong ones.</p>
+
+      <div class="tier-grid">
+        <div class="tier-card t1">
+          <div class="tier-label">Tier 1</div>
+          <div class="tier-name">Strategic</div>
+          <ul>
+            <li><strong>Volume</strong>20–50 accounts</li>
+            <li><strong>Profile</strong>Perfect ICP fit + active buying signal</li>
+            <li><strong>Effort</strong>Manual research, custom messaging, multi-channel</li>
+            <li><strong>Owner</strong>AE + SDR pair</li>
+            <li><strong>Goal</strong>Book meeting within 60 days</li>
+          </ul>
+        </div>
+        <div class="tier-card t2">
+          <div class="tier-label">Tier 2</div>
+          <div class="tier-name">Programmatic</div>
+          <ul>
+            <li><strong>Volume</strong>200–400 accounts</li>
+            <li><strong>Profile</strong>Strong ICP fit, no live signal yet</li>
+            <li><strong>Effort</strong>Persona-level sequences with light per-account personalization</li>
+            <li><strong>Owner</strong>SDR</li>
+            <li><strong>Goal</strong>Generate signal &amp; book qualified meetings</li>
+          </ul>
+        </div>
+        <div class="tier-card t3">
+          <div class="tier-label">Tier 3</div>
+          <div class="tier-name">Volume</div>
+          <ul>
+            <li><strong>Volume</strong>1,000+ contacts</li>
+            <li><strong>Profile</strong>ICP-fit but broad; testing pool</li>
+            <li><strong>Effort</strong>Pure sequences, no personalization beyond merge fields</li>
+            <li><strong>Owner</strong>SDR / automated</li>
+            <li><strong>Goal</strong>Surface intent, test messaging variants</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-head">
+          <span class="step-marker">PROCESS</span>
+          <span class="step-title">How to tier in practice</span>
+        </div>
+        <div class="step-body">
+          <p>Score each account 1–5 on three axes and sum. Use Claude to do this at scale from a CSV.</p>
+          <ul class="bullets">
+            <li><strong>Fit (1–5):</strong> How closely does this account match the ICP firmographics and technographics?</li>
+            <li><strong>Signal (1–5):</strong> Is there a current trigger event suggesting they're in market?</li>
+            <li><strong>Reach (1–5):</strong> Do we have warm paths, mutual connections, or existing relationships?</li>
+          </ul>
+          <p>Total ≥ 12: Tier 1. Total 8–11: Tier 2. Total &lt; 8: Tier 3 or drop.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 CONTACTS -->
+    <section id="contacts">
+      <div class="section-head">
+        <span class="section-num">§ 05</span>
+        <h2>Map the Buying Committee</h2>
+      </div>
+      <p class="section-sub">At $100K+ ACV, you're selling to a group of 6–10. Find all of them per account, not just one.</p>
+
+      <div class="step">
+        <div class="step-head">
+          <span class="step-marker">STEP 1</span>
+          <span class="step-title">Define the committee template for your sale</span>
+        </div>
+        <div class="tools-row">
+          <span class="chip claude">Claude</span>
+        </div>
+        <div class="step-body">
+          <p>For your product, document the standard committee shape. Most enterprise SaaS deals include:</p>
+          <table>
+            <thead><tr><th>Role</th><th>Typical Title</th><th>What They Care About</th></tr></thead>
+            <tbody>
+              <tr><td>Economic buyer</td><td>VP / SVP / C-level in the relevant function</td><td>ROI, strategic fit, risk</td></tr>
+              <tr><td>Champion</td><td>Director / Sr. Manager owning the problem</td><td>Solving the painful day-to-day reality</td></tr>
+              <tr><td>Technical evaluator</td><td>Head of IT / Security / Architecture</td><td>Integration, security, scalability</td></tr>
+              <tr><td>End user</td><td>Manager-level practitioner</td><td>Will this actually make my job better</td></tr>
+              <tr><td>Influencer</td><td>Adjacent leader (Finance, Ops, Data)</td><td>Cross-functional impact</td></tr>
+              <tr><td>Procurement / Legal</td><td>Buyer, Counsel</td><td>Terms, pricing structure, compliance</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-head">
+          <span class="step-marker">STEP 2</span>
+          <span class="step-title">Pull contacts from Apollo by account + persona</span>
+        </div>
+        <div class="tools-row">
+          <span class="chip apollo">Apollo</span>
+        </div>
+        <div class="step-body">
+          <p>For each tier-1 and tier-2 account:</p>
+          <ul class="checklist">
+            <li>Search Apollo for the account, open the org chart</li>
+            <li>Filter people by department + seniority matching your committee template</li>
+            <li>Save 4–7 contacts per account (one per committee role minimum)</li>
+            <li>Verify email status — only "verified" or "likely valid"; never send to "guessed"</li>
+            <li>Export with: name, title, department, email, LinkedIn URL, location</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-head">
+          <span class="step-marker">STEP 3</span>
+          <span class="step-title">Cross-check tier-1 contacts in Sales Nav</span>
+        </div>
+        <div class="tools-row">
+          <span class="chip salesnav">Sales Nav</span>
+        </div>
+        <div class="step-body">
+          <p>For tier-1 accounts only — verify each contact is still active and look for warmth.</p>
+          <ul class="checklist">
+            <li>Confirm current role (Apollo data lags Sales Nav by weeks sometimes)</li>
+            <li>Check last activity — did they post or comment in the last 30 days?</li>
+            <li>Look for TeamLink intros (which colleagues are connected to them?)</li>
+            <li>Note any shared groups, alumni overlap, or mutual connections worth mentioning</li>
+            <li>Save the account to a Sales Nav Account List for ongoing signal monitoring</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 ENRICHMENT -->
+    <section id="enrichment">
+      <div class="section-head">
+        <span class="section-num">§ 06</span>
+        <h2>Enrich, Verify, Prepare to Send</h2>
+      </div>
+      <p class="section-sub">The work between "I have a list" and "I'm ready to send." Skipping this is why open rates collapse.</p>
+
+      <div class="step">
+        <div class="step-head">
+          <span class="step-marker">STEP 1</span>
+          <span class="step-title">Second-pass email verification</span>
+        </div>
+        <div class="tools-row">
+          <span class="chip apollo">Apollo</span>
+          <span class="chip crm">External verifier</span>
+        </div>
+        <div class="step-body">
+          <p>Apollo's verification is good, not perfect. For tier-1 contacts especially, run a second pass before sending. Bounced enterprise emails damage your sender reputation faster than any other mistake.</p>
+          <ul class="checklist">
+            <li>Apollo "waterfall" verification turned on</li>
+            <li>For tier-1 contacts, run through a secondary verifier (NeverBounce, ZeroBounce, or similar)</li>
+            <li>Drop anything below 95% confidence</li>
+            <li>Catch-all domains: mark for LinkedIn-first outreach instead of email</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-head">
+          <span class="step-marker">STEP 2</span>
+          <span class="step-title">Pull personalization material for tier-1</span>
+        </div>
+        <div class="tools-row">
+          <span class="chip salesnav">Sales Nav</span>
+          <span class="chip claude">Claude</span>
+        </div>
+        <div class="step-body">
+          <p>For each tier-1 contact, gather public material that gives you a real opener — not a "I see you went to [school]" fake personalization.</p>
+          <ul class="bullets">
+            <li>Recent LinkedIn posts they wrote (their views, not corporate)</li>
+            <li>Posts they engaged with (what they care about right now)</li>
+            <li>Conference talks, podcast appearances, articles authored</li>
+            <li>Recent company news (funding, hire, product launch, restructuring)</li>
+            <li>Public statements about the problem you solve</li>
+          </ul>
+          <div class="pullout">
+            <div class="pullout-label">Workflow</div>
+            <p>Paste the LinkedIn profile URL + recent company news into Claude. Ask: <em>"Give me three personalization hooks for cold outreach to this person. Each should reference something specific they said or did publicly, and connect to [your value prop]. No flattery, no generic compliments."</em></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-head">
+          <span class="step-marker">STEP 3</span>
+          <span class="step-title">Sync to CRM and sequencing tool</span>
+        </div>
+        <div class="tools-row">
+          <span class="chip apollo">Apollo</span>
+          <span class="chip crm">CRM</span>
+        </div>
+        <div class="step-body">
+          <ul class="checklist">
+            <li>Push contacts to CRM with account, persona, tier, and source tags</li>
+            <li>Suppress against existing customers, open opportunities, and do-not-contact</li>
+            <li>Assign to the correct sequence based on persona + tier</li>
+            <li>Stagger sequence starts across the week — never send 500 emails on a Monday morning</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 MESSAGING -->
+    <section id="messaging">
+      <div class="section-head">
+        <span class="section-num">§ 07</span>
+        <h2>Messaging &amp; Sequence Design</h2>
+      </div>
+      <p class="section-sub">The same message to every persona is the most expensive mistake in enterprise outbound. Write one per role.</p>
+
+      <h3>The three-layer message structure</h3>
+      <p>Every sequence is built in three layers. Reuse the persona layer across accounts; rewrite the account layer for each one.</p>
+
+      <div class="two-col">
+        <div class="col-box">
+          <h4>Persona layer (reusable)</h4>
+          <ul class="bullets">
+            <li>The pain stated in their language</li>
+            <li>Your value prop framed for their KPIs</li>
+            <li>Proof point relevant to their role</li>
+            <li>A low-friction CTA</li>
+          </ul>
+        </div>
+        <div class="col-box">
+          <h4>Account layer (custom)</h4>
+          <ul class="bullets">
+            <li>The trigger event or "why now"</li>
+            <li>Mutual connection or shared context</li>
+            <li>Something specific to their company</li>
+            <li>An observation, not a flattery</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Sequence anatomy (per persona)</h3>
+      <table>
+        <thead><tr><th>Touch</th><th>Channel</th><th>Purpose</th><th>Length</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Email</td><td>Hook + value prop + soft CTA</td><td>60–90 words</td></tr>
+          <tr><td>2</td><td>LinkedIn connect</td><td>Connection request, brief note</td><td>≤ 300 chars</td></tr>
+          <tr><td>3</td><td>Email</td><td>Different angle, proof point</td><td>40–60 words</td></tr>
+          <tr><td>4</td><td>LinkedIn message</td><td>Engage with their content / share a resource</td><td>2–3 sentences</td></tr>
+          <tr><td>5</td><td>Phone (tier-1/2)</td><td>Direct dial, leave a 20-second voicemail</td><td>—</td></tr>
+          <tr><td>6</td><td>Email</td><td>Pattern interrupt — short, casual, low-stakes</td><td>≤ 30 words</td></tr>
+          <tr><td>7</td><td>Email</td><td>Break-up — final note, leave the door open</td><td>40 words</td></tr>
+        </tbody>
+      </table>
+
+      <div class="pullout">
+        <div class="pullout-label">Claude as the sequence writer</div>
+        <p>Give Claude: the persona doc, the value prop, two or three real customer success stories, and the tone you want (consultative, peer-to-peer, etc.). Ask for the full 7-touch sequence with variants. Then have Claude rewrite each touch for a different persona in the committee.</p>
+      </div>
+    </section>
+
+    <!-- 08 CADENCE -->
+    <section id="cadence">
+      <div class="section-head">
+        <span class="section-num">§ 08</span>
+        <h2>Cadence &amp; Multi-Threading</h2>
+      </div>
+      <p class="section-sub">The schedule for one persona, and how to coordinate across the committee.</p>
+
+      <h3>Single-persona cadence (21 days)</h3>
+      <div class="cadence">
+        <div class="cadence-grid">
+          <div class="cad-day"></div>
+          <div class="cad-day">D 1</div>
+          <div class="cad-day">D 4</div>
+          <div class="cad-day">D 7</div>
+          <div class="cad-day">D 10</div>
+          <div class="cad-day">D 14</div>
+          <div class="cad-day">D 18</div>
+          <div class="cad-day">D 21</div>
+
+          <div class="cad-channel">Email</div>
+          <div class="cad-cell active">T1</div>
+          <div class="cad-cell"></div>
+          <div class="cad-cell active">T3</div>
+          <div class="cad-cell"></div>
+          <div class="cad-cell"></div>
+          <div class="cad-cell active">T6</div>
+          <div class="cad-cell active">T7</div>
+
+          <div class="cad-channel">LinkedIn</div>
+          <div class="cad-cell"></div>
+          <div class="cad-cell soft">T2</div>
+          <div class="cad-cell"></div>
+          <div class="cad-cell soft">T4</div>
+          <div class="cad-cell"></div>
+          <div class="cad-cell"></div>
+          <div class="cad-cell"></div>
+
+          <div class="cad-channel">Phone</div>
+          <div class="cad-cell"></div>
+          <div class="cad-cell"></div>
+          <div class="cad-cell"></div>
+          <div class="cad-cell"></div>
+          <div class="cad-cell soft">T5</div>
+          <div class="cad-cell"></div>
+          <div class="cad-cell"></div>
+        </div>
+      </div>
+
+      <h3>Multi-thread coordination</h3>
+      <p>For tier-1 accounts, run sequences to 3–5 personas in parallel, with deliberate sequencing of who hears from you first.</p>
+      <ul class="bullets">
+        <li><strong>Week 1:</strong> Champion candidate (Director/Sr. Mgr) gets the first touch — they're most likely to respond.</li>
+        <li><strong>Week 2:</strong> Add the economic buyer (VP+). Reference outreach to the champion: "I also reached out to [name] on your team."</li>
+        <li><strong>Week 3:</strong> Add technical evaluator and end users. The internal conversation may have already started.</li>
+        <li><strong>Always:</strong> Different angles per persona. Champion gets pain. Economic buyer gets ROI. Technical evaluator gets architecture.</li>
+      </ul>
+
+      <div class="warning">
+        <div class="warning-label">Do not do this</div>
+        <p>Send the same templated email to six people at the same company in the same week. They forward it to each other within hours. The deal is dead before it starts.</p>
+      </div>
+    </section>
+
+    <!-- 09 INMAIL & TEAMLINK -->
+    <section id="inmail-teamlink">
+      <div class="section-head">
+        <span class="section-num">§ 09</span>
+        <h2>InMail &amp; TeamLink — When to Spend Them</h2>
+      </div>
+      <p class="section-sub">Sales Nav gives you scarce, high-value tools. Use them deliberately or you'll waste them on tier-3 prospects.</p>
+
+      <h3>The hierarchy of LinkedIn touches</h3>
+      <p>Most teams reach for InMail too fast. There's a ladder of options, each with different cost and conversion. Climb it in order.</p>
+
+      <table>
+        <thead><tr><th>Touch type</th><th>Cost</th><th>Typical reply rate</th><th>Use when</th></tr></thead>
+        <tbody>
+          <tr><td>Engage with their content</td><td>Free / time</td><td>n/a (warm-up)</td><td>Always. Comment thoughtfully on 1–2 posts before any direct outreach to tier-1.</td></tr>
+          <tr><td>Connection request (no note)</td><td>Free</td><td>30–40% accept</td><td>Default for most prospects. Higher acceptance than noted requests in many tests.</td></tr>
+          <tr><td>Connection request + note</td><td>Free, ≤300 chars</td><td>20–30% accept</td><td>When you have a specific, non-generic reason — mutual connection, their post, named trigger event.</td></tr>
+          <tr><td>Message after connecting</td><td>Free</td><td>10–20% reply</td><td>Once accepted, wait 2–3 days, then send a value-led message — not a pitch.</td></tr>
+          <tr><td>TeamLink intro request</td><td>Social capital</td><td>40–60% reply</td><td>Tier-1 only, when a colleague has a real (1st-degree, recent) relationship.</td></tr>
+          <tr><td>InMail (Sales Nav credit)</td><td>1 credit, finite supply</td><td>10–25% reply</td><td>Tier-1 prospect who hasn't accepted your connection request and isn't reachable by warm path.</td></tr>
+          <tr><td>Open Profile InMail</td><td>Free</td><td>10–25% reply</td><td>Same as above, but the prospect has Open Profile enabled — no credit consumed.</td></tr>
+        </tbody>
+      </table>
+
+      <div id="inmail"></div>
+      <h3>InMail — when, how, and how often</h3>
+
+      <div class="step">
+        <div class="step-head">
+          <span class="step-marker">RULE 1</span>
+          <span class="step-title">InMail is a tier-1 tool, never tier-2 or tier-3</span>
+        </div>
+        <div class="step-body">
+          <p>Sales Nav Core gives you ~50 InMail credits per month. Sales Nav Advanced gives ~50 as well, with the ability to earn credits back from positive replies within 90 days. Either way the supply is small. If your team has 10 SDRs each burning credits on Director-level tier-3 prospects, you're spending real money to underperform a free LinkedIn message.</p>
+          <ul class="checklist">
+            <li>Tier-1 accounts only — typically the economic buyer or champion candidate</li>
+            <li>The prospect has not accepted your connection request after 7–10 days</li>
+            <li>You have a specific trigger event or "why now" to lead with</li>
+            <li>The email channel has stalled (no reply after touches 1 and 3)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-head">
+          <span class="step-marker">RULE 2</span>
+          <span class="step-title">Prefer Open Profile InMails first</span>
+        </div>
+        <div class="step-body">
+          <p>Some prospects have "Open Profile" enabled — sending them an InMail does not consume a credit. Sales Nav indicates this on the profile. Always check before sending.</p>
+          <ul class="bullets">
+            <li>Sort tier-1 contact lists by Open Profile status when planning weekly outreach</li>
+            <li>Open Profile InMails should be your default LinkedIn-direct touch — they're free</li>
+            <li>Save paid credits for non-Open-Profile economic buyers who haven't accepted connection requests</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-head">
+          <span class="step-marker">RULE 3</span>
+          <span class="step-title">Write InMails differently than cold email</span>
+        </div>
+        <div class="step-body">
+          <p>InMail has its own format and norms. Treating it like a slightly shorter email is the most common waste.</p>
+          <h4>Anatomy of a high-performing InMail</h4>
+          <ul class="bullets">
+            <li><strong>Subject line:</strong> ≤ 8 words, never a question, never "Quick question"</li>
+            <li><strong>Opening:</strong> Reference something they did publicly within the last 30 days — post, talk, hire, launch. Specific.</li>
+            <li><strong>Bridge:</strong> One sentence connecting their public signal to your value prop. No pitch.</li>
+            <li><strong>Ask:</strong> Low-friction CTA. Not "15 minutes to chat" — instead "Worth me sending the 2-page summary?" or "Open to a reply if this resonates?"</li>
+            <li><strong>Length:</strong> Under 100 words total. Under 75 is often better.</li>
+          </ul>
+          <div class="pullout">
+            <div class="pullout-label">Draft with Claude</div>
+            <p>Paste the prospect's LinkedIn profile, their last 3 posts, and a recent company news item. Ask: <em>"Write a 75-word InMail using [trigger event] as the hook. Tone: peer-to-peer, not salesy. End with a low-commitment CTA."</em></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-head">
+          <span class="step-marker">RULE 4</span>
+          <span class="step-title">Track credit ROI weekly</span>
+        </div>
+        <div class="step-body">
+          <p>Every credit is real cost. Treat them like ad spend.</p>
+          <ul class="bullets">
+            <li><strong>Credits sent:</strong> per SDR per week</li>
+            <li><strong>Acceptance / reply rate:</strong> target ≥ 15% on tier-1</li>
+            <li><strong>Credits earned back:</strong> positive responses within 90 days return credits — track this as your "InMail efficiency" metric</li>
+            <li><strong>Meetings per credit:</strong> the only metric that matters in the end</li>
+          </ul>
+          <p>If an SDR's InMail reply rate is under 8%, pause their InMail sending. The issue is targeting or messaging, not effort.</p>
+        </div>
+      </div>
+
+      <h3>TeamLink — the warm-path multiplier</h3>
+
+      <div class="step">
+        <div class="step-head">
+          <span class="step-marker">RULE 1</span>
+          <span class="step-title">Use TeamLink only when the relationship is real</span>
+        </div>
+        <div class="step-body">
+          <p>TeamLink shows which of your colleagues are connected to a prospect. The connection's <em>quality</em> matters far more than its existence. A LinkedIn connection from a 2014 conference badge scan is not a warm intro — it's friction with extra steps.</p>
+          <ul class="checklist">
+            <li>Colleague has worked directly with the prospect, not just connected at an event</li>
+            <li>The connection is recent (within 3 years) or there's been actual engagement since</li>
+            <li>The colleague is willing to actually vouch for you, not just forward a name</li>
+            <li>The prospect is a tier-1 economic buyer or champion — never burn a warm intro on a mid-level contact you could reach cold</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-head">
+          <span class="step-marker">RULE 2</span>
+          <span class="step-title">The two-step ask</span>
+        </div>
+        <div class="step-body">
+          <p>Never ask a colleague "can you intro me?" Make it easy for them to say yes.</p>
+          <h4>Step 1 — Permission check (to your colleague)</h4>
+          <div class="filter-box" style="background:#fffdf7;color:var(--ink-soft);border:1px solid var(--rule);">
+<span class="label" style="color:var(--ink-mute);">Internal Slack / email to colleague</span>
+"Hey — I see you're connected to [Name] at [Company]. We're working on outbound to them — they fit our ICP and have [trigger event]. Would you be open to a forwardable intro? I'll draft the note so it's a 30-second forward for you."
+          </div>
+
+          <h4>Step 2 — Forwardable intro draft (you write it)</h4>
+          <div class="filter-box" style="background:#fffdf7;color:var(--ink-soft);border:1px solid var(--rule);">
+<span class="label" style="color:var(--ink-mute);">Draft you send to your colleague to forward</span>
+"[Name] — wanted to put you in touch with [SDR/AE] from [Company]. They're working on [problem space] and I thought of you because of [specific reason tied to prospect's role/work]. [SDR/AE], over to you — [Name] runs [team] at [Company]."
+          </div>
+          <p>Your colleague forwards the draft with maybe one line of context. Easy yes. The prospect now reads a peer-to-peer note, not a cold pitch.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-head">
+          <span class="step-marker">RULE 3</span>
+          <span class="step-title">Budget warm intros — they're not infinite</span>
+        </div>
+        <div class="step-body">
+          <p>Your colleagues have a finite tolerance for being asked. Burn it on the wrong prospects and they'll stop saying yes.</p>
+          <ul class="bullets">
+            <li><strong>Cap:</strong> No more than 1–2 intro asks per colleague per month</li>
+            <li><strong>Close the loop:</strong> Always tell the colleague what happened — meeting booked, deal progressed, deal lost. This is the price of the favor.</li>
+            <li><strong>Reciprocity:</strong> Track who in your company has connections to which target accounts. Build a "warmth map" so requests are spread, not concentrated on the two most-connected people.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Channel decision tree per persona</h3>
+      <p>For each tier-1 contact, decide the LinkedIn approach before the sequence starts. Don't improvise in the moment.</p>
+
+      <div class="matrix">
+        <div class="matrix-row header">
+          <div class="matrix-cell">Situation</div>
+          <div class="matrix-cell">Best path</div>
+          <div class="matrix-cell">Fallback</div>
+          <div class="matrix-cell">Last resort</div>
+        </div>
+        <div class="matrix-row">
+          <div class="matrix-cell task">Strong TeamLink (colleague has real relationship)</div>
+          <div class="matrix-cell">Warm intro via colleague</div>
+          <div class="matrix-cell">Connection request mentioning colleague</div>
+          <div class="matrix-cell">InMail referencing colleague</div>
+        </div>
+        <div class="matrix-row">
+          <div class="matrix-cell task">Weak TeamLink (connection exists but cold)</div>
+          <div class="matrix-cell">Connection request, no note</div>
+          <div class="matrix-cell">Engage with content, then connect</div>
+          <div class="matrix-cell">InMail if Open Profile</div>
+        </div>
+        <div class="matrix-row">
+          <div class="matrix-cell task">No TeamLink, prospect is active on LinkedIn</div>
+          <div class="matrix-cell">Engage with their content for 1 week, then connect</div>
+          <div class="matrix-cell">Connection request with referenced post</div>
+          <div class="matrix-cell">InMail with specific hook</div>
+        </div>
+        <div class="matrix-row">
+          <div class="matrix-cell task">No TeamLink, prospect is inactive on LinkedIn</div>
+          <div class="matrix-cell">Skip LinkedIn — go email + phone</div>
+          <div class="matrix-cell">Single connection request, no follow-up</div>
+          <div class="matrix-cell">Don't burn an InMail credit</div>
+        </div>
+        <div class="matrix-row">
+          <div class="matrix-cell task">Open Profile enabled</div>
+          <div class="matrix-cell">Free InMail anytime</div>
+          <div class="matrix-cell">—</div>
+          <div class="matrix-cell">—</div>
+        </div>
+      </div>
+
+      <div class="warning">
+        <div class="warning-label">Common mistake</div>
+        <p>Using InMail as the <em>first</em> touch on a prospect you've never interacted with. InMails work best as a tier-1 escalation after email and free LinkedIn touches haven't connected — not as a substitute for doing the cheaper, warmer work first.</p>
+      </div>
+    </section>
+
+    <!-- 10 HANDOFF -->
+    <section id="handoff">
+      <div class="section-head">
+        <span class="section-num">§ 10</span>
+        <h2>Reply Handling &amp; SDR → AE Handoff</h2>
+      </div>
+      <p class="section-sub">Replies arrive in three flavors. Treat each differently.</p>
+
+      <table>
+        <thead><tr><th>Reply type</th><th>Examples</th><th>SDR action</th></tr></thead>
+        <tbody>
+          <tr><td>Positive</td><td>"Tell me more" / "Send a calendar link" / questions about the product</td><td>Book meeting within 24 hours. Confirm AE attendance. Send research note to AE before the call.</td></tr>
+          <tr><td>Soft / curious</td><td>"Not the right time" / "Send info" / "I'll think about it"</td><td>Respond with one specific value-add, ask one qualifying question, add to a longer nurture cadence.</td></tr>
+          <tr><td>Hard no / referral</td><td>"Not me, talk to [name]" / "Remove me" / "We use [competitor]"</td><td>Honor the request. If referral, restart sequence to the named person with the warm reference.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Meeting handoff checklist</h3>
+      <ul class="checklist">
+        <li>Account brief sent to AE 24 hours before the meeting</li>
+        <li>Brief contains: ICP fit notes, trigger events, contact's recent activity, committee map, prior touches and replies</li>
+        <li>Ask Claude to draft the brief from your sequence log and Sales Nav notes — 5 minutes of work for the SDR</li>
+        <li>AE confirms attendance, prepares 2–3 hypotheses about the prospect's situation</li>
+        <li>Calendar invite includes a one-line agenda — never just "Intro call"</li>
+      </ul>
+    </section>
+
+    <!-- 11 METRICS -->
+    <section id="metrics">
+      <div class="section-head">
+        <span class="section-num">§ 11</span>
+        <h2>Metrics &amp; Review</h2>
+      </div>
+      <p class="section-sub">Targets for an enterprise SaaS outbound motion. Adjust to your ACV and committee size — these are starting points.</p>
+
+      <div class="metrics">
+        <div class="metric">
+          <div class="metric-label">Reply rate</div>
+          <div class="metric-value">8–12<em>%</em></div>
+          <div class="metric-note">All replies / contacts touched</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Positive reply rate</div>
+          <div class="metric-value">2–4<em>%</em></div>
+          <div class="metric-note">Interested / contacts touched</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Meetings / 100</div>
+          <div class="metric-value">1.5–3</div>
+          <div class="metric-note">Booked meetings per 100 contacted</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">SQL rate</div>
+          <div class="metric-value">50–70<em>%</em></div>
+          <div class="metric-note">Meetings → qualified opportunities</div>
+        </div>
+      </div>
+
+      <h3>What to look at weekly</h3>
+      <ul class="bullets">
+        <li><strong>Reply rate by persona:</strong> If VPs reply at 3% and Directors at 12%, you have a messaging problem at the top of the committee.</li>
+        <li><strong>Reply rate by sequence touch:</strong> Touch 4 should not have lower reply than touch 1. If it does, rewrite touches 2 and 3.</li>
+        <li><strong>Subject line A/B:</strong> Always two variants. Kill the loser weekly. Replace with a new challenger.</li>
+        <li><strong>Bounce rate:</strong> If above 3%, your verification process is broken. Stop and fix it before you damage domain reputation.</li>
+        <li><strong>Tier 1 coverage:</strong> What % of tier-1 accounts have at least 3 contacts engaged this quarter?</li>
+      </ul>
+
+      <div class="pullout">
+        <div class="pullout-label">Use Claude for reply analysis</div>
+        <p>Export your replies weekly (positive + objection text) and paste into Claude. Ask: <em>"What objection patterns are emerging? What language is in the positive replies? What should I change in the sequence?"</em></p>
+      </div>
+    </section>
+
+    <!-- 12 WEEKLY -->
+    <section id="weekly">
+      <div class="section-head">
+        <span class="section-num">§ 12</span>
+        <h2>Weekly Operating Rhythm</h2>
+      </div>
+      <p class="section-sub">The cadence that keeps the system alive instead of bit-rotting.</p>
+
+      <table>
+        <thead><tr><th>Day</th><th>Activity</th><th>Tools</th></tr></thead>
+        <tbody>
+          <tr><td>Monday AM</td><td>Review last week's metrics. Identify what's working / breaking. Decide one change to test this week.</td><td>Apollo, CRM, Claude</td></tr>
+          <tr><td>Monday PM</td><td>Refresh tier-1 account list. Add new accounts showing signal. Drop accounts that have gone quiet for 90 days.</td><td>Sales Nav, Apollo</td></tr>
+          <tr><td>Tuesday</td><td>Tier-1 personalization day. Research 10–15 tier-1 contacts deeply. Draft custom outreach.</td><td>Sales Nav, Claude</td></tr>
+          <tr><td>Wed / Thu</td><td>Send. Reply. Book meetings. Handoff to AEs.</td><td>Apollo, CRM</td></tr>
+          <tr><td>Friday AM</td><td>Reply analysis. What objections came up? What language worked?</td><td>Claude, CRM</td></tr>
+          <tr><td>Friday PM</td><td>Sequence iteration. Update templates based on what learned. Refresh one persona's messaging.</td><td>Apollo, Claude</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Monthly</h3>
+      <ul class="bullets">
+        <li>ICP review — has it shifted based on recent closed-won data?</li>
+        <li>List health audit — bounce rate, unsubscribes, suppression list growth</li>
+        <li>Sequence performance audit — kill anything below 5% reply rate, replace</li>
+      </ul>
+
+      <h3>Quarterly</h3>
+      <ul class="bullets">
+        <li>Full ICP refresh with sales and customer success input</li>
+        <li>Account list rebuild — fresh signals, new firmographic filters</li>
+        <li>Tool stack review — what's actually being used, what should be cut</li>
+      </ul>
+    </section>
+
+    <!-- 13 ANTIPATTERNS -->
+    <section id="antipatterns">
+      <div class="section-head">
+        <span class="section-num">§ 13</span>
+        <h2>Anti-patterns</h2>
+      </div>
+      <p class="section-sub">The mistakes that quietly destroy outbound programs. Audit yourself against this list quarterly.</p>
+
+      <div class="warning">
+        <div class="warning-label">Anti-pattern 01</div>
+        <p><strong>"More contacts will fix it."</strong> If your reply rate is bad, adding 10,000 more leads makes it worse, not better. Fix the targeting and message first.</p>
+      </div>
+
+      <div class="warning">
+        <div class="warning-label">Anti-pattern 02</div>
+        <p><strong>Single-threading at enterprise.</strong> One contact per account in a $100K+ deal is a leak. The buyer leaves, gets reorganized, ghosts — and the account dies.</p>
+      </div>
+
+      <div class="warning">
+        <div class="warning-label">Anti-pattern 03</div>
+        <p><strong>Fake personalization.</strong> "I see you went to [school]" or "Loved your recent post" (which they never wrote). Worse than no personalization — signals you're a bot.</p>
+      </div>
+
+      <div class="warning">
+        <div class="warning-label">Anti-pattern 04</div>
+        <p><strong>Sending without verifying.</strong> A 10% bounce rate on enterprise domains will get you flagged by Google/Microsoft. Recovery takes months.</p>
+      </div>
+
+      <div class="warning">
+        <div class="warning-label">Anti-pattern 05</div>
+        <p><strong>Optimizing open rates.</strong> Apple Mail Privacy Protection has made open rates noise. If your team is celebrating 60% opens, they're not paying attention to the right thing.</p>
+      </div>
+
+      <div class="warning">
+        <div class="warning-label">Anti-pattern 06</div>
+        <p><strong>Running Apollo and Sales Nav as duplicates.</strong> If you're paying for both and using them for the same thing, cut one. The point is to use each for its strength.</p>
+      </div>
+
+      <div class="warning">
+        <div class="warning-label">Anti-pattern 07</div>
+        <p><strong>Asking Claude for contact lists.</strong> Claude doesn't have a database of real people with real emails. Asking will produce hallucinated names and fake emails. Use Apollo for who, Claude for how.</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>B2B Lead Generation SOP</span>
+      <span>v 1.0 / 2026</span>
+    </footer>
+
+  </main>
+</div>
+
+<script>
+  // Scroll spy for active nav state
+  const links = document.querySelectorAll('.nav-link');
+  const sections = document.querySelectorAll('section[id]');
+
+  function updateActive() {
+    let current = '';
+    sections.forEach(s => {
+      const top = s.getBoundingClientRect().top;
+      if (top < 200) current = s.id;
+    });
+    links.forEach(l => {
+      l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+    });
+  }
+
+  window.addEventListener('scroll', updateActive, { passive: true });
+  updateActive();
+
+  // Flow diagram interactivity
+  const nodeContent = {
+    'icp': {
+      label: 'Stage i — Foundation',
+      title: 'Define the Ideal Customer Profile',
+      body: 'Pattern-match your closed-won customers to identify firmographic, technographic, and trigger-event filters. Define personas for each role in the buying committee. Nothing downstream works without this document.',
+      section: '#icp'
+    },
+    'filters': {
+      label: 'Stage ii — Build',
+      title: 'Write filter strings with Claude',
+      body: 'Before touching Apollo or Sales Nav, get the filter logic right. Convert the ICP doc into Apollo company-search filters, Sales Nav boolean strings, and exclusion lists for current customers and competitors.',
+      section: '#accounts'
+    },
+    'apollo-accounts': {
+      label: 'Stage ii — Build / Apollo',
+      title: 'Pull the account list',
+      body: 'Run the filter set in Apollo, save the search, export company list. Apollo gives you the broad firmographic universe. Aim for 300–800 accounts, not 50,000.',
+      section: '#accounts'
+    },
+    'sn-signals': {
+      label: 'Stage ii — Build / Sales Nav',
+      title: 'Layer real-time buying signals',
+      body: 'Use Account IQ for funding, leadership changes, hiring trends. Cross-reference with job postings and news. The accounts showing signals right now become your tier-1.',
+      section: '#accounts'
+    },
+    'tier': {
+      label: 'Stage ii — Build',
+      title: 'Tier the account list',
+      body: 'Score each account on Fit + Signal + Reach (1–5 each). Sum ≥12 = Tier 1 (strategic, manual). 8–11 = Tier 2 (programmatic). Below 8 = Tier 3 or drop. Tiering is the highest-leverage single decision in the process.',
+      section: '#tiering'
+    },
+    'committee': {
+      label: 'Stage iii — Enrich / Apollo',
+      title: 'Map the buying committee',
+      body: 'For each tier-1 and tier-2 account, pull 4–7 contacts: economic buyer, champion, technical evaluator, end user, influencer. Filter by department + seniority in Apollo. Verified emails only.',
+      section: '#contacts'
+    },
+    'sn-verify': {
+      label: 'Stage iii — Enrich / Sales Nav',
+      title: 'Verify and warm-check tier-1 contacts',
+      body: 'For tier-1 only: confirm current role, check recent activity, look for TeamLink intros and mutual connections. Save accounts to a Sales Nav Account List for ongoing signal monitoring.',
+      section: '#contacts'
+    },
+    'personalize': {
+      label: 'Stage iii — Enrich / Claude',
+      title: 'Pull personalization hooks',
+      body: 'For each tier-1 contact, gather public material: their recent posts, talks, articles, podcast appearances. Synthesize into specific hooks for outreach — never fake personalization, always anchored in something they did.',
+      section: '#enrichment'
+    },
+    'verify-sync': {
+      label: 'Stage iii — Enrich / Apollo',
+      title: 'Second-pass verify, sync to CRM',
+      body: 'Run tier-1 emails through a secondary verifier before sending. Push contacts to CRM with account, persona, tier, and source tags. Suppress against existing customers and open opportunities.',
+      section: '#enrichment'
+    },
+    'messaging': {
+      label: 'Stage iv — Engage / Claude',
+      title: 'Draft persona-specific sequences',
+      body: 'Build sequences in three layers: persona-level (reusable), account-level (custom per company), and per-touch personalization. One sequence per role in the committee — never the same message to every persona.',
+      section: '#messaging'
+    },
+    'cadence': {
+      label: 'Stage iv — Engage / Apollo',
+      title: 'Run the 21-day multi-channel cadence',
+      body: '7 touches across email, LinkedIn, and phone over three weeks. Multi-thread tier-1 accounts: champion first, economic buyer week 2, technical evaluator and end users week 3.',
+      section: '#cadence'
+    },
+    'inmail': {
+      label: 'Stage iv — Engage / Sales Nav',
+      title: 'Escalate with InMail or warm intro',
+      body: 'For tier-1 only, when free LinkedIn touches stall. Prefer Open Profile (free) InMails first, save paid credits for non-Open-Profile economic buyers. TeamLink intros require a real relationship — not just a connection.',
+      section: '#inmail-teamlink'
+    },
+    'handoff': {
+      label: 'Stage v — Convert / CRM',
+      title: 'SDR → AE handoff',
+      body: 'Positive replies booked within 24 hours. Account brief sent to AE before the meeting: ICP fit, trigger events, contact activity, committee map, prior touches. Reply analysis feeds back into next week\'s messaging.',
+      section: '#handoff'
+    }
+  };
+
+  const detailEl = document.getElementById('flow-detail');
+  const nodes = document.querySelectorAll('.flow-node');
+
+  nodes.forEach(node => {
+    node.addEventListener('click', () => {
+      const id = node.getAttribute('data-id');
+      const content = nodeContent[id];
+      if (!content) return;
+
+      detailEl.style.opacity = '0';
+      setTimeout(() => {
+        detailEl.innerHTML = `
+          <div class="flow-detail-label">${content.label}</div>
+          <div class="flow-detail-title">${content.title}</div>
+          <div class="flow-detail-body">${content.body}</div>
+          <a class="flow-detail-link" href="${content.section}">Jump to section →</a>
+        `;
+        detailEl.style.opacity = '1';
+      }, 150);
+    });
+
+    // Keyboard accessibility
+    node.setAttribute('tabindex', '0');
+    node.setAttribute('role', 'button');
+    node.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        node.dispatchEvent(new Event('click'));
+      }
+    });
+  });
+
+  // Expand / collapse fullscreen toggle for the diagram
+  const flowWrap = document.getElementById('flow-wrap');
+  const expandBtn = document.getElementById('flow-expand-btn');
+
+  function setExpanded(expanded) {
+    flowWrap.classList.toggle('expanded', expanded);
+    document.body.classList.toggle('flow-locked', expanded);
+    expandBtn.setAttribute('aria-pressed', expanded ? 'true' : 'false');
+  }
+
+  expandBtn.addEventListener('click', () => {
+    setExpanded(!flowWrap.classList.contains('expanded'));
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && flowWrap.classList.contains('expanded')) {
+      setExpanded(false);
+    }
+  });
+
+  // When a node is clicked in expanded mode, collapse before scrolling to section
+  document.querySelectorAll('.flow-detail').forEach(panel => {
+    panel.addEventListener('click', (e) => {
+      if (e.target.matches('.flow-detail-link') && flowWrap.classList.contains('expanded')) {
+        setExpanded(false);
+      }
+    });
+  });
+</script>
+</body>
+</html>
