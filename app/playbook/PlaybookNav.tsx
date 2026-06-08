@@ -43,7 +43,8 @@ const categories: Category[] = [
     key: "Fundraising",
     accent: "violet",
     items: [
-      { href: "/playbook/fundraising", label: "Fundraising" },
+      { href: "/playbook/fundraising", label: "Capital strategy", locked: true },
+      { href: "/playbook/the-raise", label: "The Raise", locked: true },
     ],
   },
 ];

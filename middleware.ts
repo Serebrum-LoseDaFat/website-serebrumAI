@@ -58,6 +58,13 @@ export function middleware(req: NextRequest) {
 }
 
 export const config = {
-  // Match the priorities root and every subroute.
-  matcher: ["/playbook/priorities", "/playbook/priorities/:path*"],
+  // Gate the internal Strategy + Fundraising operating docs.
+  matcher: [
+    "/playbook/priorities",
+    "/playbook/priorities/:path*",
+    "/playbook/fundraising",
+    "/playbook/fundraising/:path*",
+    "/playbook/the-raise",
+    "/playbook/the-raise/:path*",
+  ],
 };

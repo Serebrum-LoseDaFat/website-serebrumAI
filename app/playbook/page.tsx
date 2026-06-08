@@ -182,7 +182,7 @@ const sections: {
   {
     href: "/playbook/fundraising",
     num: "F1",
-    label: "Fundraising",
+    label: "Capital strategy",
     title: "Capital strategy",
     body: "Architecture, per-venture raise plans, sequencing, narratives, and process. Operating playbook for ~$120M deployed across studio + four ventures.",
     contents: [
@@ -194,6 +194,25 @@ const sections: {
     ],
     accent: "violet",
     category: "Fundraising",
+    locked: true,
+  },
+  {
+    href: "/playbook/the-raise",
+    num: "F2",
+    label: "The Raise",
+    title: "The Raise — sprint-based outreach",
+    body: "Operational counterpart to Capital strategy. 8-week sprint, warm-path coverage, OpenVC + Crunchbase + LinkedIn Sales Nav stack. Honest funnel math: 50–100 funds → 1 lead investor.",
+    contents: [
+      "The pyramid (T1 warm → T4 cold)",
+      "Tool roles (OpenVC, Crunchbase, LinkedIn, Signal NFX, Apollo)",
+      "Warm-path mapping + tracker schema",
+      "Intro request + forwardable templates",
+      "8-week sprint cadence",
+      "Honest funnel math + failure modes",
+    ],
+    accent: "violet",
+    category: "Fundraising",
+    locked: true,
   },
 ];
 
