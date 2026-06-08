@@ -39,5 +39,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# internal-only playbook content (kept local, not pushed)
-/app/playbook/priorities/
+# local design-exploration tool (not part of production feature)
+/app/playbook/priorities/themes/
