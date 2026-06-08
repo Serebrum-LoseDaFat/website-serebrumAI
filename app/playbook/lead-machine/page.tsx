@@ -585,7 +585,8 @@ export default function LeadMachinePage() {
             <p className="mt-2">
               6–8 touches over 30 days. Industry data: 78% of replies happen
               after touch 3. Stopping at Day 7 leaves most of the response
-              curve on the table. Stopping past Day 30 is harassment.
+              curve on the table. Continuing past Day 30 without a reply tips
+              into harassment — move them to a long-term nurture list instead.
             </p>
           </div>
         </div>
