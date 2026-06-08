@@ -78,6 +78,7 @@ const sections: {
   accent: Accent;
   category: Category;
   external?: boolean;
+  locked?: boolean;
 }[] = [
   // STRATEGY
   {
@@ -94,6 +95,23 @@ const sections: {
     ],
     accent: "emerald",
     category: "Strategy",
+  },
+  {
+    href: "/playbook/priorities",
+    num: "S2",
+    label: "Priorities",
+    title: "Prioritization matrix",
+    body: "Interactive 3×3 matrix scoring ideas on peak ARR potential vs. time to $1M ARR. Conviction is the tiebreaker. Sliders for maturity + traction reposition each idea live.",
+    contents: [
+      "Peak ARR × Time-to-revenue grid",
+      "Cell strategy labels + capital-ratio shading",
+      "Maturity + traction sliders (per-item)",
+      "Sequencing — short / medium / long-term phasing",
+      "Wedge structure analysis",
+    ],
+    accent: "emerald",
+    category: "Strategy",
+    locked: true,
   },
 
   // MARKETING
@@ -142,6 +160,22 @@ const sections: {
     accent: "cyan",
     category: "Marketing",
     external: true,
+  },
+  {
+    href: "/playbook/lead-machine",
+    num: "M4",
+    label: "Lead machine",
+    title: "The lead machine",
+    body: "Two channels, one workflow. Apollo + LinkedIn Sales Navigator producing qualified leads via a 30-minute daily routine.",
+    contents: [
+      "Two engines, one workflow",
+      "Apollo channel (steps + template + KPIs)",
+      "LinkedIn channel (steps + templates + KPIs)",
+      "Combined 7-day multi-touch",
+      "30-minute daily routine",
+    ],
+    accent: "cyan",
+    category: "Marketing",
   },
 
   // FUNDRAISING
@@ -232,6 +266,14 @@ export default function PlaybookPage() {
                           {s.external && (
                             <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-neutral-500">
                               ↗ standalone
+                            </span>
+                          )}
+                          {s.locked && (
+                            <span
+                              title="Password protected"
+                              className="font-mono text-[9px] uppercase tracking-[0.2em] text-amber-300"
+                            >
+                              🔒 private
                             </span>
                           )}
                         </div>

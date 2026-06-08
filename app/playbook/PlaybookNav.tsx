@@ -3,13 +3,20 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const sections: { href: string; label: string; external?: boolean }[] = [
+const sections: {
+  href: string;
+  label: string;
+  external?: boolean;
+  locked?: boolean;
+}[] = [
   { href: "/playbook", label: "Overview" },
   { href: "/playbook/blueprint", label: "Blueprint" },
+  { href: "/playbook/priorities", label: "Priorities", locked: true },
   { href: "/playbook/gtm", label: "GTM" },
   { href: "/playbook/fundraising", label: "Fundraising" },
   { href: "/playbook/content-marketing", label: "Content marketing" },
   { href: "/playbook/b2b-leadgen.html", label: "B2B LeadGen", external: true },
+  { href: "/playbook/lead-machine", label: "Lead machine" },
 ];
 
 export default function PlaybookNav() {
@@ -40,12 +47,25 @@ export default function PlaybookNav() {
                   ? "bg-white/[0.08] text-neutral-50"
                   : "text-neutral-400 hover:bg-white/[0.04] hover:text-neutral-100"
               }`;
+              const labelNode = (
+                <>
+                  {s.label}
+                  {s.locked && (
+                    <span
+                      aria-label="Password required"
+                      className="ml-1.5 inline-block translate-y-[-1px] text-[10px] opacity-70"
+                    >
+                      🔒
+                    </span>
+                  )}
+                </>
+              );
               // External (static HTML) entries use a regular anchor so we leave
               // the Next.js app rather than 404 on a non-route.
               if (s.external) {
                 return (
                   <a key={s.href} href={s.href} className={className}>
-                    {s.label}
+                    {labelNode}
                   </a>
                 );
               }
@@ -56,7 +76,7 @@ export default function PlaybookNav() {
                   aria-current={isActive ? "page" : undefined}
                   className={className}
                 >
-                  {s.label}
+                  {labelNode}
                 </Link>
               );
             })}
