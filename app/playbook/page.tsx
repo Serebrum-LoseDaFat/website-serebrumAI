@@ -180,6 +180,24 @@ const sections: {
 
   // FUNDRAISING
   {
+    href: "/playbook/vygor-gyms",
+    num: "M5",
+    label: "Vygor · Gyms",
+    title: "Vygor gym partnerships",
+    body: "SDR-executable gym partner play. Apollo + LinkedIn Sales Nav targeting boutique studios and PT-led gyms. AI wellness fills the nutrition gap gyms can't fill — converting that into 20% higher retention and 25% more revenue per member.",
+    contents: [
+      "ICP tiers (T1 boutique → T3 small independent)",
+      "Apollo account + contact filters",
+      "LinkedIn Sales Nav signals + saved searches",
+      "16-day 6-touch combined sequence + templates",
+      "Discovery call — 15 min agenda + 5 qualifying questions",
+      "4 partnership models (PT add-on → corporate wellness)",
+      "30-min daily routine + weekly KPIs",
+    ],
+    accent: "cyan",
+    category: "Marketing",
+  },
+  {
     href: "/playbook/fundraising",
     num: "F1",
     label: "Capital strategy",

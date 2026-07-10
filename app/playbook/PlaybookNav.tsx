@@ -37,6 +37,7 @@ const categories: Category[] = [
       { href: "/playbook/content-marketing", label: "Content marketing" },
       { href: "/playbook/b2b-leadgen.html", label: "B2B LeadGen", external: true },
       { href: "/playbook/lead-machine", label: "Lead machine" },
+      { href: "/playbook/vygor-gyms", label: "Vygor · Gyms" },
     ],
   },
   {
