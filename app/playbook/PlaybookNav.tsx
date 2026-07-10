@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-type Accent = "emerald" | "cyan" | "violet";
+type Accent = "emerald" | "cyan" | "violet" | "amber";
 
 type Item = {
   href: string;
@@ -37,7 +37,6 @@ const categories: Category[] = [
       { href: "/playbook/content-marketing", label: "Content marketing" },
       { href: "/playbook/b2b-leadgen.html", label: "B2B LeadGen", external: true },
       { href: "/playbook/lead-machine", label: "Lead machine" },
-      { href: "/playbook/vygor-gyms", label: "Vygor · Gyms" },
     ],
   },
   {
@@ -48,17 +47,26 @@ const categories: Category[] = [
       { href: "/playbook/the-raise", label: "The Raise", locked: true },
     ],
   },
+  {
+    key: "Vygor",
+    accent: "amber",
+    items: [
+      { href: "/playbook/vygor-gyms", label: "Gyms" },
+    ],
+  },
 ];
 
 const accentText: Record<Accent, string> = {
   emerald: "text-emerald-300/80",
   cyan: "text-cyan-300/80",
   violet: "text-violet-300/80",
+  amber: "text-amber-300/80",
 };
 
 const accentDot: Record<Accent, string> = {
   emerald: "bg-emerald-300/60",
   cyan: "bg-cyan-300/60",
+  amber: "bg-amber-300/60",
   violet: "bg-violet-300/60",
 };
 

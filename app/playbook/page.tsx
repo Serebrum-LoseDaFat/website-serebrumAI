@@ -40,7 +40,7 @@ const accents: Record<
   },
 };
 
-type Category = "Strategy" | "Marketing" | "Fundraising";
+type Category = "Strategy" | "Marketing" | "Fundraising" | "Vygor";
 
 const categories: {
   key: Category;
@@ -65,6 +65,12 @@ const categories: {
     num: "03",
     blurb: "How capital flows through the studio and into each venture.",
     accent: "violet",
+  },
+  {
+    key: "Vygor",
+    num: "04",
+    blurb: "GTM, partnerships, and channel playbooks specific to Vygor Health.",
+    accent: "amber",
   },
 ];
 
@@ -181,21 +187,21 @@ const sections: {
   // FUNDRAISING
   {
     href: "/playbook/vygor-gyms",
-    num: "M5",
-    label: "Vygor · Gyms",
+    num: "V1",
+    label: "Gyms",
     title: "Vygor gym partnerships",
-    body: "SDR-executable gym partner play. Apollo + LinkedIn Sales Nav targeting boutique studios and PT-led gyms. AI wellness fills the nutrition gap gyms can't fill — converting that into 20% higher retention and 25% more revenue per member.",
+    body: "SDR-executable gym partner play. Apollo + LinkedIn Sales Nav targeting boutique studios and PT-led gyms. $8/subscription revenue share via unique UTM link — AI wellness fills the nutrition gap gyms can't fill.",
     contents: [
       "ICP tiers (T1 boutique → T3 small independent)",
       "Apollo account + contact filters",
       "LinkedIn Sales Nav signals + saved searches",
       "16-day 6-touch combined sequence + templates",
       "Discovery call — 15 min agenda + 5 qualifying questions",
+      "$8/subscription revenue share + UTM tracking",
       "4 partnership models (PT add-on → corporate wellness)",
-      "30-min daily routine + weekly KPIs",
     ],
-    accent: "cyan",
-    category: "Marketing",
+    accent: "amber",
+    category: "Vygor",
   },
   {
     href: "/playbook/fundraising",

@@ -19,8 +19,8 @@ export default function VygorGymsPage() {
         <div className="glow-orb pointer-events-none absolute -top-40 left-1/2 h-[420px] w-[420px] -translate-x-1/2" />
 
         <div className="relative mx-auto max-w-6xl px-6 pb-14 pt-24 md:px-10 md:pb-16 md:pt-32">
-          <div className="font-mono text-[11px] uppercase tracking-[0.25em] text-cyan-400">
-            / M5 · Vygor · Gyms
+          <div className="font-mono text-[11px] uppercase tracking-[0.25em] text-amber-400">
+            / Vygor · V1 · Gyms
           </div>
           <h1 className="mt-4 max-w-4xl text-5xl font-medium tracking-tight text-neutral-50 md:text-6xl">
             The{" "}
@@ -598,6 +598,117 @@ export default function VygorGymsPage() {
               bestFor="Gyms near business districts or with corporate client relationships"
               accent="amber"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* REVENUE SHARING */}
+      <section className="border-b border-white/[0.06]">
+        <div className="mx-auto max-w-6xl px-6 py-16 md:px-10 md:py-20">
+          <div className="mb-10 max-w-2xl">
+            <div className="font-mono text-[11px] uppercase tracking-[0.25em] text-amber-300">
+              / 08 · Revenue sharing
+            </div>
+            <h2 className="mt-3 text-3xl font-medium tracking-tight text-neutral-50 md:text-4xl">
+              $8 per subscription. Tracked by UTM.
+            </h2>
+            <p className="mt-3 text-neutral-400">
+              Every gym partner gets a unique UTM link. Every time a member signs
+              up through that link, the gym earns $8 — paid monthly. No
+              minimums, no caps, no manual tracking.
+            </p>
+          </div>
+
+          {/* Mechanics */}
+          <div className="grid gap-5 md:grid-cols-3">
+            <div className="rounded-2xl border border-amber-400/25 bg-amber-400/[0.04] p-7">
+              <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-amber-300">/ The rate</div>
+              <div className="mt-4 text-4xl font-medium text-neutral-50">$8</div>
+              <div className="mt-1 text-sm text-neutral-400">per subscription activated</div>
+              <p className="mt-4 text-xs leading-5 text-neutral-500">
+                Vygor is $79.99/year. The gym earns $8 — ~10% — on every member who signs up via their link. Clean, simple, easy to communicate.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-white/[0.08] bg-[#0a0a0d] p-7">
+              <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-amber-300">/ The link</div>
+              <div className="mt-4 rounded-lg border border-white/[0.06] bg-black/40 p-4 font-mono text-[12px] text-neutral-300">
+                <div className="text-neutral-500">Example UTM</div>
+                <div className="mt-2 break-all text-amber-200">vygor.health/?utm_source=gym&amp;utm_medium=partner&amp;utm_campaign=<span className="text-neutral-50">[gymname]</span></div>
+              </div>
+              <p className="mt-4 text-xs leading-5 text-neutral-500">
+                One link per gym, provided by Vygor at onboarding. Works across every channel — QR code at front desk, Instagram bio, email newsletter, trainer recommendation.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-white/[0.08] bg-[#0a0a0d] p-7">
+              <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-amber-300">/ Payout</div>
+              <div className="mt-4 space-y-3 text-sm">
+                <div className="flex justify-between border-b border-white/[0.05] pb-2">
+                  <span className="text-neutral-400">Tracking</span>
+                  <span className="text-neutral-200">UTM attribution</span>
+                </div>
+                <div className="flex justify-between border-b border-white/[0.05] pb-2">
+                  <span className="text-neutral-400">Cadence</span>
+                  <span className="text-neutral-200">Monthly</span>
+                </div>
+                <div className="flex justify-between border-b border-white/[0.05] pb-2">
+                  <span className="text-neutral-400">Minimum</span>
+                  <span className="text-neutral-200">None</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-neutral-400">Contact</span>
+                  <span className="text-neutral-200">partners@vygor.health</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Earnings projection */}
+          <div className="mt-6 rounded-2xl border border-white/[0.08] bg-[#0a0a0d] p-7 md:p-9">
+            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-amber-300">
+              / Earnings projection — use this in the pitch
+            </div>
+            <p className="mt-3 text-sm text-neutral-400">
+              Frame it as passive income that scales with member adoption. A gym with 500 members and 20% Vygor adoption earns $800/month — for doing nothing after setup.
+            </p>
+            <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4">
+              {[
+                { members: "25", earn: "$200", label: "25 sign-ups" },
+                { members: "50", earn: "$400", label: "50 sign-ups" },
+                { members: "100", earn: "$800", label: "100 sign-ups" },
+                { members: "200", earn: "$1,600", label: "200 sign-ups" },
+              ].map((row) => (
+                <div key={row.members} className="rounded-xl border border-amber-400/20 bg-amber-400/[0.04] p-5 text-center">
+                  <div className="text-2xl font-medium text-amber-200">{row.earn}</div>
+                  <div className="mt-1 font-mono text-[10px] uppercase tracking-[0.15em] text-neutral-500">{row.label} / mo</div>
+                </div>
+              ))}
+            </div>
+            <p className="mt-5 text-xs leading-5 text-neutral-500">
+              Numbers are monthly (recurring subscriptions renew annually — gym earns $8 on each new activation, not on renewals). A 500-member gym targeting 10–20% adoption is a realistic first-year goal.
+            </p>
+          </div>
+
+          {/* How to pitch it */}
+          <div className="mt-6 rounded-2xl border border-emerald-400/25 bg-emerald-400/[0.04] p-7 md:p-9">
+            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-emerald-300">
+              / How to pitch the revenue share in the sequence
+            </div>
+            <div className="mt-5 grid gap-5 md:grid-cols-2">
+              <div>
+                <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-neutral-500">In Email #2 — replace the generic revenue angle with this</div>
+                <div className="mt-3 rounded-lg border border-white/[0.06] bg-black/40 p-4 font-mono text-[12px] leading-6 text-neutral-300">
+                  <div>We pay $8 for every member who signs up through your gym&apos;s link. You get a unique UTM link at onboarding — put it in your Instagram bio, email, or a QR code at the front desk.</div>
+                  <div className="h-3" />
+                  <div>50 sign-ups = $400/month. No minimum, no manual tracking.</div>
+                </div>
+              </div>
+              <div>
+                <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-neutral-500">In the discovery call — after the pilot offer</div>
+                <div className="mt-3 rounded-lg border border-white/[0.06] bg-black/40 p-4 font-mono text-[12px] leading-6 text-neutral-300">
+                  <div>&ldquo;And once members start signing up, you earn $8 per activation through your unique link — paid monthly. So the pilot is also your first look at what the revenue side looks like for your gym.&rdquo;</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
