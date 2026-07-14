@@ -172,6 +172,26 @@ export const ventures: Venture[] = [
     motion: "Enterprise",
     note: "Health-plan and employer sales cycle. Massive ceiling, slow proof curve — phase capital with pilots.",
   },
+  {
+    name: "MetabolIQ",
+    framing: "AI-native personal HealthOS",
+    accent: "violet",
+    size: ">$500M",
+    time: ">2yr",
+    conviction: "med",
+    motion: "B2C",
+    note: "Consumer HealthOS for chronic condition management — AI breaks down complex medical info into user-controlled daily guidance ('my health, my way'). 60%+ of Americans have at least one chronic condition; no consumer product owns this navigation layer. Vygor distributes into health plans and employers from the B2B side; MetabolIQ attacks the same chronic-disease wedge direct-to-patient. Slow proof curve: trust, HIPAA compliance, and clinical credibility required before scaling. Phase capital with Vygor's employer/health-plan channel relationships.",
+  },
+  {
+    name: "Rattlebox",
+    framing: "AI-native developer screening",
+    accent: "cyan",
+    size: "$50M–$500M",
+    time: "1–2yr",
+    conviction: "med",
+    motion: "Hybrid",
+    note: "AI coding test engine for companies screening developers on AI-native engineering skills — Copilot proficiency, prompt engineering, AI-assisted architecture, agentic workflow design. HackerRank/Codility test traditional coding; no product assesses AI-native fluency. Every engineering team is now hiring for these skills without a reliable signal. Interactive AI-coding education layer follows (creates moat and expands TAM beyond assessment). B2B buyer is VP Engineering / Head of Talent — short sales cycle. TokenSource distribution wedge: same engineering-leadership buyer orbit.",
+  },
 ];
 
 // ============================================================
@@ -260,7 +280,7 @@ export const ideas: Idea[] = [
       "Software for VCs — deal flow, investments, risk, returns. Sister product to FedStat (both 'Stat' = portfolio/investment management). Heavily consolidated stack: Affinity (~$100M, deal CRM, dominant), Carta (~$400M, cap table + portfolio, network effect via founder-side adoption), PitchBook ($400M+ data), CB Insights (~$100M), Juniper Square (~$50M LP relations), AngelList Stack (~$100M), Visible.vc, Standard Metrics, Tactyc (Carta acquired). AI deal sourcing entrants: Harmonic, Specter, Tracxn — generic AI doesn't differentiate anymore. TAM: ~10,000 firms globally × ~$50K avg software spend ≈ $500M total; top 5 capture 50–70%; new entrant caps ~$30–80M unless niche carved. Hard: VC firms are sophisticated, slow buyers (6–12 mo cycles, partner consensus); switching CRM mid-fund is brutal; Carta's founder-side network effect is real. Real edges that distinguish from other speculative ideas: (1) SerebrumAI distribution wedge — actual VC relationships (LPs, co-investors, advisors) = 12–18 month head start vs. cold-start founder; (2) studio operators see VC ops from both sides — credibility on workflow problems; (3) AI-native angle is genuine here, not bolted-on — LP reporting auto-generation, deal scoring with reasoning chains, portfolio risk models, IC memo synthesis are real LLM-shaped problems; (4) brand consistency with FedStat. Likely niches: emerging managers (~3,000 globally, underserved by Carta's enterprise tier), risk + return analytics for Series A–C funds (replace Excel Monte Carlo / J-curve models), all-in-one for sub-$100M funds. Time to $1M ARR: 12–18 mo with SerebrumAI network warm-intros (20–40 customers at $25–50K ACV). Ceiling: $50–150M plausible if niche carved; head-on with Affinity+Carta is $30–80M. Med conviction — same reason as AlphaSigma Research: distribution wedge is real and AI-native angle is genuine.",
   },
   {
-    name: "AI FinOps",
+    name: "Cognomix",
     size: ">$500M",
     time: "1–2yr",
     conviction: "high",

@@ -176,7 +176,7 @@ export default function PrioritiesPage() {
                     <p className="mt-1">
                       <span className="text-neutral-50">FedStat</span> enters
                       enterprise sales (Apptio comp).{" "}
-                      <span className="text-neutral-50">AI FinOps</span>{" "}
+                      <span className="text-neutral-50">Cognomix</span>{" "}
                       launches dev-led on FedStat&apos;s CIO/CFO base.{" "}
                       <span className="text-neutral-50">ClaimSentry</span>{" "}
                       cross-sells into Vygor&apos;s health-plan relationships.{" "}
@@ -212,8 +212,8 @@ export default function PrioritiesPage() {
                   VentureStat VC, DealLens AI, CreditCore AI).{" "}
                   <span className="text-neutral-50">Vygor</span> unlocks
                   ClaimSentry.{" "}
-                  <span className="text-neutral-50">FedStat</span> unlocks AI
-                  FinOps. The studio&apos;s structural advantage is{" "}
+                  <span className="text-neutral-50">FedStat</span> unlocks
+                  Cognomix. The studio&apos;s structural advantage is{" "}
                   <span className="text-neutral-50">
                     multiplicative distribution wedges
                   </span>

@@ -355,6 +355,37 @@ export default function MatrixInteractive() {
 // ============================================================
 // Chip components
 // ============================================================
+
+function firstSentence(text: string): string {
+  const m = text.match(/^.+?[.!?](?:\s|$)/);
+  const s = m ? m[0].trim() : text.slice(0, 200);
+  return s.length > 200 ? s.slice(0, 197).replace(/\s\w*$/, "") + "…" : s;
+}
+
+function ChipTooltip({ item }: { item: ItemWithSim }) {
+  const desc =
+    item.kind === "venture"
+      ? item.note
+        ? firstSentence(item.note)
+        : item.framing ?? ""
+      : item.rationale
+      ? firstSentence(item.rationale)
+      : "";
+
+  if (!desc) return null;
+
+  return (
+    <div className="pointer-events-none absolute bottom-full left-0 z-50 mb-2 w-60 rounded-xl border border-white/[0.12] bg-[#0d0d10] p-3 text-left opacity-0 shadow-2xl transition-opacity duration-150 group-hover:opacity-100">
+      {item.framing && (
+        <div className="mb-1.5 font-mono text-[9px] uppercase tracking-[0.15em] text-neutral-500">
+          {item.framing}
+        </div>
+      )}
+      <p className="text-[11px] leading-[1.6] text-neutral-300">{desc}</p>
+    </div>
+  );
+}
+
 function ChipSim({ item, onClick }: { item: ItemWithSim; onClick: () => void }) {
   const m = motionStyle[item.motion];
   const isGrad = item.adjusted.graduated;
@@ -362,16 +393,40 @@ function ChipSim({ item, onClick }: { item: ItemWithSim; onClick: () => void }) 
   if (item.kind === "venture" && item.accent) {
     const c = accentColors[item.accent];
     return (
+      <div className="group relative">
+        <ChipTooltip item={item} />
+        <button
+          onClick={onClick}
+          className={`inline-flex items-center gap-1.5 rounded-full border ${c.border} ${c.bgSoft} px-2 py-0.5 text-[11px] ${c.text} transition hover:brightness-125 ${
+            isGrad ? "ring-1 ring-amber-300/60 ring-offset-0" : ""
+          }`}
+        >
+          {isGrad && <span className="text-amber-300">★</span>}
+          <MaturityBadge maturity={item.adj.maturity} traction={item.adj.traction} />
+          <span className={`h-1.5 w-1.5 rounded-full ${c.dot}`} />
+          {item.name}
+          <span
+            className={`inline-flex items-center rounded border px-1 py-px font-mono text-[9px] not-italic ${m.bg} ${m.text} ${m.border}`}
+          >
+            {item.motion}
+          </span>
+          <ConvictionDots level={item.adjusted.conviction} />
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <div className="group relative">
+      <ChipTooltip item={item} />
       <button
         onClick={onClick}
-        className={`group inline-flex items-center gap-1.5 rounded-full border ${c.border} ${c.bgSoft} px-2 py-0.5 text-[11px] ${c.text} transition hover:brightness-125 ${
+        className={`inline-flex items-center gap-1.5 rounded-full border border-dashed border-white/20 bg-white/[0.02] px-2 py-0.5 text-[11px] italic text-neutral-400 transition hover:border-white/40 hover:text-neutral-200 ${
           isGrad ? "ring-1 ring-amber-300/60 ring-offset-0" : ""
         }`}
-        title={`Click to adjust · ${item.framing ?? ""}`}
       >
-        {isGrad && <span className="text-amber-300">★</span>}
+        {isGrad && <span className="not-italic text-amber-300">★</span>}
         <MaturityBadge maturity={item.adj.maturity} traction={item.adj.traction} />
-        <span className={`h-1.5 w-1.5 rounded-full ${c.dot}`} />
         {item.name}
         <span
           className={`inline-flex items-center rounded border px-1 py-px font-mono text-[9px] not-italic ${m.bg} ${m.text} ${m.border}`}
@@ -380,27 +435,7 @@ function ChipSim({ item, onClick }: { item: ItemWithSim; onClick: () => void }) 
         </span>
         <ConvictionDots level={item.adjusted.conviction} />
       </button>
-    );
-  }
-
-  return (
-    <button
-      onClick={onClick}
-      className={`group inline-flex items-center gap-1.5 rounded-full border border-dashed border-white/20 bg-white/[0.02] px-2 py-0.5 text-[11px] italic text-neutral-400 transition hover:border-white/40 hover:text-neutral-200 ${
-        isGrad ? "ring-1 ring-amber-300/60 ring-offset-0" : ""
-      }`}
-      title="Click to adjust"
-    >
-      {isGrad && <span className="not-italic text-amber-300">★</span>}
-      <MaturityBadge maturity={item.adj.maturity} traction={item.adj.traction} />
-      {item.name}
-      <span
-        className={`inline-flex items-center rounded border px-1 py-px font-mono text-[9px] not-italic ${m.bg} ${m.text} ${m.border}`}
-      >
-        {item.motion}
-      </span>
-      <ConvictionDots level={item.adjusted.conviction} />
-    </button>
+    </div>
   );
 }
 
