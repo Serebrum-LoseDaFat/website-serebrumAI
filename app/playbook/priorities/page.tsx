@@ -296,6 +296,66 @@ export default function PrioritiesPage() {
         </div>
       </section>
 
+      {/* PER-IDEA NOTES */}
+      <section className="border-b border-white/[0.06]">
+        <div className="mx-auto max-w-6xl px-6 py-16 md:px-10 md:py-20">
+          <div className="mb-10 max-w-2xl">
+            <div className="font-mono text-[11px] uppercase tracking-[0.25em] text-emerald-400">
+              / Ideas
+            </div>
+            <h2 className="mt-3 text-3xl font-medium tracking-tight text-neutral-50 md:text-4xl">
+              Why each idea lands where it does.
+            </h2>
+            <p className="mt-3 text-neutral-400">
+              Speculative bets, not in-flight ventures. Each inherits a
+              distribution wedge from an existing venture — that&apos;s the
+              filter that earns studio capital.
+            </p>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-2">
+            {ideas.map((idea) => {
+              const m = motionStyle[idea.motion];
+              return (
+                <div
+                  key={idea.name}
+                  className="rounded-2xl border border-dashed border-white/[0.10] bg-[#0a0a0d] p-6 md:p-7"
+                >
+                  <div className="flex items-center gap-2.5">
+                    <span
+                      className={`inline-flex items-center rounded border px-1.5 py-0.5 font-mono text-[9px] ${m.bg} ${m.text} ${m.border}`}
+                    >
+                      {idea.motion}
+                    </span>
+                    <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-neutral-500">
+                      AI-native idea
+                    </span>
+                  </div>
+                  <h3 className="mt-3 text-2xl font-medium italic text-neutral-50">
+                    {idea.name}
+                  </h3>
+                  <div className="mt-3 flex flex-wrap items-center gap-2 text-xs">
+                    <span className="rounded-full border border-white/[0.08] bg-white/[0.03] px-2.5 py-0.5 text-neutral-300">
+                      {idea.size}
+                    </span>
+                    <span className="rounded-full border border-white/[0.08] bg-white/[0.03] px-2.5 py-0.5 text-neutral-300">
+                      {idea.time} to $1M ARR
+                    </span>
+                    <span className="flex items-center gap-1.5 rounded-full border border-white/[0.08] bg-white/[0.03] px-2.5 py-0.5 text-neutral-300">
+                      <ConvictionDots level={idea.conviction} />
+                      {convictionLabel[idea.conviction]}
+                    </span>
+                  </div>
+                  <p className="mt-4 text-sm leading-6 text-neutral-400">
+                    {idea.rationale}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* FRAMEWORK NOTES */}
       <section>
         <div className="mx-auto max-w-6xl px-6 py-16 md:px-10 md:py-20">
