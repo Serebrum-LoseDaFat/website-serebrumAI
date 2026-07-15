@@ -58,3 +58,228 @@ body {
     transparent
   );
 }
+
+/* ============================================================
+   Playbook light theme
+   Toggled by adding .playbook-light to <html> via PlaybookNav.
+   All color overrides are scoped to [data-playbook] except the
+   body background, which must be set at the root level.
+   ============================================================ */
+html.playbook-light {
+  color-scheme: light;
+}
+
+html.playbook-light body {
+  background: #f0f2f5;
+  color: #111115;
+}
+
+html.playbook-light ::selection {
+  background: rgba(5, 150, 105, 0.18);
+  color: #0f0f14;
+}
+
+/* ── Page / nav backgrounds ── */
+html.playbook-light [data-playbook] .bg-\[\#070709\]\/90 {
+  background-color: rgba(244, 245, 248, 0.96) !important;
+}
+html.playbook-light [data-playbook] .bg-\[\#070709\] {
+  background-color: #f0f2f5 !important;
+}
+html.playbook-light [data-playbook] .bg-\[\#0a0a0d\] {
+  background-color: #ffffff !important;
+}
+html.playbook-light [data-playbook] .bg-\[\#0d0d10\] {
+  background-color: #f6f7f9 !important;
+}
+html.playbook-light [data-playbook] .bg-\[\#0a0a0c\] {
+  background-color: #ffffff !important;
+}
+
+/* ── Transparent white backgrounds → transparent dark ── */
+html.playbook-light [data-playbook] .bg-white\/\[0\.02\] {
+  background-color: rgba(0, 0, 0, 0.025) !important;
+}
+html.playbook-light [data-playbook] .bg-white\/\[0\.03\] {
+  background-color: rgba(0, 0, 0, 0.04) !important;
+}
+html.playbook-light [data-playbook] .bg-white\/\[0\.04\] {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+html.playbook-light [data-playbook] .bg-white\/\[0\.06\] {
+  background-color: rgba(0, 0, 0, 0.06) !important;
+}
+html.playbook-light [data-playbook] .bg-white\/\[0\.08\] {
+  background-color: rgba(0, 0, 0, 0.07) !important;
+}
+html.playbook-light [data-playbook] .bg-white\/\[0\.10\] {
+  background-color: rgba(0, 0, 0, 0.08) !important;
+}
+html.playbook-light [data-playbook] .hover\:bg-white\/\[0\.04\]:hover {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+html.playbook-light [data-playbook] .hover\:bg-white\/\[0\.08\]:hover {
+  background-color: rgba(0, 0, 0, 0.07) !important;
+}
+
+/* ── Border: white/* → dark/* ── */
+html.playbook-light [data-playbook] .border-white\/\[0\.04\] {
+  border-color: rgba(0, 0, 0, 0.06) !important;
+}
+html.playbook-light [data-playbook] .border-white\/\[0\.06\] {
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+html.playbook-light [data-playbook] .border-white\/\[0\.08\] {
+  border-color: rgba(0, 0, 0, 0.10) !important;
+}
+html.playbook-light [data-playbook] .border-white\/\[0\.10\] {
+  border-color: rgba(0, 0, 0, 0.12) !important;
+}
+html.playbook-light [data-playbook] .border-white\/\[0\.12\] {
+  border-color: rgba(0, 0, 0, 0.14) !important;
+}
+html.playbook-light [data-playbook] .border-white\/\[0\.15\] {
+  border-color: rgba(0, 0, 0, 0.16) !important;
+}
+html.playbook-light [data-playbook] .border-white\/\[0\.20\] {
+  border-color: rgba(0, 0, 0, 0.18) !important;
+}
+html.playbook-light [data-playbook] .border-white\/\[0\.25\] {
+  border-color: rgba(0, 0, 0, 0.20) !important;
+}
+html.playbook-light [data-playbook] .border-white\/\[0\.30\] {
+  border-color: rgba(0, 0, 0, 0.22) !important;
+}
+html.playbook-light [data-playbook] .border-white\/10 {
+  border-color: rgba(0, 0, 0, 0.12) !important;
+}
+html.playbook-light [data-playbook] .border-white\/15 {
+  border-color: rgba(0, 0, 0, 0.16) !important;
+}
+html.playbook-light [data-playbook] .border-white\/30 {
+  border-color: rgba(0, 0, 0, 0.22) !important;
+}
+html.playbook-light [data-playbook] .hover\:border-white\/\[0\.20\]:hover {
+  border-color: rgba(0, 0, 0, 0.20) !important;
+}
+html.playbook-light [data-playbook] .hover\:border-white\/30:hover {
+  border-color: rgba(0, 0, 0, 0.24) !important;
+}
+
+/* ── Neutral text — invert for light bg ── */
+html.playbook-light [data-playbook] .text-white {
+  color: #111115 !important;
+}
+html.playbook-light [data-playbook] .text-neutral-50 {
+  color: #111115 !important;
+}
+html.playbook-light [data-playbook] .text-neutral-100 {
+  color: #1c1c24 !important;
+}
+html.playbook-light [data-playbook] .text-neutral-200 {
+  color: #2c2c38 !important;
+}
+html.playbook-light [data-playbook] .text-neutral-300 {
+  color: #3e3e50 !important;
+}
+html.playbook-light [data-playbook] .text-neutral-400 {
+  color: #4a4a5c !important;
+}
+html.playbook-light [data-playbook] .text-neutral-500 {
+  color: #6a6a7e !important;
+}
+html.playbook-light [data-playbook] .text-neutral-600 {
+  color: #8888a0 !important;
+}
+html.playbook-light [data-playbook] .text-neutral-700 {
+  color: #a0a0b8 !important;
+}
+html.playbook-light [data-playbook] .hover\:text-neutral-100:hover {
+  color: #111115 !important;
+}
+html.playbook-light [data-playbook] .hover\:text-neutral-200:hover {
+  color: #1c1c24 !important;
+}
+html.playbook-light [data-playbook] .hover\:text-neutral-300:hover {
+  color: #3e3e50 !important;
+}
+
+/* ── Accent text — darken for readability on light bg ── */
+html.playbook-light [data-playbook] .text-emerald-400 {
+  color: #059669 !important;
+}
+html.playbook-light [data-playbook] .text-emerald-400\/80 {
+  color: rgba(5, 150, 105, 0.9) !important;
+}
+html.playbook-light [data-playbook] .hover\:text-emerald-400:hover {
+  color: #047857 !important;
+}
+html.playbook-light [data-playbook] .text-emerald-300 {
+  color: #059669 !important;
+}
+html.playbook-light [data-playbook] .text-emerald-300\/80 {
+  color: rgba(5, 150, 105, 0.9) !important;
+}
+html.playbook-light [data-playbook] .text-cyan-300 {
+  color: #0284c7 !important;
+}
+html.playbook-light [data-playbook] .text-cyan-300\/80 {
+  color: rgba(2, 132, 199, 0.9) !important;
+}
+html.playbook-light [data-playbook] .text-violet-300 {
+  color: #7c3aed !important;
+}
+html.playbook-light [data-playbook] .text-violet-300\/80 {
+  color: rgba(124, 58, 237, 0.9) !important;
+}
+html.playbook-light [data-playbook] .text-amber-300 {
+  color: #d97706 !important;
+}
+html.playbook-light [data-playbook] .text-amber-300\/80 {
+  color: rgba(217, 119, 6, 0.9) !important;
+}
+html.playbook-light [data-playbook] .text-rose-300 {
+  color: #e11d48 !important;
+}
+
+/* ── Accent dot fills (nav category indicators) ── */
+html.playbook-light [data-playbook] .bg-emerald-300\/60 {
+  background-color: rgba(5, 150, 105, 0.55) !important;
+}
+html.playbook-light [data-playbook] .bg-cyan-300\/60 {
+  background-color: rgba(2, 132, 199, 0.55) !important;
+}
+html.playbook-light [data-playbook] .bg-violet-300\/60 {
+  background-color: rgba(124, 58, 237, 0.55) !important;
+}
+html.playbook-light [data-playbook] .bg-amber-300\/60 {
+  background-color: rgba(217, 119, 6, 0.55) !important;
+}
+
+/* ── Text gradient — use darker stops on light bg ── */
+html.playbook-light [data-playbook] .text-gradient {
+  background: linear-gradient(100deg, #059669 0%, #0284c7 50%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ── Decorative elements ── */
+html.playbook-light [data-playbook] .grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+}
+
+html.playbook-light [data-playbook] .glow-orb {
+  opacity: 0.35;
+}
+
+html.playbook-light [data-playbook] .divider {
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(0, 0, 0, 0.12),
+    transparent
+  );
+}

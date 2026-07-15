@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
 
 type Accent = "emerald" | "cyan" | "violet" | "amber";
 
@@ -72,6 +73,26 @@ const accentDot: Record<Accent, string> = {
 
 export default function PlaybookNav() {
   const pathname = usePathname();
+  const [theme, setTheme] = useState<"dark" | "light">("dark");
+
+  useEffect(() => {
+    const saved = localStorage.getItem("playbook-theme");
+    if (saved === "light") {
+      setTheme("light");
+      document.documentElement.classList.add("playbook-light");
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const next = theme === "dark" ? "light" : "dark";
+    setTheme(next);
+    if (next === "light") {
+      document.documentElement.classList.add("playbook-light");
+    } else {
+      document.documentElement.classList.remove("playbook-light");
+    }
+    localStorage.setItem("playbook-theme", next);
+  };
 
   const isItemActive = (item: Item) =>
     item.href === "/playbook"
@@ -123,7 +144,7 @@ export default function PlaybookNav() {
       className="sticky top-[64px] z-40 border-b border-white/[0.06] bg-[#070709]/90 backdrop-blur-md"
     >
       <div className="mx-auto max-w-7xl px-4 py-3 md:px-10">
-        {/* Top header row — brand + Overview */}
+        {/* Top header row — brand + Overview + theme toggle */}
         <div className="flex items-center gap-3 border-b border-white/[0.04] pb-2">
           <Link
             href="/playbook"
@@ -133,6 +154,13 @@ export default function PlaybookNav() {
           </Link>
           <span className="text-neutral-700">·</span>
           {renderItem(overview)}
+          <button
+            onClick={toggleTheme}
+            title={theme === "dark" ? "Switch to light theme" : "Switch to dark theme"}
+            className="ml-auto shrink-0 rounded-full border border-white/[0.08] px-2.5 py-0.5 font-mono text-[10px] text-neutral-500 transition hover:border-white/[0.20] hover:text-neutral-300"
+          >
+            {theme === "dark" ? "☀ Light" : "☾ Dark"}
+          </button>
         </div>
 
         {/* Three category rows */}

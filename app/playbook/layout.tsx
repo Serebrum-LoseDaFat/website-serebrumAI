@@ -6,9 +6,9 @@ export default function PlaybookLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
+    <div data-playbook>
       <PlaybookNav />
       {children}
-    </>
+    </div>
   );
 }
