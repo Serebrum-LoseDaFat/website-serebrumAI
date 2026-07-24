@@ -546,12 +546,10 @@ export default function VygorTikTokPage() {
               <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-violet-300">/ Creator onboarding checklist</div>
               <div className="mt-5 space-y-3">
                 {[
-                  ["Brief sent", "Segment-specific brief (from the Content Briefs doc). Confirm receipt."],
-                  ["Unique promo code set up", "One code per creator. Never share codes between creators."],
-                  ["UTM link generated", "vygor.health/?utm_source=tiktok&utm_medium=creator&utm_campaign=[handle]"],
-                  ["Rate confirmed in writing", "Flat fee + commission rate. Get confirmation before brief delivery."],
+                  ["Rate confirmed in writing", "Flat fee + commission rate. Get written confirmation before anything else."],
+                  ["Content Brief sent + compliance acknowledged", "Send the Content Brief link. Creator confirms they've read the compliance rules before receiving their tracking link."],
+                  ["Unique tracking link set up", "One promo code + UTM per creator: vygor.health/?utm_source=tiktok&utm_medium=creator&utm_campaign=[handle]. Never share between creators."],
                   ["Approval workflow agreed", "Creator sends draft via DM or email. PM reviews within 48h."],
-                  ["Compliance rules acknowledged", "Creator confirms they've read the compliance section of the brief."],
                 ].map(([label, note]) => (
                   <div key={label as string} className="flex items-start gap-3">
                     <span className="mt-1 h-4 w-4 shrink-0 rounded border border-violet-400/30 bg-violet-400/[0.06] flex items-center justify-center">
