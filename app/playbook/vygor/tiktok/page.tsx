@@ -256,7 +256,7 @@ export default function VygorTikTokPage() {
               <div className="mt-4 rounded-lg border border-white/[0.06] bg-black/40 p-5 font-mono text-[13px] leading-6 text-neutral-300">
                 <div>Hi {"{"} Firstname {"}"} — we&rsquo;re Vygor Health, a weight management app launching in the US. We&rsquo;re offering paid partnerships to wellness creators: flat fee per post + affiliate commission on every subscriber you refer. Full creative freedom, no script.</div>
                 <div className="h-3" />
-                <div>Interested? Reply here or email us at creators@vygor.health.</div>
+                <div>Interested? Reply here or email us at partners@vygor.health.</div>
               </div>
               <div className="mt-4 rounded-lg border border-emerald-400/20 bg-emerald-400/[0.04] p-4 text-xs text-neutral-400">
                 <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-emerald-300">Key detail:</span>{" "}

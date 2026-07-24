@@ -178,10 +178,10 @@ export default function ContentBriefPage() {
               ↗ Download on App Store
             </a>
             <a
-              href="mailto:creators@vygor.health"
+              href="mailto:partners@vygor.health"
               className="inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.03] px-4 py-2 font-mono text-[11px] uppercase tracking-[0.18em] text-neutral-400 transition hover:border-white/[0.20] hover:text-neutral-200"
             >
-              creators@vygor.health
+              partners@vygor.health
             </a>
           </div>
         </div>
@@ -199,7 +199,7 @@ export default function ContentBriefPage() {
             </h2>
             <p className="mt-3 text-neutral-400 text-sm leading-6">
               All posts must be reviewed and approved by the Vygor team before publishing. Send your draft to{" "}
-              <a href="mailto:creators@vygor.health" className="text-amber-400 underline underline-offset-2">creators@vygor.health</a>{" "}
+              <a href="mailto:partners@vygor.health" className="text-amber-400 underline underline-offset-2">partners@vygor.health</a>{" "}
               or via DM.
             </p>
           </div>
@@ -416,8 +416,8 @@ export default function ContentBriefPage() {
               <div className="mt-4 space-y-2 text-sm">
                 <div className="text-neutral-200">Nare Harutyunyan</div>
                 <div className="text-neutral-500">Influencer Manager · Vygor Health</div>
-                <a href="mailto:creators@vygor.health" className="block mt-3 text-amber-400 underline underline-offset-2 hover:text-amber-300 transition">
-                  creators@vygor.health
+                <a href="mailto:partners@vygor.health" className="block mt-3 text-amber-400 underline underline-offset-2 hover:text-amber-300 transition">
+                  partners@vygor.health
                 </a>
                 <div className="text-neutral-400">443-360-8250</div>
               </div>
