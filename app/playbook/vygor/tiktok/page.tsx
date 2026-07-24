@@ -160,7 +160,7 @@ export default function VygorTikTokPage() {
             <div className="rounded-2xl border border-white/[0.08] bg-[#0a0a0d] p-7 md:p-9">
               <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cyan-300">/ Search filters</div>
               <div className="mt-5 space-y-3">
-                <FilterRow label="Category" value="Fitness & Health · Food & Cooking · Lifestyle" />
+                <FilterRow label="Video Content Tag" value="Sports & Outdoor > Fitness · Sports & Outdoor > Health & Wellness" />
                 <FilterRow label="Followers" value="10K – 500K (micro to mid-tier; best ROI)" />
                 <FilterRow label="Avg views" value="5K+ per video minimum" />
                 <FilterRow label="Engagement" value="> 8% (TikTok avg is 5.3%; skip anyone below this)" />
