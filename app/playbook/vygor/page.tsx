@@ -36,7 +36,7 @@ export default function VygorOverviewPage() {
             <span className="font-serif italic text-gradient">playbooks.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-400">
-            Internal documents covering Vygor's go-to-market, partnerships, and
+            Internal documents covering Vygor&apos;s go-to-market, partnerships, and
             outreach. Add new sections as the playbook grows.
           </p>
         </div>
