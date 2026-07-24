@@ -300,28 +300,61 @@ export default function VygorTikTokPage() {
             </div>
           </div>
 
-          {/* Sequence */}
-          <div className="rounded-2xl border border-white/[0.08] bg-[#0a0a0d] p-7 md:p-9">
-            <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-emerald-300">/ Outreach sequence</div>
-            <div className="mt-5 grid gap-4 md:grid-cols-4">
-              {[
-                { day: "Day 1", action: "TikTok DM", sub: "Reference a specific video. No pitch yet — open with the connection.", color: "emerald" },
-                { day: "Day 5", action: "Email (if no DM reply)", sub: "Use the email template above. Only send if you have a verified email.", color: "cyan" },
-                { day: "Day 8", action: "TikTok DM follow-up", sub: "One sentence: 'Wanted to make sure this didn't get buried — still happy to share details if you're interested.'", color: "violet" },
-                { day: "Day 12", action: "Final close — or move on", sub: "'Last note — if timing isn't right, no worries. We'll be back in touch in Q2.' Then archive.", color: "amber" },
-              ].map((s) => {
-                const a = accentMap[s.color];
-                return (
-                  <div key={s.day} className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-5">
-                    <div className={`font-mono text-[10px] uppercase tracking-[0.18em] ${a.text}`}>{s.day}</div>
-                    <div className="mt-2 text-sm font-medium text-neutral-100">{s.action}</div>
-                    <p className="mt-2 text-xs leading-5 text-neutral-500">{s.sub}</p>
-                  </div>
-                );
-              })}
+          {/* Sequences */}
+          <div className="space-y-4">
+            {/* Micro sequence */}
+            <div className="rounded-2xl border border-white/[0.08] bg-[#0a0a0d] p-7 md:p-9">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-emerald-300">/ Outreach sequence</div>
+                <span className="rounded-full border border-emerald-400/30 bg-emerald-400/[0.06] px-2 py-0.5 font-mono text-[9px] uppercase tracking-[0.15em] text-emerald-300">Micro · 10K–100K</span>
+                <span className="rounded-full border border-neutral-700 bg-white/[0.03] px-2 py-0.5 font-mono text-[9px] uppercase tracking-[0.15em] text-neutral-500">DM only</span>
+              </div>
+              <div className="grid gap-4 md:grid-cols-3">
+                {[
+                  { day: "Day 1", action: "TikTok DM", sub: "Reference a specific video. No pitch yet — open with the connection.", color: "emerald" },
+                  { day: "Day 6", action: "DM follow-up", sub: "One sentence: 'Wanted to make sure this didn't get buried — still happy to share details if you're interested.'", color: "violet" },
+                  { day: "Day 10", action: "Final close — or move on", sub: "'Last note — if timing isn't right, no worries. We'll be back in touch in Q2.' Then archive.", color: "amber" },
+                ].map((s) => {
+                  const a = accentMap[s.color];
+                  return (
+                    <div key={s.day} className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-5">
+                      <div className={`font-mono text-[10px] uppercase tracking-[0.18em] ${a.text}`}>{s.day}</div>
+                      <div className="mt-2 text-sm font-medium text-neutral-100">{s.action}</div>
+                      <p className="mt-2 text-xs leading-5 text-neutral-500">{s.sub}</p>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
-            <p className="mt-5 text-xs leading-5 text-neutral-500">
-              Past Day 12: move to a quarterly nurture list. Creators&rsquo; situations change — new audience growth, niche shifts, sponsored content openings. Re-engage in 90 days.
+
+            {/* Macro sequence */}
+            <div className="rounded-2xl border border-white/[0.08] bg-[#0a0a0d] p-7 md:p-9">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-cyan-300">/ Outreach sequence</div>
+                <span className="rounded-full border border-cyan-400/30 bg-cyan-400/[0.06] px-2 py-0.5 font-mono text-[9px] uppercase tracking-[0.15em] text-cyan-300">Mid-tier & Macro · 100K+</span>
+                <span className="rounded-full border border-neutral-700 bg-white/[0.03] px-2 py-0.5 font-mono text-[9px] uppercase tracking-[0.15em] text-neutral-500">DM + Email</span>
+              </div>
+              <div className="grid gap-4 md:grid-cols-4">
+                {[
+                  { day: "Day 1", action: "TikTok DM", sub: "Reference a specific video. Brief intro — these inboxes are busy, so lead with the creator angle, not the brand.", color: "cyan" },
+                  { day: "Day 4", action: "Email", sub: "Use the email template. Check bio for a business email or Linktree. Only send if verified — no cold guesses.", color: "emerald" },
+                  { day: "Day 8", action: "DM follow-up", sub: "'Sent an email too — wanted to make sure this reached you. Happy to share full details either way.'", color: "violet" },
+                  { day: "Day 12", action: "Final close — or move on", sub: "'Last note — if timing isn't right, no worries. We'll be back in touch in Q2.' Then archive.", color: "amber" },
+                ].map((s) => {
+                  const a = accentMap[s.color];
+                  return (
+                    <div key={s.day} className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-5">
+                      <div className={`font-mono text-[10px] uppercase tracking-[0.18em] ${a.text}`}>{s.day}</div>
+                      <div className="mt-2 text-sm font-medium text-neutral-100">{s.action}</div>
+                      <p className="mt-2 text-xs leading-5 text-neutral-500">{s.sub}</p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            <p className="px-1 text-xs leading-5 text-neutral-500">
+              Past final close: move to a quarterly nurture list. Creators&rsquo; situations change — new audience growth, niche shifts, sponsored content openings. Re-engage in 90 days.
             </p>
           </div>
         </div>
