@@ -17,6 +17,15 @@ const sections = [
     accent: "amber" as const,
     status: "Live",
   },
+  {
+    href: "/playbook/vygor/tiktok",
+    label: "TikTok",
+    tag: "V1",
+    description:
+      "Full creator marketing playbook — 7 segment briefs, TikTok One discovery criteria, DM/email templates, campaign setup, compliance rules, KPI thresholds, and Scale or Cancel decision framework.",
+    accent: "amber" as const,
+    status: "Live",
+  },
 ];
 
 export default function VygorOverviewPage() {
