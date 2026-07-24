@@ -13,6 +13,42 @@ const accentMap: Record<string, { text: string; border: string; bgSoft: string; 
   amber:   { text: "text-amber-300",   border: "border-amber-400/25",   bgSoft: "bg-amber-400/[0.04]",   dot: "bg-amber-400" },
 };
 
+const firstVideos = [
+  {
+    num: "01",
+    title: "Your Future Self",
+    tagline: "Imagine yourself 90 days from now.",
+    why: "People buy transformation, not software.",
+    emotion: "Hope · Aspiration",
+    color: "emerald",
+    opening: "Someone avoids the mirror. Tired. Struggling up stairs. Doctor says they need to lose some weight.",
+    middle: "Phone appears. Vygor opens. AI meal plan. Daily walks. Meals logged. Weight gradually drops.",
+    ending: "The hardest day is Day One. Start today.",
+  },
+  {
+    num: "02",
+    title: "Your AI Health Coach",
+    tagline: "Show them what AI actually does.",
+    why: "Consumers have heard AI hundreds of times — show, not tell.",
+    emotion: "Relief · Less work",
+    color: "cyan",
+    opening: "Most apps make you do the work. Vygor works with you.",
+    middle: "Photo of lunch → AI identifies food → calories logged → meal suggestions → workout plan → shopping list → progress dashboard.",
+    ending: "Stop tracking everything. Start living healthier.",
+  },
+  {
+    num: "03",
+    title: "Small Habits. Big Results.",
+    tagline: "Don't promise miracles. Promise consistency.",
+    why: "Most viewers have already failed several diets. This feels achievable.",
+    emotion: "Achievable · Momentum",
+    color: "violet",
+    opening: "Nobody changes their life overnight.",
+    middle: "One walk. One healthy meal. One pound. Montage: Day 1 → Day 12 → Day 37 → Day 84. Weight graph dips. Steps climb.",
+    ending: "Progress beats perfection. Every day counts.",
+  },
+];
+
 // ============================================================
 // Page
 // ============================================================
@@ -127,6 +163,47 @@ export default function VygorTikTokPage() {
                   );
                 })}
               </div>
+            </div>
+          </div>
+
+          {/* First 3 videos */}
+          <div className="mt-6">
+            <div className="mb-5">
+              <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-amber-300">/ First 3 videos to post</div>
+              <p className="mt-2 text-sm text-neutral-500">Post these before any outreach. They establish the account voice and give creators something real to evaluate.</p>
+            </div>
+            <div className="grid gap-4 md:grid-cols-3">
+              {firstVideos.map((v) => {
+                const a = accentMap[v.color];
+                return (
+                  <div key={v.num} className={`rounded-2xl border ${a.border} ${a.bgSoft} p-6`}>
+                    <div className="flex items-center gap-2 mb-4">
+                      <span className={`font-mono text-[10px] uppercase tracking-[0.22em] ${a.text}`}>Video {v.num}</span>
+                    </div>
+                    <div className={`text-xl font-medium text-neutral-50`}>{v.title}</div>
+                    <p className={`mt-1 text-xs italic ${a.text} opacity-80`}>&ldquo;{v.tagline}&rdquo;</p>
+
+                    <div className="mt-4 space-y-3">
+                      {[
+                        { label: "Opening", text: v.opening },
+                        { label: "Middle", text: v.middle },
+                        { label: "Ending", text: v.ending },
+                      ].map((s) => (
+                        <div key={s.label}>
+                          <div className="font-mono text-[9px] uppercase tracking-[0.18em] text-neutral-600">{s.label}</div>
+                          <p className="mt-1 text-xs leading-5 text-neutral-400">{s.text}</p>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className={`mt-4 pt-4 border-t border-white/[0.06]`}>
+                      <div className="font-mono text-[9px] uppercase tracking-[0.18em] text-neutral-600">Core emotion</div>
+                      <div className={`mt-1 text-xs font-medium ${a.text}`}>{v.emotion}</div>
+                      <p className="mt-1 text-[11px] leading-4 text-neutral-500">{v.why}</p>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
 
