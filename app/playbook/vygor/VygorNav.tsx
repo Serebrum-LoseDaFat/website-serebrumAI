@@ -13,6 +13,7 @@ const sections: Section[] = [
   { href: "/playbook/vygor", label: "Overview", exact: true },
   { href: "/playbook/vygor/gyms", label: "Gyms" },
   { href: "/playbook/vygor/tiktok", label: "TikTok" },
+  { href: "/playbook/vygor/content-brief", label: "Content Brief" },
 ];
 
 export default function VygorNav() {

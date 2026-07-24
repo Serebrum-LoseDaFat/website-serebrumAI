@@ -25,6 +25,17 @@ function unauthorized(): NextResponse {
 }
 
 export function middleware(req: NextRequest) {
+  // Content brief is publicly accessible — skip auth gate
+  const pathname = req.nextUrl.pathname;
+  if (
+    pathname === "/playbook/vygor/content-brief" ||
+    pathname.startsWith("/playbook/vygor/content-brief/")
+  ) {
+    const res = NextResponse.next();
+    res.headers.set("X-Robots-Tag", "noindex, nofollow, noarchive");
+    return res;
+  }
+
   const expectedUser = process.env.PRIORITIES_AUTH_USER ?? "Krishna";
   const expectedPass = process.env.PRIORITIES_AUTH_PASS ?? "SerebrumAI";
 
