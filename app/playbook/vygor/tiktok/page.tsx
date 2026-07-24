@@ -6,132 +6,6 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-// ============================================================
-// Data
-// ============================================================
-
-const segments = [
-  {
-    id: "weight-loss",
-    icon: "⚖️",
-    label: "Weight Loss",
-    angle: "Vygor as the system that keeps you on track when willpower runs out. Not a diet — a habit engine that tracks patterns, builds accountability, and makes progress visible.",
-    hooks: [
-      '"I stopped tracking calories and started doing THIS instead."',
-      '"Why I\'ve lost and regained the same 10 lbs — and what finally changed."',
-      '"Day 30 of using Vygor — here\'s what the data actually showed me."',
-      '"I challenged my friends to a weight loss competition and this happened."',
-    ],
-    formats: ["Before/after habit comparison (habits, not body imagery)", "Week in my life with Vygor check-ins", "30/60/90-day progress reflection", "Contest reveal — follower weight challenge"],
-    doList: ["Talk about habit-building and consistency", "Share personal app experience", "Mention the contest feature", "#ad / 'Paid partnership' in every post"],
-    dontList: ["Claim specific weight loss numbers", "Before/after body transformation photos", "Say Vygor 'makes you lose weight'", "Sound like a diet or meal plan"],
-    dm: "Hey [name] — I loved your video on [specific topic]. It really resonated because Vygor is built around exactly that idea: that results come from habits, not diets. Would love to see how it fits with your content. Happy to send you early access — no pressure at all.",
-    accent: "emerald" as const,
-  },
-  {
-    id: "diet-nutrition",
-    icon: "🥗",
-    label: "Diet & Nutrition",
-    angle: "Vygor complements a healthy diet by building consistent habits around it. Not a calorie counter — a behavioral tracker that helps people stick to the food approach they've already chosen.",
-    hooks: [
-      '"I\'m a nutritionist and I finally found an app I\'d actually recommend to clients."',
-      '"The problem with every nutrition app: they tell you what to eat but not how to build the habit."',
-      '"Tracking your food is fine. Tracking your habits is better."',
-      '"This is the habit-building layer missing from most nutrition plans."',
-    ],
-    formats: ["'App I recommend alongside a diet plan' — practitioner framing", "Nutrition routine with Vygor as daily check-in", "'Why habit tracking beats calorie counting' educational piece", "FAQ: 'How do you stay consistent?'"],
-    doList: ["Frame Vygor as a habit and consistency tool", "Use language like 'accountability', 'patterns', 'consistency'", "Show routine-building alongside nutrition", "#ad disclosure in every post"],
-    dontList: ["Claim Vygor provides nutrition advice or meal plans", "Imply Vygor replaces a dietitian", "Say it 'cures' unhealthy eating or eating disorders", "Make condition-specific claims (insulin resistance, PCOS)"],
-    dm: "Hey [name] — I've been following your content on [specific topic] and it struck me how much of your advice is about building sustainable habits rather than just what to eat. That's exactly the gap Vygor is built for. Would you be open to trying it and sharing honest feedback?",
-    accent: "cyan" as const,
-  },
-  {
-    id: "womens-health",
-    icon: "🌸",
-    label: "Women's Health",
-    angle: "Weight management for women dealing with PCOS, perimenopause, or postpartum isn't a willpower problem — it's a complexity problem. Vygor helps build consistent habits in a body that doesn't always cooperate.",
-    hooks: [
-      '"Managing my weight with PCOS is nothing like \'just eat less\' — here\'s what actually helps."',
-      '"I gained weight during perimenopause and these are the only habits that made a difference."',
-      '"Nobody tells you how hard it is to stay consistent when your hormones are working against you."',
-      '"This is the one app that doesn\'t assume my body works like everyone else\'s."',
-    ],
-    formats: ["Personal story: weight journey with PCOS / menopause / postpartum", "'What I wish I knew about [condition] and weight'", "Day-in-the-life: Vygor check-in as self-care", "Community Q&A: 'How do you stay consistent?'"],
-    doList: ["Talk about habit consistency as the key", "Share personal experience — 'this helped me stay consistent'", "Frame Vygor as a support tool alongside medical treatment", "Acknowledge every body is different"],
-    dontList: ["Say Vygor 'treats' PCOS, menopause, or any condition", "Claim Vygor balances hormones or reduces symptoms", "Make specific weight loss claims", "Use language like 'cure', 'reverse', 'heal'"],
-    dm: "Hey [name] — your video on [PCOS/menopause/postpartum topic] really stuck with me. The way you talk about consistency and self-compassion is exactly what Vygor is built around. It's a habit-tracking app for people who are doing the right things but need help staying consistent. I'd love to send you access.",
-    accent: "violet" as const,
-  },
-  {
-    id: "fitness",
-    icon: "🏋️",
-    label: "Fitness / Workout",
-    angle: "Fitness gets you partway there — but weight management is 80% what happens outside the gym. Vygor is the accountability layer for the other 23 hours: sleep, eating consistency, stress management, recovery.",
-    hooks: [
-      '"I\'ve been training for 3 years and this is the habit I wish I\'d started on day one."',
-      '"Why people who work out every day still struggle to lose weight — and what\'s actually missing."',
-      '"The app I use to track everything that isn\'t my workout."',
-      '"I set a steps challenge for my followers. Here\'s what happened after 30 days."',
-    ],
-    formats: ["Full day routine: workout + Vygor habit check-in as bookends", "'What your trainer doesn't tell you' — habits outside the gym", "30-day accountability challenge alongside a workout program", "Steps contest: challenge your audience via Vygor's open competition"],
-    doList: ["Talk about habits outside the gym: sleep, eating, recovery", "Position Vygor as the accountability layer supporting training", "Use the contest feature for audience challenges", "Be honest — it's a habit app, not a fitness tracker"],
-    dontList: ["Imply Vygor tracks workouts or replaces a fitness app", "Claim Vygor accelerates muscle gain or athletic performance", "Make specific body composition claims", "Suggest Vygor substitutes a personal trainer"],
-    dm: "Hey [name] — love your content on [specific workout series]. What I appreciate most is how you talk about the lifestyle side, not just the reps. That's exactly what Vygor is: a habit app for everything outside the gym. We'd love for you to try it alongside your current program and share your honest take. No script — just your genuine experience.",
-    accent: "amber" as const,
-  },
-  {
-    id: "wellness",
-    icon: "🌿",
-    label: "Wellness / Lifestyle",
-    angle: "Vygor fits naturally into the wellness lifestyle narrative: a tool for building good habits, staying accountable, and showing up consistently for your health. No restriction, no diet culture — just intentional habit-building.",
-    hooks: [
-      '"The one app that actually changed how I think about my health habits."',
-      '"I\'ve tried every wellness routine. This is the only thing that made consistency feel possible."',
-      '"My \'soft\' approach to weight management — no restriction, just habits."',
-      '"I started a wellness challenge with my community and the results surprised me."',
-    ],
-    formats: ["Morning routine: Vygor check-in as part of healthy morning", "'Apps that are actually part of my wellness routine'", "Habit reflection: 'what 30 days of tracking taught me'", "Community challenge: steps or weight contest for followers"],
-    doList: ["Talk about habit-building, consistency, and showing up for yourself", "Frame weight management as one dimension of overall wellness", "Use language like 'awareness', 'accountability', 'intention', 'patterns'", "Show Vygor authentically as part of your real routine"],
-    dontList: ["Promote diet culture, restriction, or body image pressure", "Make specific weight loss claims or outcomes", "Suggest Vygor is a 'quick fix' or shortcut", "Use before/after content or weight numbers"],
-    dm: "Hey [name] — your content on [morning routine / habit / wellness topic] really resonated. The philosophy behind Vygor is almost identical to how you talk about health: it's not about restriction, it's about building habits you can actually sustain. I'd love to send you access to try it — not looking for a script, just an honest share if it genuinely fits your routine.",
-    accent: "emerald" as const,
-  },
-  {
-    id: "coaches",
-    icon: "🧑‍💼",
-    label: "Wellness Coaches",
-    angle: "Vygor works WITH coaching. The Share feature lets coaches see client weight and steps trends in real time. The Contest feature lets coaches run group challenges between clients. Vygor becomes a coaching platform, not just a personal app.",
-    hooks: [
-      '"I\'ve been looking for an app that lets me actually SEE my clients\' progress. This is it."',
-      '"I run accountability groups for my clients. Here\'s how I use Vygor."',
-      '"I set up a 30-day weight loss contest for my coaching group — here\'s what happened."',
-      '"My clients can now challenge each other — not just track themselves."',
-    ],
-    formats: ["Walkthrough: 'how I use Vygor to monitor client progress'", "Demo: setting up a contest between client groups", "'A week in my coaching practice' — Vygor in the workflow", "Open challenge: invite audience to join a steps or weight contest"],
-    doList: ["Highlight the Share feature as a coach accountability tool", "Demonstrate the Contest feature for group challenges", "Frame Vygor as complementary to existing coaching methods", "Be clear Vygor supports — not replaces — professional coaching"],
-    dontList: ["Imply Vygor provides coaching, therapy, or clinical guidance", "Make specific outcome claims for client results", "Suggest the app replaces a coach or health professional", "Share client data or personal information publicly"],
-    dm: "Hey [name] — your approach to [accountability / group coaching / habit-based programs] is really aligned with what we're building at Vygor. We have a Share feature where clients grant their coach visibility into weight and steps trends — and a Contest feature for running group challenges. I think it could genuinely fit your workflow. Would you be open to a quick look?",
-    accent: "cyan" as const,
-  },
-  {
-    id: "medical",
-    icon: "🩺",
-    label: "Medical / Clinical",
-    angle: "Vygor bridges the gap between 'your doctor told you to change your lifestyle' and actually doing it — a patient-side habit tool for behavioral consistency. Not a medical device. A behavior tracker to recommend alongside clinical advice.",
-    hooks: [
-      '"As a doctor: why can\'t my patients stick to healthy habits? Here\'s my answer."',
-      '"The gap between knowing what to do and actually doing it — this is the hardest part of weight management."',
-      '"Behavior change is the #1 predictor of sustainable weight loss. Here\'s a tool for that."',
-      '"Why willpower is not the problem — and what actually is."',
-    ],
-    formats: ["Educational explainer: 'the science of habit formation and weight'", "'Apps I actually recommend to patients' — Vygor as behavioral tool", "Myth-busting: 'why diets fail' — Vygor as the behavioral solution", "Professional review: honest assessment of what the app does and doesn't do"],
-    doList: ["Frame Vygor as a behavior/habit tool, not a medical intervention", "Be clear Vygor is a wellness app, not a medical device", "Recommend Vygor as a complement to clinical care", "Disclose paid partnership prominently — HCP audiences expect transparency"],
-    dontList: ["Say Vygor treats, manages, or helps with any medical condition", "Imply Vygor is clinically validated or FDA-cleared", "Make specific outcome claims", "Overstate capabilities — this audience will call it out"],
-    dm: "Hi Dr. [name] — I follow your content on [topic] and appreciate how rigorously you approach evidence. I'm reaching out from Vygor Health. We're a habit-tracking app for weight management — not a diet, not a medical device, but a behavioral consistency tool. We're looking for clinicians who create honest educational content. Happy to send access with no strings attached if you're interested.",
-    accent: "violet" as const,
-  },
-];
-
 const accentMap: Record<string, { text: string; border: string; bgSoft: string; dot: string }> = {
   emerald: { text: "text-emerald-300", border: "border-emerald-400/25", bgSoft: "bg-emerald-400/[0.04]", dot: "bg-emerald-400" },
   cyan:    { text: "text-cyan-300",    border: "border-cyan-400/25",    bgSoft: "bg-cyan-400/[0.04]",    dot: "bg-cyan-400" },
@@ -358,105 +232,20 @@ export default function VygorTikTokPage() {
         </div>
       </section>
 
-      {/* CREATOR SEGMENTS */}
-      <section className="border-b border-white/[0.06]">
-        <div className="mx-auto max-w-6xl px-6 py-16 md:px-10 md:py-20">
-          <div className="mb-10 max-w-2xl">
-            <div className="font-mono text-[11px] uppercase tracking-[0.25em] text-violet-300">
-              / 02 · Creator segments
-            </div>
-            <h2 className="mt-3 text-3xl font-medium tracking-tight text-neutral-50 md:text-4xl">
-              Seven segments. One angle per segment.
-            </h2>
-            <p className="mt-3 text-neutral-400">
-              Match every creator to exactly one primary segment before outreach.
-              Use the segment&rsquo;s angle in your DM and the hooks in your content brief.
-              Content and compliance rules differ by segment — never use a generic brief.
-            </p>
-          </div>
-
-          <div className="space-y-5">
-            {segments.map((seg) => {
-              const a = accentMap[seg.accent];
-              return (
-                <div key={seg.id} className={`rounded-2xl border ${a.border} ${a.bgSoft} p-7 md:p-8`}>
-                  <div className="flex items-start gap-4">
-                    <span className="text-3xl">{seg.icon}</span>
-                    <div className="flex-1 min-w-0">
-                      <div className={`font-mono text-[10px] uppercase tracking-[0.22em] ${a.text}`}>Segment</div>
-                      <h3 className="mt-1 text-xl font-medium text-neutral-50">{seg.label}</h3>
-                      <p className="mt-2 text-sm leading-6 text-neutral-400">{seg.angle}</p>
-                    </div>
-                  </div>
-
-                  <div className="mt-6 grid gap-5 md:grid-cols-3">
-                    {/* Hooks */}
-                    <div>
-                      <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-neutral-500 mb-3">Content hooks</div>
-                      <ul className="space-y-2">
-                        {seg.hooks.map((h) => (
-                          <li key={h} className="flex items-start gap-2 text-xs leading-5 text-neutral-300">
-                            <span className={`mt-1.5 h-1 w-1 shrink-0 rounded-full ${a.dot}`} />
-                            {h}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* Formats */}
-                    <div>
-                      <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-neutral-500 mb-3">Content formats</div>
-                      <ul className="space-y-2">
-                        {seg.formats.map((f) => (
-                          <li key={f} className="flex items-start gap-2 text-xs leading-5 text-neutral-300">
-                            <span className={`mt-1.5 h-1 w-1 shrink-0 rounded-full ${a.dot}`} />
-                            {f}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* Do/don't */}
-                    <div className="space-y-4">
-                      <div>
-                        <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-emerald-300/70 mb-2">✓ Do</div>
-                        <ul className="space-y-1">
-                          {seg.doList.map((d) => (
-                            <li key={d} className="text-xs leading-5 text-neutral-300">· {d}</li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div>
-                        <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-rose-300/70 mb-2">✗ Don&rsquo;t</div>
-                        <ul className="space-y-1">
-                          {seg.dontList.map((d) => (
-                            <li key={d} className="text-xs leading-5 text-neutral-400">· {d}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* OUTREACH */}
       <section className="border-b border-white/[0.06]">
         <div className="mx-auto max-w-6xl px-6 py-16 md:px-10 md:py-20">
           <div className="mb-10 max-w-2xl">
             <div className="font-mono text-[11px] uppercase tracking-[0.25em] text-emerald-400">
-              / 03 · Outreach
+              / 02 · Outreach
             </div>
             <h2 className="mt-3 text-3xl font-medium tracking-tight text-neutral-50 md:text-4xl">
               DM first. Email second. Never both at once.
             </h2>
             <p className="mt-3 text-neutral-400">
               TikTok DM is the primary channel — it feels native and doesn&rsquo;t
-              require an email harvest. Send the segment-specific DM first. If no
-              reply in 5 days, follow up with email if available. Do not send generic outreach.
+              require an email harvest. Send the DM first. If no reply in 5 days,
+              follow up with email if available.
             </p>
           </div>
 
@@ -502,7 +291,7 @@ export default function VygorTikTokPage() {
             <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-emerald-300">/ Outreach sequence</div>
             <div className="mt-5 grid gap-4 md:grid-cols-4">
               {[
-                { day: "Day 1", action: "TikTok DM — segment-personalised", sub: "Reference a specific video. No pitch yet — open with the connection.", color: "emerald" },
+                { day: "Day 1", action: "TikTok DM", sub: "Reference a specific video. No pitch yet — open with the connection.", color: "emerald" },
                 { day: "Day 5", action: "Email (if no DM reply)", sub: "Use the email template above. Only send if you have a verified email.", color: "cyan" },
                 { day: "Day 8", action: "TikTok DM follow-up", sub: "One sentence: 'Wanted to make sure this didn't get buried — still happy to share details if you're interested.'", color: "violet" },
                 { day: "Day 12", action: "Final close — or move on", sub: "'Last note — if timing isn't right, no worries. We'll be back in touch in Q2.' Then archive.", color: "amber" },
@@ -529,7 +318,7 @@ export default function VygorTikTokPage() {
         <div className="mx-auto max-w-6xl px-6 py-16 md:px-10 md:py-20">
           <div className="mb-10 max-w-2xl">
             <div className="font-mono text-[11px] uppercase tracking-[0.25em] text-violet-300">
-              / 04 · Campaign setup
+              / 03 · Campaign setup
             </div>
             <h2 className="mt-3 text-3xl font-medium tracking-tight text-neutral-50 md:text-4xl">
               Brief, track, approve. In that order.
@@ -597,7 +386,7 @@ export default function VygorTikTokPage() {
         <div className="mx-auto max-w-6xl px-6 py-16 md:px-10 md:py-20">
           <div className="mb-10 max-w-2xl">
             <div className="font-mono text-[11px] uppercase tracking-[0.25em] text-amber-300">
-              / 05 · Metrics
+              / 04 · Metrics
             </div>
             <h2 className="mt-3 text-3xl font-medium tracking-tight text-neutral-50 md:text-4xl">
               Measure the right things. At the right time.
@@ -675,7 +464,7 @@ export default function VygorTikTokPage() {
         <div className="mx-auto max-w-6xl px-6 py-16 md:px-10 md:py-20">
           <div className="mb-10 max-w-2xl">
             <div className="font-mono text-[11px] uppercase tracking-[0.25em] text-emerald-400">
-              / 06 · Scale or Cancel
+              / 05 · Scale or Cancel
             </div>
             <h2 className="mt-3 text-3xl font-medium tracking-tight text-neutral-50 md:text-4xl">
               The decision is in the data. Make it fast.
