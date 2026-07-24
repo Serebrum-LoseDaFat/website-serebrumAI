@@ -289,7 +289,7 @@ export default function VygorTikTokPage() {
                 <FilterRow label="Category" value="Fitness & Health · Food & Cooking · Lifestyle" />
                 <FilterRow label="Followers" value="10K – 500K (micro to mid-tier; best ROI)" />
                 <FilterRow label="Avg views" value="5K+ per video minimum" />
-                <FilterRow label="Engagement" value="≥ 4% (TikTok avg is 5.3%; filter below 4%)" />
+                <FilterRow label="Engagement" value="> 8% (TikTok avg is 5.3%; skip anyone below this)" />
                 <FilterRow label="Location" value="United States" />
                 <FilterRow label="Audience age" value="18–35 (primary), 35–44 (secondary)" />
                 <FilterRow label="Audience gender" value="50%+ female preferred (Vygor core user)" />
