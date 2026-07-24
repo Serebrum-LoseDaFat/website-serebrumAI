@@ -269,8 +269,15 @@ export default function VygorTikTokPage() {
               Find the right creator before you write a single DM.
             </h2>
             <p className="mt-3 text-neutral-400">
-              TikTok One (business.tiktok.com → Creator Marketplace) is the
-              primary discovery tool. Build and save your search — refresh weekly.
+              <a
+                href="https://ads.tiktok.com/creative/creator/explore?region=us_ttp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cyan-400 underline underline-offset-2 hover:text-cyan-300 transition"
+              >
+                TikTok One Creator Explorer
+              </a>{" "}
+              is the primary discovery tool. Build and save your search — refresh weekly.
               Do not DM anyone with a score below 6.
             </p>
           </div>
