@@ -187,6 +187,60 @@ export default function ContentBriefPage() {
         </div>
       </section>
 
+      {/* COMPLIANCE */}
+      <section className="border-b border-white/[0.06]">
+        <div className="mx-auto max-w-6xl px-6 py-14 md:px-10 md:py-16">
+          <div className="mb-8 max-w-2xl">
+            <div className="font-mono text-[11px] uppercase tracking-[0.25em] text-rose-400">
+              / Compliance — required for all posts
+            </div>
+            <h2 className="mt-3 text-2xl font-medium tracking-tight text-neutral-50 md:text-3xl">
+              Non-negotiable rules. Every post, every segment.
+            </h2>
+            <p className="mt-3 text-neutral-400 text-sm leading-6">
+              All posts must be reviewed and approved by the Vygor team before publishing. Send your draft to{" "}
+              <a href="mailto:creators@vygor.health" className="text-amber-400 underline underline-offset-2">creators@vygor.health</a>{" "}
+              or via DM.
+            </p>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2">
+            <div className="rounded-2xl border border-rose-400/25 bg-rose-400/[0.04] p-6 md:p-7">
+              <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-rose-300 mb-4">✓ Required</div>
+              <ul className="space-y-3">
+                {[
+                  '#ad, #sponsored, or "Paid partnership with Vygor Health" in every post',
+                  "PM approval on all content and captions before publishing",
+                  "Your unique promo code and UTM link in every post",
+                  "Honest, first-person experience of the app",
+                ].map((r) => (
+                  <li key={r} className="flex items-start gap-3 text-sm leading-5 text-neutral-200">
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rose-400" />
+                    {r}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-2xl border border-rose-400/25 bg-rose-400/[0.04] p-6 md:p-7">
+              <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-rose-300 mb-4">✗ Prohibited</div>
+              <ul className="space-y-3">
+                {[
+                  "Specific weight loss claims ('lose X lbs', 'drop a dress size')",
+                  "Medical claims of any kind ('treats PCOS', 'balances hormones')",
+                  "Before/after body transformation imagery",
+                  "Language like 'cure', 'reverse', 'heal', 'clinically proven'",
+                  "Sharing another creator's promo code or UTM link",
+                ].map((r) => (
+                  <li key={r} className="flex items-start gap-3 text-sm leading-5 text-neutral-400">
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-neutral-600" />
+                    {r}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ABOUT VYGOR */}
       <section className="border-b border-white/[0.06]">
         <div className="mx-auto max-w-6xl px-6 py-14 md:px-10 md:py-16">
@@ -242,60 +296,6 @@ export default function ContentBriefPage() {
                 <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-amber-300">Core message:</span>{" "}
                 Vygor is the habit and accountability layer that helps people stay consistent with the healthy choices they&rsquo;ve already decided to make.
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* COMPLIANCE — top of page so creators see it first */}
-      <section className="border-b border-white/[0.06]">
-        <div className="mx-auto max-w-6xl px-6 py-14 md:px-10 md:py-16">
-          <div className="mb-8 max-w-2xl">
-            <div className="font-mono text-[11px] uppercase tracking-[0.25em] text-rose-400">
-              / Compliance — required for all posts
-            </div>
-            <h2 className="mt-3 text-2xl font-medium tracking-tight text-neutral-50 md:text-3xl">
-              Non-negotiable rules. Every post, every segment.
-            </h2>
-            <p className="mt-3 text-neutral-400 text-sm leading-6">
-              All posts must be reviewed and approved by the Vygor team before publishing. Send your draft to{" "}
-              <a href="mailto:creators@vygor.health" className="text-amber-400 underline underline-offset-2">creators@vygor.health</a>{" "}
-              or via DM.
-            </p>
-          </div>
-          <div className="grid gap-4 md:grid-cols-2">
-            <div className="rounded-2xl border border-rose-400/25 bg-rose-400/[0.04] p-6 md:p-7">
-              <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-rose-300 mb-4">✓ Required</div>
-              <ul className="space-y-3">
-                {[
-                  '#ad, #sponsored, or "Paid partnership with Vygor Health" in every post',
-                  "PM approval on all content and captions before publishing",
-                  "Your unique promo code and UTM link in every post",
-                  "Honest, first-person experience of the app",
-                ].map((r) => (
-                  <li key={r} className="flex items-start gap-3 text-sm leading-5 text-neutral-200">
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rose-400" />
-                    {r}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="rounded-2xl border border-rose-400/25 bg-rose-400/[0.04] p-6 md:p-7">
-              <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-rose-300 mb-4">✗ Prohibited</div>
-              <ul className="space-y-3">
-                {[
-                  "Specific weight loss claims ('lose X lbs', 'drop a dress size')",
-                  "Medical claims of any kind ('treats PCOS', 'balances hormones')",
-                  "Before/after body transformation imagery",
-                  "Language like 'cure', 'reverse', 'heal', 'clinically proven'",
-                  "Sharing another creator's promo code or UTM link",
-                ].map((r) => (
-                  <li key={r} className="flex items-start gap-3 text-sm leading-5 text-neutral-400">
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-neutral-600" />
-                    {r}
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
         </div>

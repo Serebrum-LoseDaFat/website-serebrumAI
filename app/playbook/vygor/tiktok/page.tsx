@@ -463,12 +463,9 @@ export default function VygorTikTokPage() {
           <div className="grid gap-5 md:grid-cols-2 mb-6">
             {/* DM template */}
             <div className="rounded-2xl border border-white/[0.08] bg-[#0a0a0d] p-7 md:p-9">
-              <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-emerald-300">/ DM template (segment-personalised)</div>
-              <p className="mt-3 text-xs text-neutral-500">Replace [brackets] with specific research. Every DM must reference a real piece of their content.</p>
+              <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-emerald-300">/ DM template</div>
               <div className="mt-4 rounded-lg border border-white/[0.06] bg-black/40 p-5 font-mono text-[13px] leading-6 text-neutral-300">
                 <div>Hi {"{"} Firstname {"}"} — we&rsquo;re Vygor Health, a weight management app launching in the US. We&rsquo;re offering paid partnerships to wellness creators: flat fee per post + affiliate commission on every subscriber you refer. Full creative freedom, no script.</div>
-                <div className="h-3" />
-                <div className="text-neutral-500">→ Then add 1–2 sentences from the segment DM above</div>
                 <div className="h-3" />
                 <div>Interested? Reply here or email us at creators@vygor.health.</div>
               </div>
@@ -495,9 +492,6 @@ export default function VygorTikTokPage() {
                   <div>Free app access · Flat fee per post · Affiliate commission per subscriber · Full creative freedom</div>
                   <div className="h-3" />
                   <div>Visit www.vygor.health or download from the App Store (iPhone). If you&rsquo;re open to hearing more, reply and we&rsquo;ll share details.</div>
-                  <div className="h-3" />
-                  <div>Nare Harutyunyan · Influencer Manager · Vygor Health</div>
-                  <div>creators@vygor.health · 443-360-8250</div>
                 </div>
               </div>
             </div>
@@ -572,24 +566,6 @@ export default function VygorTikTokPage() {
               </div>
             </div>
 
-            <div className="rounded-2xl border border-rose-400/25 bg-rose-400/[0.04] p-7 md:p-9">
-              <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-rose-300">/ Universal compliance rules — no exceptions</div>
-              <div className="mt-5 space-y-3 text-sm leading-6">
-                {[
-                  "Every post must include #ad, #sponsored, or 'Paid partnership with Vygor Health'.",
-                  "Never make specific outcome claims: 'lose X lbs', 'drop a dress size', 'cure PCOS'.",
-                  "No medical claims. Vygor is a wellness app, not a medical device.",
-                  "All posts and captions must be reviewed and approved by the PM before publishing.",
-                  "Use your unique promo code and UTM link in every post. Never share another creator's link.",
-                  "No before/after body transformation imagery.",
-                ].map((rule) => (
-                  <div key={rule} className="flex items-start gap-3">
-                    <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-rose-400" />
-                    <span className="text-neutral-300">{rule}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
 
           {/* Rate structure */}
