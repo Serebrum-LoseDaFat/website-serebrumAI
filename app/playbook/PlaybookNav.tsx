@@ -52,7 +52,8 @@ const categories: Category[] = [
     key: "Vygor",
     accent: "amber",
     items: [
-      { href: "/playbook/vygor-gyms", label: "Gyms" },
+      { href: "/playbook/vygor", label: "Overview" },
+      { href: "/playbook/vygor/gyms", label: "Gyms" },
     ],
   },
 ];

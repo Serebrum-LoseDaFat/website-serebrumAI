@@ -58,7 +58,7 @@ export function middleware(req: NextRequest) {
 }
 
 export const config = {
-  // Gate the internal Strategy + Fundraising operating docs.
+  // Gate the internal Strategy, Fundraising, and Vygor operating docs.
   matcher: [
     "/playbook/priorities",
     "/playbook/priorities/:path*",
@@ -66,5 +66,7 @@ export const config = {
     "/playbook/fundraising/:path*",
     "/playbook/the-raise",
     "/playbook/the-raise/:path*",
+    "/playbook/vygor",
+    "/playbook/vygor/:path*",
   ],
 };
