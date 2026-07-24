@@ -49,11 +49,10 @@ const categories: Category[] = [
     ],
   },
   {
-    key: "Vygor",
+    key: "Ventures",
     accent: "amber",
     items: [
-      { href: "/playbook/vygor", label: "Overview" },
-      { href: "/playbook/vygor/gyms", label: "Gyms" },
+      { href: "/playbook/vygor", label: "Vygor", locked: true },
     ],
   },
 ];
