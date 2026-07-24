@@ -129,6 +129,20 @@ export default function VygorTikTokPage() {
               </div>
             </div>
           </div>
+
+          {/* Outreach prerequisite warning */}
+          <div className="mt-6 rounded-2xl border border-amber-400/30 bg-amber-400/[0.05] p-6 flex gap-4">
+            <div className="mt-0.5 shrink-0 text-amber-400 text-lg">⚠</div>
+            <div>
+              <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-amber-300">Outreach prerequisite</div>
+              <p className="mt-2 text-sm leading-6 text-neutral-300">
+                <strong className="text-neutral-100">Do not start creator outreach until @vygorapp has at least 3 posts live.</strong>{" "}
+                Creators check the account before replying to a cold DM. An empty profile reads as a scam —
+                no template can overcome that. Even 2–3 on-brand posts establish legitimacy and give creators
+                something to reference when evaluating the partnership.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
