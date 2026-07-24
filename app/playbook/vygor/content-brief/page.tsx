@@ -414,8 +414,6 @@ export default function ContentBriefPage() {
             <div className="rounded-2xl border border-white/[0.08] bg-[#0a0a0d] p-7">
               <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-amber-300">/ Contact</div>
               <div className="mt-4 space-y-2 text-sm">
-                <div className="text-neutral-200">Nare Harutyunyan</div>
-                <div className="text-neutral-500">Influencer Manager · Vygor Health</div>
                 <a href="mailto:partners@vygor.health" className="block mt-3 text-amber-400 underline underline-offset-2 hover:text-amber-300 transition">
                   partners@vygor.health
                 </a>
