@@ -315,15 +315,13 @@ export default function AppLayerThesisPage() {
             </Prose>
 
             <Prose>
-              Leopold Aschenbrenner&rsquo;s &ldquo;Situational Awareness&rdquo; frames the underlying capability
-              transition precisely: we are building systems that can reason, and by 2027, those systems will
-              be able to do the work of a qualified professional in a growing range of domains.{" "}
-              <Citation text='Leopold Aschenbrenner, "Situational Awareness: The Decade Ahead," June 2024.' />
-              The implication is not that professionals will be automated away. It is that the information
-              asymmetry that made professionals indispensable intermediaries will erode. When everyone has access
-              to a system that can reason about their health situation, legal options, or financial position with
-              the competence of a skilled professional, the industries structured to manage that asymmetry will
-              be forced to restructure.
+              The underlying capability transition makes this structural. We are building systems that can reason,
+              and within this decade, those systems will be able to do the work of a qualified professional in
+              a growing range of domains. The implication is not that professionals will be automated away. It
+              is that the information asymmetry that made professionals indispensable intermediaries will erode.
+              When everyone has access to a system that can reason about their health situation, legal options,
+              or financial position with the competence of a skilled professional, the industries structured to
+              manage that asymmetry will be forced to restructure.
             </Prose>
 
             <Prose>
@@ -593,7 +591,7 @@ export default function AppLayerThesisPage() {
                 },
                 {
                   title: "AGI timeline uncertainty",
-                  body: "Leopold Aschenbrenner&rsquo;s &ldquo;Situational Awareness&rdquo; makes a serious and well-reasoned case that systems capable of doing the work of a qualified AI researcher may exist by 2027, with superintelligence following in the early 2030s. If this timeline is correct, it implies a level of capability acceleration that changes the investment thesis significantly&mdash;not necessarily invalidating the App Layer Thesis, but compressing the timeline within which application-layer advantages must be established. We take the Aschenbrenner timeline seriously without treating it as certainty. Our portfolio sequencing reflects this: we prioritize ventures with faster time-to-revenue precisely because faster validation provides a hedge against timeline uncertainty.",
+                  body: "Serious projections place systems capable of doing the work of a qualified AI researcher as early as 2027, with superintelligence following in the early 2030s. If this timeline is correct, it implies a level of capability acceleration that changes the investment thesis significantly&mdash;not necessarily invalidating the replacement thesis, but compressing the timeline within which application-layer advantages must be established. We take near-term AGI scenarios seriously without treating any specific timeline as certainty. Our portfolio sequencing reflects this: we prioritize ventures with faster time-to-revenue precisely because faster validation provides a hedge against timeline uncertainty.",
                 },
               ]}
             />
