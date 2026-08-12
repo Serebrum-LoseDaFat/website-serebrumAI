@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "The App Layer Thesis — SerebrumAI",
+  title: "The Replacement Thesis — SerebrumAI",
   description:
-    "Why the returns in the AI era will not accrue to model providers or infrastructure, but to the application layer built on top — and why disciplined selection of which applications to build is the defining investment decision of this decade.",
-  alternates: { canonical: "/insights/the-app-layer-thesis" },
+    "Why AI's biggest returns come from companies that destroy and rebuild industries, not from those that make existing processes more efficient — and how disciplined selection of which industries to replace is the defining investment decision of this decade.",
+  alternates: { canonical: "/insights/the-replacement-thesis-krishna-polineni" },
   openGraph: {
-    title: "The App Layer Thesis · SerebrumAI",
+    title: "The Replacement Thesis · SerebrumAI",
     description:
-      "Why returns in AI will not accrue to infrastructure, and how disciplined application-layer selection produces asymmetric outcomes.",
-    url: "/insights/the-app-layer-thesis",
+      "Why AI's biggest returns come from destruction, not efficiency — and how to identify the industries worth rebuilding.",
+    url: "/insights/the-replacement-thesis-krishna-polineni",
   },
 };
 
@@ -37,15 +37,16 @@ export default function AppLayerThesisPage() {
           </div>
 
           <h1 className="mt-6 text-5xl font-medium tracking-tight text-neutral-50 md:text-7xl">
-            The App Layer{" "}
+            The Replacement{" "}
             <span className="font-serif italic text-gradient">Thesis.</span>
           </h1>
 
           <p className="mt-8 max-w-2xl text-xl leading-9 text-neutral-300">
-            Why the returns in the AI era will not accrue to model providers
-            or compute infrastructure, but to the application layer&mdash;and
-            why choosing which applications to build is the defining investment
-            decision of this decade.
+            Why AI&rsquo;s biggest returns come from companies that destroy and
+            rebuild industries&mdash;not from those that make existing processes
+            more efficient&mdash;and how disciplined selection of which
+            industries to replace is the defining investment decision of this
+            decade.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-6">
