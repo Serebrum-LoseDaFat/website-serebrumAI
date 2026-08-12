@@ -1113,7 +1113,7 @@ function DataRow({ items }: { items: { label: string; value: string; sub: string
   );
 }
 
-function NumberedList({ items }: { items: { title: string; body: string }[] }) {
+function NumberedList({ items }: { title?: string; items: { title: string; body: string }[] }) {
   return (
     <div className="my-10 space-y-6">
       {items.map((item, i) => (
