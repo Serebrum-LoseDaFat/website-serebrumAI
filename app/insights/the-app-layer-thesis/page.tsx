@@ -53,7 +53,7 @@ export default function AppLayerThesisPage() {
               <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-neutral-600">
                 By
               </div>
-              <div className="mt-1 text-sm text-neutral-300">SerebrumAI</div>
+              <div className="mt-1 text-sm text-neutral-300">Krishna Polineni</div>
             </div>
             <div className="h-8 w-px bg-white/[0.08]" />
             <div>
