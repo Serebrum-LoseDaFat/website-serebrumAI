@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Instrument_Serif, JetBrains_Mono } from "next/font/google";
+import { Inter, Instrument_Serif, JetBrains_Mono, EB_Garamond } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import Header from "@/components/Header";
@@ -22,6 +22,14 @@ const serif = Instrument_Serif({
 const mono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
+  display: "swap",
+});
+
+const garamond = EB_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  style: ["normal", "italic"],
+  variable: "--font-prose",
   display: "swap",
 });
 
@@ -109,7 +117,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${serif.variable} ${mono.variable}`}
+      className={`${inter.variable} ${serif.variable} ${mono.variable} ${garamond.variable}`}
     >
       <body className="min-h-screen bg-[#070709] font-sans text-neutral-200 antialiased">
         <script
