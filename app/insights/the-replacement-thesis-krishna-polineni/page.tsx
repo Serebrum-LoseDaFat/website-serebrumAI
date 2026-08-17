@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "The Replacement Thesis — SerebrumAI",
+  title: "The Infrastructure Fallacy — SerebrumAI",
   description:
-    "Why AI's biggest returns come from companies that destroy and rebuild industries, not from those that make existing processes more efficient — and how disciplined selection of which industries to replace is the defining investment decision of this decade.",
+    "Why the capital flowing into AI infrastructure will not generate the returns investors expect — and a disciplined framework for identifying where those returns will actually concentrate: the application layer.",
   alternates: { canonical: "/insights/the-replacement-thesis-krishna-polineni" },
   openGraph: {
-    title: "The Replacement Thesis · SerebrumAI",
+    title: "The Infrastructure Fallacy · SerebrumAI",
     description:
-      "Why AI's biggest returns come from destruction, not efficiency — and how to identify the industries worth rebuilding.",
+      "AI returns will not concentrate in infrastructure, models, or compute. They will concentrate in AI-native applications that replace the industries built on artificial scarcity.",
     url: "/insights/the-replacement-thesis-krishna-polineni",
   },
 };
@@ -37,15 +37,13 @@ export default function AppLayerThesisPage() {
           </div>
 
           <h1 className="mt-6 text-5xl font-medium tracking-tight text-neutral-900 md:text-7xl">
-            The Replacement Thesis.
+            The Infrastructure Fallacy.
           </h1>
 
           <p className="mt-8 max-w-2xl text-xl leading-9 text-neutral-600">
-            Why AI&rsquo;s biggest returns come from companies that destroy and
-            rebuild industries, not by making existing processes more efficient,
-            and how disciplined selection of which
-            industries to replace is the defining investment decision of this
-            decade.
+            Why AI returns will not concentrate in infrastructure, models, or
+            compute — and a disciplined framework for identifying the
+            application-layer companies that will define the next decade.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-6">
@@ -696,8 +694,8 @@ export default function AppLayerThesisPage() {
               the accumulated buyer relationships, domain credibility, and pipeline access that each existing
               venture creates for adjacent ideas. An AI-native fund management platform (AlphaSigma) creates
               natural entry points into institutional finance for ventures that serve the same buyer population.
-              An AI-native health platform (Vygor) creates natural entry points into health plan and employer
-              relationships for adjacent health-economy applications. An AI-native software lifecycle tool
+              An AI-native health and wellness platform (Vygor) creates natural entry points into consumer
+              health relationships for adjacent nutrition, fitness, and wellness applications. An AI-native software lifecycle tool
               (TokenSource) creates entry points into engineering leadership and product management relationships
               for adjacent developer productivity tools.
             </Prose>
@@ -1032,27 +1030,44 @@ export default function AppLayerThesisPage() {
             </div>
 
             <Prose>
-              Some markets are fragmented not by accident but because the cost of coordination exceeded the
-              value of coordination. The intervention is not to replace any individual player but to provide
-              the intelligence layer that makes aggregation viable for the first time. Weight management,
-              obesity, and diabetes care — the domain where Vygor Health operates — is a textbook example.
-              The fragmentation between patients, providers, payers, and employers is not a failure of any
-              single player. It is a coordination failure: each party operates with partial information, on
-              different timelines, optimizing for different outcomes. The result is expensive for all parties
-              and poor in clinical outcomes. What AI changes is the cost of coordination. Vygor provides
-              continuous intelligence across the care relationship, operating as the connective layer between
-              existing providers rather than as a replacement for any of them. The defensibility does not come
-              from the product itself but from the longitudinal outcome data accumulated across a growing
-              patient population. Three years of continuous outcome data for a specific clinical population —
-              weight trajectories, intervention response patterns, long-term adherence rates — is not
-              reproducible by any general-purpose model regardless of its capabilities. The data asset is the moat.
+              Health and wellness is a market fragmented by the absence of a unifying intelligence layer, not
+              by competitive moats. A person managing their health today relies on a personal trainer for
+              exercise programming, a nutritionist for dietary guidance, a separate app for macro tracking,
+              another for meal planning, and some combination of habit tools to hold it together. Each point
+              solution is optimized for its slice. None of them reason across the full picture. The result is
+              an expensive, high-friction experience that demands significant self-coordination — and produces
+              inconsistent outcomes because no single intelligence is working across nutrition, movement, and
+              recovery simultaneously.
+            </Prose>
+
+            <Prose>
+              What AI changes is the cost of unification. Vygor builds the intelligence layer that connects
+              nutrition, movement, and recovery into a continuous, adaptive system: meal planning and macro
+              tracking that adjusts to the user&rsquo;s actual training load that week; exercise programming
+              informed by dietary state and recovery signals; longitudinal behavioral intelligence that
+              identifies what is actually working for a given individual across months of data. This is not a
+              bundled app. It is a reasoning system — one that gets meaningfully smarter the longer it runs on
+              a specific user&rsquo;s data, and that no point solution can replicate without access to the
+              full behavioral picture.
+            </Prose>
+
+            <Prose>
+              The rollup strategy compounds the platform. Vygor consolidates health and wellness businesses —
+              personal trainers, nutritionists, fitness studios, wellness coaches — into an AI-powered network
+              where each provider is enhanced by the platform&rsquo;s intelligence rather than operating in
+              isolation. Each acquisition extends the data surface: more dietary adherence patterns, more
+              exercise response data, more individual behavioral signals across a wider population. Three years
+              of continuous behavioral data — macro-to-outcome correlations, exercise response curves,
+              adherence patterns by lifestyle segment — is not reproducible by any general-purpose model
+              regardless of its underlying capability. The longitudinal data asset is the moat.
             </Prose>
 
             <Prose>
               Consolidate plays have more predictable capital profiles than Create or Replace. The revenue base
-              exists in acquired or contracted practices and health plans. Technology risk is lower. The execution
-              challenge is integration complexity and maintaining quality consistency across a heterogeneous
-              provider network. AI is the structural differentiator; operations are the work.
+              exists in a growing subscriber base and contracted providers. Technology risk is lower than in
+              Create plays. The execution challenge is integrating acquired businesses without degrading their
+              quality, and maintaining personalization at scale as the platform grows. AI is the structural
+              differentiator; operations are the work.
             </Prose>
 
             {/* Model IV */}

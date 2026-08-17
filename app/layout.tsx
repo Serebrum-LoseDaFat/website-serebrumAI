@@ -104,7 +104,7 @@ const organizationJsonLd = {
       name: "Vygor AI",
       url: `${siteUrl}/ventures/vygor`,
       description:
-        "Continuous intelligence for weight, obesity, and diabetes care — sold to health plans and employers.",
+        "AI-powered health and wellness super app — diet, nutrition, meal planning, macro tracking, and exercise planning, with industry rollups across health and wellness businesses.",
     },
   ],
 };
