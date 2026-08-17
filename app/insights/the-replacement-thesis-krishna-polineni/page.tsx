@@ -104,7 +104,7 @@ export default function AppLayerThesisPage() {
                 ["XI",   "“AI-Native” — What It Actually Means"],
                 ["XII",  "The Shared Intelligence Layer"],
                 ["XIII", "Investment Discipline"],
-                ["XIV",  "Growth Strategies and AI Business Models"],
+                ["XIV",  "Four Structural Modes of Value Creation"],
                 ["XV",   "Conclusion: The Window Is Open. The Discipline Is the Edge."],
               ] as [string, string][]).map(([num, title]) => (
                 <li key={num} className="list-none">
@@ -945,7 +945,10 @@ export default function AppLayerThesisPage() {
             </Prose>
 
             {/* SECTION XIV */}
-            <SectionHeader number="XIV" title="Growth Strategies and AI Business Models" />
+            <SectionHeader number="XIV" title="Four Structural Modes of Value Creation" />
+            <div className="-mt-4 mb-8 font-mono text-[10px] uppercase tracking-[0.25em] text-neutral-400">
+              Create · Replace · Consolidate · Re-platform
+            </div>
 
             <Prose>
               AI doesn&rsquo;t produce one kind of company. Every platform shift generates multiple structurally
