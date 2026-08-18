@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { XMLParser } from "fast-xml-parser";
 
 export const metadata: Metadata = {
@@ -112,6 +113,34 @@ export default async function WritingPage() {
       {/* POSTS */}
       <section>
         <div className="mx-auto max-w-5xl px-6 py-16 md:px-10 md:py-24">
+
+          {/* FEATURED: The Infrastructure Fallacy */}
+          <div className="mb-16 rounded-3xl border border-white/[0.08] bg-[#0a0a0d] p-8 md:p-10">
+            <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-emerald-400 mb-6">
+              / Investment Thesis · August 2026
+            </div>
+            <Link href="/insights/the-infrastructure-fallacy-krishna-polineni">
+              <h2 className="text-3xl font-medium tracking-tight text-neutral-50 transition hover:text-emerald-400 md:text-4xl">
+                The Infrastructure Fallacy.
+              </h2>
+            </Link>
+            <p className="mt-4 max-w-2xl text-base leading-7 text-neutral-400">
+              Why AI returns will not concentrate in infrastructure, models, or
+              compute — and a disciplined framework for identifying the
+              application-layer companies that will define the next decade.
+            </p>
+            <div className="mt-5 font-mono text-[10px] uppercase tracking-[0.15em] text-neutral-600">
+              Krishna Polineni · 25 min read
+            </div>
+            <Link
+              href="/insights/the-infrastructure-fallacy-krishna-polineni"
+              className="mt-6 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.2em] text-neutral-500 transition hover:text-emerald-400"
+            >
+              Read the thesis
+              <span className="transition group-hover:translate-x-0.5">→</span>
+            </Link>
+          </div>
+
           {posts.length === 0 ? (
             <div className="rounded-3xl border border-white/[0.08] bg-[#0a0a0d] p-10 text-center">
               <p className="text-neutral-400">
