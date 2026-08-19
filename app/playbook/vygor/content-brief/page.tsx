@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import SegmentTabs from "./SegmentTabs";
 
 export const metadata: Metadata = {
   title: "Vygor · Creator Content Brief",
@@ -312,98 +313,11 @@ export default function ContentBriefPage() {
               Find your segment.
             </h2>
             <p className="mt-3 text-neutral-400">
-              Your brief is the section that best matches your content niche. Use the angle, hooks, and formats from your segment. The compliance rules above apply to all segments.
+              Select the tab that best matches your content niche. Use the angle, hooks, and formats from your segment. The compliance rules above apply to all segments.
             </p>
           </div>
 
-          <div className="space-y-6">
-            {segments.map((seg, i) => (
-              <div
-                key={seg.id}
-                id={seg.id}
-                className="rounded-2xl border border-white/[0.08] bg-[#0a0a0d] p-7 md:p-9"
-              >
-                <div className="flex items-start gap-4">
-                  <span className="text-3xl">{seg.icon}</span>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-3">
-                      <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-amber-400/70">
-                        Segment {String(i + 1).padStart(2, "0")}
-                      </span>
-                    </div>
-                    <h3 className="mt-1 text-xl font-medium text-neutral-50">{seg.label}</h3>
-                    <p className="mt-2 text-sm leading-6 text-neutral-400">{seg.angle}</p>
-                  </div>
-                </div>
-
-                <div className="mt-7 grid gap-6 md:grid-cols-3">
-                  {/* Hooks */}
-                  <div>
-                    <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-neutral-500 mb-3">
-                      Content hooks
-                    </div>
-                    <ul className="space-y-2">
-                      {seg.hooks.map((h) => (
-                        <li
-                          key={h}
-                          className="flex items-start gap-2 text-xs leading-5 text-neutral-300"
-                        >
-                          <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-amber-400/60" />
-                          {h}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Formats */}
-                  <div>
-                    <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-neutral-500 mb-3">
-                      Content formats
-                    </div>
-                    <ul className="space-y-2">
-                      {seg.formats.map((f) => (
-                        <li
-                          key={f}
-                          className="flex items-start gap-2 text-xs leading-5 text-neutral-300"
-                        >
-                          <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-amber-400/60" />
-                          {f}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Do / Don't */}
-                  <div className="space-y-5">
-                    <div>
-                      <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-emerald-300/70 mb-2">
-                        ✓ Do
-                      </div>
-                      <ul className="space-y-1">
-                        {seg.doList.map((d) => (
-                          <li key={d} className="text-xs leading-5 text-neutral-300">
-                            · {d}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div>
-                      <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-rose-300/70 mb-2">
-                        ✗ Don&rsquo;t
-                      </div>
-                      <ul className="space-y-1">
-                        {seg.dontList.map((d) => (
-                          <li key={d} className="text-xs leading-5 text-neutral-400">
-                            · {d}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <SegmentTabs segments={segments} />
         </div>
       </section>
 
