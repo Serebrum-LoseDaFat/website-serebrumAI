@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Suspense } from "react";
 import SegmentTabs from "./SegmentTabs";
 
 export const metadata: Metadata = {
@@ -317,7 +318,9 @@ export default function ContentBriefPage() {
             </p>
           </div>
 
-          <SegmentTabs segments={segments} />
+          <Suspense>
+            <SegmentTabs segments={segments} />
+          </Suspense>
         </div>
       </section>
 

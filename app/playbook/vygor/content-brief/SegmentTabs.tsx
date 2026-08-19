@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 
 type Segment = {
   id: string;
@@ -14,7 +15,36 @@ type Segment = {
 };
 
 export default function SegmentTabs({ segments }: { segments: Segment[] }) {
-  const [active, setActive] = useState(0);
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  const getInitialIndex = () => {
+    const seg = searchParams.get("segment");
+    if (!seg) return 0;
+    const idx = segments.findIndex((s) => s.id === seg);
+    return idx >= 0 ? idx : 0;
+  };
+
+  const [active, setActive] = useState(getInitialIndex);
+
+  // Sync if the URL changes externally (e.g. browser back/forward)
+  useEffect(() => {
+    const seg = searchParams.get("segment");
+    if (!seg) return;
+    const idx = segments.findIndex((s) => s.id === seg);
+    if (idx >= 0) setActive(idx);
+  }, [searchParams, segments]);
+
+  const handleTabClick = (i: number) => {
+    setActive(i);
+    const params = new URLSearchParams(searchParams.toString());
+    params.set("segment", segments[i].id);
+    router.replace(`?${params.toString()}`, { scroll: false });
+  };
+
+  const handlePrev = () => handleTabClick(Math.max(0, active - 1));
+  const handleNext = () => handleTabClick(Math.min(segments.length - 1, active + 1));
+
   const seg = segments[active];
 
   return (
@@ -25,7 +55,7 @@ export default function SegmentTabs({ segments }: { segments: Segment[] }) {
           {segments.map((s, i) => (
             <button
               key={s.id}
-              onClick={() => setActive(i)}
+              onClick={() => handleTabClick(i)}
               className={[
                 "flex shrink-0 items-center gap-2 rounded-full border px-4 py-2.5 font-mono text-[11px] uppercase tracking-[0.18em] transition whitespace-nowrap",
                 active === i
@@ -38,12 +68,24 @@ export default function SegmentTabs({ segments }: { segments: Segment[] }) {
             </button>
           ))}
         </div>
-        {/* fade edges on mobile */}
+        {/* fade edge on mobile */}
         <div className="pointer-events-none absolute right-0 top-0 bottom-px w-12 bg-gradient-to-l from-[#080810] to-transparent md:hidden" />
       </div>
 
+      {/* Shareable link hint */}
+      <div className="mt-4 flex items-center gap-2">
+        <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-neutral-600">
+          Shareable link:
+        </span>
+        <code className="font-mono text-[10px] text-neutral-500 select-all">
+          {typeof window !== "undefined"
+            ? `${window.location.origin}/playbook/vygor/content-brief?segment=${seg.id}`
+            : `/playbook/vygor/content-brief?segment=${seg.id}`}
+        </code>
+      </div>
+
       {/* Tab content */}
-      <div key={seg.id} className="mt-6 rounded-2xl border border-white/[0.08] bg-[#0a0a0d] p-7 md:p-9">
+      <div key={seg.id} className="mt-4 rounded-2xl border border-white/[0.08] bg-[#0a0a0d] p-7 md:p-9">
         {/* Header */}
         <div className="flex items-start gap-4">
           <span className="text-3xl">{seg.icon}</span>
@@ -122,10 +164,10 @@ export default function SegmentTabs({ segments }: { segments: Segment[] }) {
         </div>
       </div>
 
-      {/* Next / prev nav */}
+      {/* Prev / next */}
       <div className="mt-4 flex items-center justify-between">
         <button
-          onClick={() => setActive((a) => Math.max(0, a - 1))}
+          onClick={handlePrev}
           disabled={active === 0}
           className="font-mono text-[11px] uppercase tracking-[0.18em] text-neutral-500 transition hover:text-neutral-200 disabled:opacity-25"
         >
@@ -135,7 +177,7 @@ export default function SegmentTabs({ segments }: { segments: Segment[] }) {
           {active + 1} / {segments.length}
         </span>
         <button
-          onClick={() => setActive((a) => Math.min(segments.length - 1, a + 1))}
+          onClick={handleNext}
           disabled={active === segments.length - 1}
           className="font-mono text-[11px] uppercase tracking-[0.18em] text-neutral-500 transition hover:text-neutral-200 disabled:opacity-25"
         >
