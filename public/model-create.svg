@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-label="Model I: Create — TokenSource introduces a net-new category by orchestrating the full SDLC as an integrated intelligence layer">
+  <defs>
+    <style>
+      .sans { font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; }
+      .mono { font-family: 'JetBrains Mono', ui-monospace, Consolas, monospace; }
+      .serif { font-family: 'Instrument Serif', Georgia, serif; }
+    </style>
+    <radialGradient id="c-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="rgba(0,0,0,0.07)"/>
+      <stop offset="1" stop-color="rgba(0,0,0,0)"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Canvas -->
+  <rect width="1200" height="520" fill="#fafafa" rx="24"/>
+  <rect x="0.5" y="0.5" width="1199" height="519" rx="24" fill="none" stroke="rgba(0,0,0,0.08)"/>
+
+  <!-- Header -->
+  <text x="60" y="52" class="mono" fill="rgba(0,0,0,0.4)" font-size="10" letter-spacing="3">/ MODEL I · CREATE</text>
+  <text x="60" y="96" class="serif" fill="#0a0a0a" font-size="34" font-style="italic">A category that didn't exist. Now it does.</text>
+
+  <!-- ── BEFORE (left) ── -->
+  <text x="72" y="142" class="mono" fill="rgba(0,0,0,0.3)" font-size="9" letter-spacing="2.5">BEFORE AI</text>
+  <line x1="72" y1="150" x2="430" y2="150" stroke="rgba(0,0,0,0.07)" stroke-width="1"/>
+
+  <!-- Scattered disconnected boxes -->
+  <rect x="72"  y="168" width="128" height="48" rx="10" fill="rgba(0,0,0,0.02)" stroke="rgba(0,0,0,0.08)"/>
+  <text x="136" y="188" text-anchor="middle" class="mono" fill="rgba(0,0,0,0.3)" font-size="8" letter-spacing="2">PLANNING</text>
+  <text x="136" y="206" text-anchor="middle" class="sans" fill="rgba(0,0,0,0.35)" font-size="12">Scattered docs</text>
+
+  <rect x="240" y="248" width="128" height="48" rx="10" fill="rgba(0,0,0,0.02)" stroke="rgba(0,0,0,0.08)"/>
+  <text x="304" y="268" text-anchor="middle" class="mono" fill="rgba(0,0,0,0.3)" font-size="8" letter-spacing="2">CODING</text>
+  <text x="304" y="286" text-anchor="middle" class="sans" fill="rgba(0,0,0,0.35)" font-size="12">Point tools</text>
+
+  <rect x="80"  y="328" width="128" height="48" rx="10" fill="rgba(0,0,0,0.02)" stroke="rgba(0,0,0,0.08)"/>
+  <text x="144" y="348" text-anchor="middle" class="mono" fill="rgba(0,0,0,0.3)" font-size="8" letter-spacing="2">TESTING</text>
+  <text x="144" y="366" text-anchor="middle" class="sans" fill="rgba(0,0,0,0.35)" font-size="12">Manual QA</text>
+
+  <rect x="250" y="408" width="128" height="48" rx="10" fill="rgba(0,0,0,0.02)" stroke="rgba(0,0,0,0.08)"/>
+  <text x="314" y="428" text-anchor="middle" class="mono" fill="rgba(0,0,0,0.3)" font-size="8" letter-spacing="2">DEPLOY</text>
+  <text x="314" y="446" text-anchor="middle" class="sans" fill="rgba(0,0,0,0.35)" font-size="12">Ad hoc ops</text>
+
+  <text x="252" y="492" text-anchor="middle" class="mono" fill="rgba(0,0,0,0.2)" font-size="9" letter-spacing="1.5">NO ORCHESTRATION LAYER EXISTS</text>
+
+  <!-- ── DIVIDER ── -->
+  <line x1="530" y1="130" x2="530" y2="500" stroke="rgba(0,0,0,0.06)" stroke-width="1" stroke-dasharray="5 5"/>
+
+  <!-- Genesis node -->
+  <circle cx="530" cy="330" r="52" fill="url(#c-glow)"/>
+  <circle cx="530" cy="330" r="26" fill="none" stroke="rgba(0,0,0,0.1)" stroke-width="1"/>
+  <circle cx="530" cy="330" r="17" fill="none" stroke="rgba(0,0,0,0.22)" stroke-width="1.5"/>
+  <circle cx="530" cy="330" r="8"  fill="#0a0a0a"/>
+  <text x="530" y="292" text-anchor="middle" class="mono" fill="rgba(0,0,0,0.45)" font-size="10" letter-spacing="3">AI</text>
+  <text x="530" y="392" text-anchor="middle" class="mono" fill="rgba(0,0,0,0.3)" font-size="9" letter-spacing="2">INFLECTION</text>
+
+  <!-- Arrow left → genesis -->
+  <line x1="430" y1="330" x2="500" y2="330" stroke="rgba(0,0,0,0.18)" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Arrow genesis → right -->
+  <line x1="560" y1="330" x2="626" y2="330" stroke="rgba(0,0,0,0.45)" stroke-width="2" stroke-linecap="round"/>
+  <polygon points="626,325 638,330 626,335" fill="rgba(0,0,0,0.45)"/>
+
+  <!-- ── AFTER (right) — TokenSource ── -->
+  <text x="660" y="142" class="mono" fill="rgba(0,0,0,0.55)" font-size="10" letter-spacing="2.5">TOKENSOURCE</text>
+  <line x1="660" y1="150" x2="1140" y2="150" stroke="rgba(0,0,0,0.07)" stroke-width="1"/>
+
+  <!-- 4 lifecycle nodes -->
+  <rect x="660" y="172" width="100" height="46" rx="10" fill="rgba(0,0,0,0.03)" stroke="rgba(0,0,0,0.1)"/>
+  <text x="710" y="191" text-anchor="middle" class="mono" fill="rgba(0,0,0,0.45)" font-size="8" letter-spacing="1.5">PLAN</text>
+  <text x="710" y="208" text-anchor="middle" class="sans" fill="#0a0a0a" font-size="12">Specs &amp; scope</text>
+
+  <rect x="778" y="172" width="100" height="46" rx="10" fill="rgba(0,0,0,0.03)" stroke="rgba(0,0,0,0.1)"/>
+  <text x="828" y="191" text-anchor="middle" class="mono" fill="rgba(0,0,0,0.45)" font-size="8" letter-spacing="1.5">CODE</text>
+  <text x="828" y="208" text-anchor="middle" class="sans" fill="#0a0a0a" font-size="12">Generate</text>
+
+  <rect x="896" y="172" width="100" height="46" rx="10" fill="rgba(0,0,0,0.03)" stroke="rgba(0,0,0,0.1)"/>
+  <text x="946" y="191" text-anchor="middle" class="mono" fill="rgba(0,0,0,0.45)" font-size="8" letter-spacing="1.5">TEST</text>
+  <text x="946" y="208" text-anchor="middle" class="sans" fill="#0a0a0a" font-size="12">Validate</text>
+
+  <rect x="1014" y="172" width="100" height="46" rx="10" fill="rgba(0,0,0,0.03)" stroke="rgba(0,0,0,0.1)"/>
+  <text x="1064" y="191" text-anchor="middle" class="mono" fill="rgba(0,0,0,0.45)" font-size="8" letter-spacing="1.5">DEPLOY</text>
+  <text x="1064" y="208" text-anchor="middle" class="sans" fill="#0a0a0a" font-size="12">Ship</text>
+
+  <!-- Vertical connectors node → intelligence bar -->
+  <line x1="710"  y1="218" x2="710"  y2="290" stroke="rgba(0,0,0,0.14)" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <line x1="828"  y1="218" x2="828"  y2="290" stroke="rgba(0,0,0,0.14)" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <line x1="946"  y1="218" x2="946"  y2="290" stroke="rgba(0,0,0,0.14)" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <line x1="1064" y1="218" x2="1064" y2="290" stroke="rgba(0,0,0,0.14)" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+  <!-- Intelligence bar -->
+  <rect x="660" y="290" width="460" height="62" rx="14" fill="rgba(0,0,0,0.04)" stroke="rgba(0,0,0,0.13)" stroke-width="1.5"/>
+  <text x="890" y="315" text-anchor="middle" class="mono" fill="rgba(0,0,0,0.45)" font-size="10" letter-spacing="2">SDLC INTELLIGENCE LAYER</text>
+  <text x="890" y="337" text-anchor="middle" class="sans" fill="#0a0a0a" font-size="14" font-weight="500">TokenSource</text>
+
+  <!-- Vertical connectors bar → data moat -->
+  <line x1="890" y1="352" x2="890" y2="394" stroke="rgba(0,0,0,0.12)" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+  <!-- Data moat box -->
+  <rect x="690" y="394" width="400" height="50" rx="10" fill="rgba(0,0,0,0.02)" stroke="rgba(0,0,0,0.07)"/>
+  <text x="890" y="413" text-anchor="middle" class="mono" fill="rgba(0,0,0,0.3)" font-size="9" letter-spacing="2">COMPOUNDING DATA MOAT</text>
+  <text x="890" y="432" text-anchor="middle" class="sans" fill="rgba(0,0,0,0.45)" font-size="12">Velocity · Accuracy · Failure patterns</text>
+
+  <!-- Bottom caption -->
+  <text x="60" y="494" class="sans" fill="rgba(0,0,0,0.45)" font-size="13">No prior product owned the SDLC end-to-end. AI makes the category possible for the first time.</text>
+</svg>

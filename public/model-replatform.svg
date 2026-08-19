@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-label="Model IV: Re-platform — FedStat rebuilds the IT portfolio management category on AI-native infrastructure, producing the same function at lower cost and higher intelligence">
+  <defs>
+    <style>
+      .sans { font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; }
+      .mono { font-family: 'JetBrains Mono', ui-monospace, Consolas, monospace; }
+      .serif { font-family: 'Instrument Serif', Georgia, serif; }
+    </style>
+  </defs>
+
+  <!-- Canvas -->
+  <rect width="1200" height="520" fill="#fafafa" rx="24"/>
+  <rect x="0.5" y="0.5" width="1199" height="519" rx="24" fill="none" stroke="rgba(0,0,0,0.08)"/>
+
+  <!-- Header -->
+  <text x="60" y="52" class="mono" fill="rgba(0,0,0,0.4)" font-size="10" letter-spacing="3">/ MODEL IV · RE-PLATFORM</text>
+  <text x="60" y="96" class="serif" fill="#0a0a0a" font-size="34" font-style="italic">Same function. New architecture.</text>
+
+  <!-- ── SHARED FUNCTION LABEL ── -->
+  <text x="540" y="148" text-anchor="middle" class="mono" fill="rgba(0,0,0,0.4)" font-size="9" letter-spacing="2.5">SAME FUNCTION · SAME BUYER · SAME BUDGET</text>
+
+  <!-- ── LEFT BUILDING: LEGACY ── -->
+  <text x="72" y="142" class="mono" fill="rgba(0,0,0,0.28)" font-size="9" letter-spacing="2">LEGACY · APPTIO / SERVICENOW ITBM</text>
+
+  <!-- Function roof (shared look) -->
+  <rect x="72" y="162" width="420" height="72" rx="14" fill="rgba(0,0,0,0.03)" stroke="rgba(0,0,0,0.1)" stroke-width="1.5"/>
+  <text x="282" y="188" text-anchor="middle" class="mono" fill="rgba(0,0,0,0.4)" font-size="9" letter-spacing="1.5">IT PORTFOLIO MANAGEMENT</text>
+  <text x="282" y="210" text-anchor="middle" class="sans" fill="rgba(0,0,0,0.55)" font-size="12">Budgeting · App rationalization · TBM · Capex</text>
+
+  <!-- Foundation divider -->
+  <line x1="72" y1="246" x2="492" y2="246" stroke="rgba(0,0,0,0.12)" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="282" y="262" text-anchor="middle" class="mono" fill="rgba(0,0,0,0.2)" font-size="8" letter-spacing="2">FOUNDATION</text>
+
+  <!-- Legacy foundation blocks (stacked, dense) -->
+  <rect x="88"  y="272" width="388" height="36" rx="8" fill="rgba(0,0,0,0.04)" stroke="rgba(0,0,0,0.08)"/>
+  <text x="282" y="295" text-anchor="middle" class="sans" fill="rgba(0,0,0,0.4)" font-size="12">Consulting layer — expensive implementation teams</text>
+
+  <rect x="88"  y="316" width="388" height="36" rx="8" fill="rgba(0,0,0,0.03)" stroke="rgba(0,0,0,0.08)"/>
+  <text x="282" y="339" text-anchor="middle" class="sans" fill="rgba(0,0,0,0.4)" font-size="12">Manual reporting — batch exports, spreadsheet layer</text>
+
+  <rect x="88"  y="360" width="388" height="36" rx="8" fill="rgba(0,0,0,0.03)" stroke="rgba(0,0,0,0.08)"/>
+  <text x="282" y="383" text-anchor="middle" class="sans" fill="rgba(0,0,0,0.4)" font-size="12">Siloed data — no cross-portfolio reasoning</text>
+
+  <rect x="88"  y="404" width="388" height="36" rx="8" fill="rgba(0,0,0,0.02)" stroke="rgba(0,0,0,0.07)"/>
+  <text x="282" y="427" text-anchor="middle" class="sans" fill="rgba(0,0,0,0.35)" font-size="12">Static dashboards — no natural language queries</text>
+
+  <!-- Legacy cost label -->
+  <text x="282" y="462" text-anchor="middle" class="mono" fill="rgba(0,0,0,0.25)" font-size="9" letter-spacing="1.5">HIGH COST · LOW INTELLIGENCE · SLOW</text>
+
+  <!-- ── CENTER DIVIDER ── -->
+  <line x1="600" y1="140" x2="600" y2="490" stroke="rgba(0,0,0,0.07)" stroke-width="1"/>
+  <text x="600" y="316" text-anchor="middle" class="serif" fill="rgba(0,0,0,0.18)" font-size="28" font-style="italic">vs</text>
+
+  <!-- ── RIGHT BUILDING: FEDSTAT ── -->
+  <text x="628" y="142" class="mono" fill="rgba(0,0,0,0.55)" font-size="9" letter-spacing="2">FEDSTAT · AI-NATIVE REBUILD</text>
+
+  <!-- Function roof (identical to left) -->
+  <rect x="628" y="162" width="504" height="72" rx="14" fill="rgba(0,0,0,0.03)" stroke="rgba(0,0,0,0.1)" stroke-width="1.5"/>
+  <text x="880" y="188" text-anchor="middle" class="mono" fill="rgba(0,0,0,0.4)" font-size="9" letter-spacing="1.5">IT PORTFOLIO MANAGEMENT</text>
+  <text x="880" y="210" text-anchor="middle" class="sans" fill="rgba(0,0,0,0.55)" font-size="12">Budgeting · App rationalization · TBM · Capex</text>
+
+  <!-- Foundation divider -->
+  <line x1="628" y1="246" x2="1132" y2="246" stroke="rgba(0,0,0,0.12)" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="880" y="262" text-anchor="middle" class="mono" fill="rgba(0,0,0,0.2)" font-size="8" letter-spacing="2">FOUNDATION</text>
+
+  <!-- AI-native foundation (single clean block) -->
+  <rect x="644" y="272" width="472" height="168" rx="14" fill="rgba(0,0,0,0.04)" stroke="rgba(0,0,0,0.13)" stroke-width="1.5"/>
+  <text x="880" y="330" text-anchor="middle" class="mono" fill="rgba(0,0,0,0.45)" font-size="10" letter-spacing="2">AI-NATIVE SUBSTRATE</text>
+  <text x="880" y="358" text-anchor="middle" class="sans" fill="#0a0a0a" font-size="15" font-weight="500">FedStat</text>
+  <text x="880" y="382" text-anchor="middle" class="sans" fill="rgba(0,0,0,0.5)" font-size="12">Natural language · Continuous intelligence</text>
+  <text x="880" y="400" text-anchor="middle" class="sans" fill="rgba(0,0,0,0.5)" font-size="12">Real-time reasoning across the full portfolio</text>
+  <text x="880" y="418" text-anchor="middle" class="sans" fill="rgba(0,0,0,0.5)" font-size="12">No consulting team required</text>
+
+  <!-- FedStat advantage label -->
+  <text x="880" y="462" text-anchor="middle" class="mono" fill="rgba(0,0,0,0.5)" font-size="9" letter-spacing="1.5">STRUCTURALLY CHEAPER · MEANINGFULLY SMARTER</text>
+
+  <!-- Caption -->
+  <text x="60" y="498" class="sans" fill="rgba(0,0,0,0.45)" font-size="13">The buyer recognizes the function. The obstacle is inertia — which a large enough cost-and-capability advantage overcomes.</text>
+</svg>

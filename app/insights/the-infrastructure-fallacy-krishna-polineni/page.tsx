@@ -993,6 +993,14 @@ export default function AppLayerThesisPage() {
               the category name captures not just current market share but the definition of what the market is.
             </Prose>
 
+            <div className="my-10">
+              <img
+                src="/model-create.svg"
+                alt="Model I Create: TokenSource orchestrates the full SDLC as an integrated intelligence layer — a category that didn't exist before AI."
+                className="h-auto w-full"
+              />
+            </div>
+
             {/* Model II */}
             <div className="mt-14 mb-5">
               <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-neutral-400 mb-2">/ Model II</div>
@@ -1021,6 +1029,14 @@ export default function AppLayerThesisPage() {
               education but incumbent relationships and switching costs. The structural argument that the
               AI-native architecture is simply better, not just cheaper, is the wedge.
             </Prose>
+
+            <div className="my-10">
+              <img
+                src="/model-replace.svg"
+                alt="Model II Replace: AlphaSigma runs the same fund management function on AI-native architecture — same job, structurally different architecture."
+                className="h-auto w-full"
+              />
+            </div>
 
             {/* Model III */}
             <div className="mt-14 mb-5">
@@ -1070,6 +1086,14 @@ export default function AppLayerThesisPage() {
               differentiator; operations are the work.
             </Prose>
 
+            <div className="my-10">
+              <img
+                src="/model-consolidate.svg"
+                alt="Model III Consolidate: Vygor provides the AI intelligence layer connecting fragmented health and wellness providers into a unified platform."
+                className="h-auto w-full"
+              />
+            </div>
+
             {/* Model IV */}
             <div className="mt-14 mb-5">
               <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-neutral-400 mb-2">/ Model IV</div>
@@ -1099,6 +1123,14 @@ export default function AppLayerThesisPage() {
               cost-and-capability advantage — which the gap between a legacy architecture and an AI-native one
               provides, and which widens every quarter that the underlying models improve.
             </Prose>
+
+            <div className="my-10">
+              <img
+                src="/model-replatform.svg"
+                alt="Model IV Re-platform: FedStat rebuilds IT portfolio management on AI-native infrastructure — same function, new architecture."
+                className="h-auto w-full"
+              />
+            </div>
 
             <Prose>
               The four models are not fixed positions. A successful Consolidate play accumulates the longitudinal
