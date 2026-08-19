@@ -159,7 +159,7 @@ export default function SegmentTabs({ segments }: { segments: Segment[] }) {
           <p className="mb-2 text-xs text-neutral-500">
             Copy and paste this URL to share the {seg.label} brief directly.
           </p>
-          <code className="block select-all rounded-lg border border-white/[0.08] bg-white/[0.03] px-4 py-3 font-mono text-sm text-amber-300/80 break-all">
+          <code className="block select-all rounded-lg border border-white/[0.08] bg-white/[0.03] px-4 py-3 font-mono text-sm text-white break-all">
             {typeof window !== "undefined"
               ? `${window.location.origin}/playbook/vygor/content-brief?segment=${seg.id}`
               : `https://www.serebrum.ai/playbook/vygor/content-brief?segment=${seg.id}`}
