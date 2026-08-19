@@ -72,18 +72,6 @@ export default function SegmentTabs({ segments }: { segments: Segment[] }) {
         <div className="pointer-events-none absolute right-0 top-0 bottom-px w-12 bg-gradient-to-l from-[#080810] to-transparent md:hidden" />
       </div>
 
-      {/* Shareable link hint */}
-      <div className="mt-4 flex items-center gap-2">
-        <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-neutral-600">
-          Shareable link:
-        </span>
-        <code className="font-mono text-[10px] text-neutral-500 select-all">
-          {typeof window !== "undefined"
-            ? `${window.location.origin}/playbook/vygor/content-brief?segment=${seg.id}`
-            : `/playbook/vygor/content-brief?segment=${seg.id}`}
-        </code>
-      </div>
-
       {/* Tab content */}
       <div key={seg.id} className="mt-4 rounded-2xl border border-white/[0.08] bg-[#0a0a0d] p-7 md:p-9">
         {/* Header */}
@@ -161,6 +149,21 @@ export default function SegmentTabs({ segments }: { segments: Segment[] }) {
               </ul>
             </div>
           </div>
+        </div>
+
+        {/* Direct link */}
+        <div className="mt-8 pt-6 border-t border-white/[0.06]">
+          <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-neutral-500 mb-2">
+            Direct link to this brief
+          </div>
+          <p className="mb-2 text-xs text-neutral-500">
+            Copy and paste this URL to share the {seg.label} brief directly.
+          </p>
+          <code className="block select-all rounded-lg border border-white/[0.08] bg-white/[0.03] px-4 py-3 font-mono text-sm text-amber-300/80 break-all">
+            {typeof window !== "undefined"
+              ? `${window.location.origin}/playbook/vygor/content-brief?segment=${seg.id}`
+              : `https://www.serebrum.ai/playbook/vygor/content-brief?segment=${seg.id}`}
+          </code>
         </div>
       </div>
 
