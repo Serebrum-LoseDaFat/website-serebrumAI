@@ -1225,6 +1225,42 @@ export default function AppLayerThesisPage() {
         </div>
       </section>
 
+      {/* AUTHOR BIO — edit the text below */}
+      <section className="border-t border-black/[0.06]">
+        <div className="mx-auto max-w-4xl px-6 py-16 md:px-10 md:py-20">
+          <div className="flex items-start gap-6">
+            <div className="shrink-0 mt-1">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-100 font-mono text-[11px] font-medium text-neutral-500">
+                KP
+              </div>
+            </div>
+            <div>
+              <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-neutral-400 mb-3">
+                / About the author
+              </div>
+              {/* Bio text — edit here */}
+              <p className="text-sm leading-7 text-neutral-700 max-w-2xl">
+                <span className="font-medium text-neutral-900">Krishna Polineni</span> is the founder
+                of Serebrum.AI, where he builds AI-native applications across software development,
+                quantitative finance, health and wellness, and federal technology — the verticals that
+                ground the framework in this paper. Previously, he has built a Federal technology
+                strategy consulting practice, advising on billions in technology investments, and
+                conducted biomedical R&amp;D at Pfizer. He holds an MBA in Finance and International
+                Business from the Stern School of Business at New York University. He writes on the
+                structural dynamics of the AI transition from the vantage point of an operator, not
+                an analyst.
+              </p>
+              <a
+                href="mailto:krishna@serebrumhq.com"
+                className="mt-4 inline-block font-mono text-[11px] text-neutral-500 transition hover:text-neutral-900"
+              >
+                krishna@serebrumhq.com
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* BACK / CTA */}
       <section className="border-t border-black/[0.06]">
         <div className="mx-auto max-w-4xl px-6 py-16 md:px-10 md:py-20">
